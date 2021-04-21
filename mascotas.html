@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Mascotas</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/pruebas.css">
     </head>
     <body>
         <header>
@@ -21,10 +21,11 @@
                 <h2>Pincha foto. Pincha!</h2>
             </section>
             <section id="Escondite">
-                <img class="toggle" src="images/escondite.jpg" alt="Perro escondido thumbnail" tabindex="0">
+                <input type="radio" name="selectPet" id="checkEscondido">
+                <label for="checkEscondido"><img class="seleccion" src="images/escondite.jpg" alt="Perro escondido thumbnail"></label>              
                 <article>
                     <h2>Escondite</h2>
-                    <img src="images/escondite.jpg" alt="Perro escondido" tabindex="0">
+                    <img src="images/escondite.jpg" alt="Perro escondido">
                     <section class="bio">
                         <table>
                             <tr><th>Nombre</th><td>Escondido</td></tr>
@@ -34,10 +35,12 @@
                         </table>
                         <p>Este perro esta escondido y necesita que lo encuentren</p>    
                     </section>
+                    <a href="formularioAdopcion.html?nomAdoptante=Pupok">Adoptar Escondite</a>
                 </article>
             </section>
             <section id="Firefox">
-                <img class="toggle" src="images/firefox.jpg" alt="Perro firefox thumbnail" tabindex="0">
+                <input type="radio" name="selectPet" id="checkFirefox">
+                <label for="checkFirefox"><img class="seleccion" src="images/firefox.jpg" alt="Perro firefox thumbnail"></label>
                 <article>
                     <h2>Firefox</h2>
                     <img src="images/firefox.jpg" alt="Perro firefox">
@@ -53,7 +56,8 @@
                 </article>
             </section>
             <section id = "Hipnosis">
-                <img class="toggle" src="images/hipnosis.jpg" alt="Perro hipnotizado thumbnail" tabindex="0">
+                <input type="radio" name="selectPet" id="checkHipnosis">
+                <label for="checkHipnosis"><img class="seleccion" src="images/hipnosis.jpg" alt="Perro hipnotizado thumbnail"></label>
                 <article>
                     <h2>Hiponosis</h2>
                     <img src="images/hipnosis.jpg" alt="Perro hipnotizado">
@@ -69,5 +73,10 @@
                 </article>
             </section>
         </main>
+        <aside id="wave">
+            <p>Página accesible y validada!</p>
+            <p>El código fuente de esta página ha sido validado por <a href="https://validator.w3.org"> w3 validator</a></p>
+            <p>Esta página ha sido valorada como accesible por la herramienta <a href="https://wave.webaim.org">wave</a></p>
+        </aside>
     </body>
 </html>

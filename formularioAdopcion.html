@@ -3,44 +3,49 @@
     <head>
         <meta charset="UTF-8">
         <title>Formulario de Adopcion</title>
+        <link rel="stylesheet" href="css/pruebas.css">
     </head>
     <body>
         <header>
-            <a href="">Home</a>
-            <a href="">Quienes somos</a>
-            <a href="mascotas.html">Nuestras mascotas</a>
-            <a href="" class="pagina-actual">Formulario de Adopci&oacute;n</a>
-            <a href="">Cont&aacute;ctanos</a>
-        </nav>
+            <nav>
+                <a href="">Home</a>
+                <a href="">Quienes somos</a>
+                <a href="mascotas.html">Nuestras mascotas</a>
+                <a href="" class="pagina-actual">Formulario de Adopci&oacute;n</a>
+                <a href="">Cont&aacute;ctanos</a>
+            </nav>
         <h1>Formulario de Adopci&oacute;n</h1>
         </header>
         <main>
             <form action=""> <!--Acción no se ha escogido acción-->
                 <fieldset>
                     <legend>Datos de Contacto</legend>
-                    <label for="nombre">Nombre</label>
+                    <label for="nomAdoptante">Nombre</label>
                     <input type="text" name="nombre" id="nomAdoptante" autofocus required>
-                    <label for="tlf">Tel&eacute;fono</label>
+                    <label for="tflAdoptante">Tel&eacute;fono</label>
                     <input type="tel" name="tlf" id="tflAdoptante" placeholder="+34 xxx xxx xxx" required>
-                    <label for="email">Email</label>
+                    <label for="emailAdoptante">Email</label>
                     <input type="email" name="email" id="emailAdoptante" required>
                 </fieldset>
                 <fieldset>
                     <legend>Datos sobre la mascota deseada</legend>
                     <label for="especie">Especie</label>
                     <select name="especie" id="especie" required>
+                        <option value="" selected>Elige especie</option>
                         <option value="perro">Perro</option>
                         <option value="gato">Gato</option>
-                        <option value="pilar" selected>Pilar</option>
+                        <option value="pilar">Pilar</option>
                     </select>
                     <label for="sexo">Sexo</label>
                     <select name="sexo" id="sexo" required>
+                        <option value="" selected>Elige sexo</option>
                         <option value="macho">Macho</option>
                         <option value="hembra">Hembra</option>
-                        <option value="irrelevante" selected>Me da igual</option>
+                        <option value="irrelevante">Me da igual</option>
                     </select>
                     <label for="edad">Edad</label>
                     <select name="edad" id="edad" required>
+                        <option value="" selected>Elige edad</option>
                         <option value="cachorro">Cachorro</option>
                         <option value="joven">Joven</option>
                         <option value="adulto">Adulto</option>
@@ -48,7 +53,7 @@
                         <option value="irrelevante">Me da igual</option>
                     </select>
                     <br>
-                    <label for="tamanio">Tama&ntilde;o</label>
+                    <label for="tamMascota">Tama&ntilde;o</label>
                     <select name="tamanio" id="tamMascota" multiple>
                         <option value="pequenio" selected>&lt; 10kg</option>
                         <option value="mediano" selected>10kg - 20kg</option>
@@ -58,37 +63,45 @@
                 </fieldset>
                 <fieldset>
                     <legend>Datos de tu entorno</legend>
-                    <input type="checkbox" name="acogida" id="acogida">
+                    <input type="checkbox" name="acogida" id="acogida" value="si">
                     <label for="acogida">Quiero convertirme en casa de acogida, no adoptar de forma permanente</label><br>
                     <p>Nota: no hay respuestas más o menos válidas a las preguntas sobre tu entorno. Queremos asegurar la compatibilidad de nuestras mascotas con el entorno en el que vivirán.</p>
-                    <label for="vivienda">&iquest;En qué tipo de vivienda vives?</label>
-                    <input type="radio" name="vivienda" id="piso" value="piso">
-                    <label for="piso">Piso</label>
-                    <input type="radio" name="vivienda" id="casa" value="casa">
-                    <label for="casa">Casa&#47;Chalet</label>
-                    <input type="radio" name="vivienda" id="otro" value="otro">
-                    <label for="otro">Otro</label><br>
-                    <label for="animales">&iquest;Qu&eacute; otros animales tienes?</label>
-                    <input type="radio" name="animales" id="gato" value="gato">
-                    <label for="gato">Gato(s)</label>
-                    <input type="radio" name="animales" id="perro" value="perro">
-                    <label for="perro">Perro(s)</label>
-                    <input type="radio" name="animales" id="otro" value="otro">
-                    <label for="otro">Otro(s)</label>
-                    <input type="radio" name="animales" id="sinAnimales" value="ninguno">
-                    <label for="sinAnimales">No tengo otros animales</label>
-                    <br>
-                    <label for="experiencia">&iquest;Tienes experiencia con animales de la especie que buscas?</label>
-                    <input type="radio" name="experiencia" id="conExp" value="si">
-                    <label for="conExp">S&iacute;</label>
-                    <input type="radio" name="experiencia" id="sinExp" value="no">
-                    <label for="sinExp">No</label>
-                    <br>
-                    <label for="ninios">&iquest;Convives con o tienes visitas habituales de ni&ntilde;os?</label>
-                    <input type="radio" name="ninios" id="conNinios" value="si">
-                    <label for="conExp">S&iacute;</label>
-                    <input type="radio" name="ninios" id="sinNinios" value="no">
-                    <label for="sinExp">No</label>               </fieldset>
+                    <fieldset id=vivienda>
+                        <legend>&iquest;En qué tipo de vivienda vives?</legend>
+                        <input type="radio" name="vivienda" id="piso" value="piso">
+                        <label for="piso">Piso</label>
+                        <input type="radio" name="vivienda" id="casa" value="casa">
+                        <label for="casa">Casa&#47;Chalet</label>
+                        <input type="radio" name="vivienda" id="otraVivienda" value="otro">
+                        <label for="otraVivienda">Otro</label><br>
+                    </fieldset>
+                    <fieldset id="animales">
+                        <legend>&iquest;Qu&eacute; otros animales tienes?</legend>
+                        <input type="radio" name="animales" id="gato" value="gato">
+                        <label for="gato">Gato(s)</label>
+                        <input type="radio" name="animales" id="perro" value="perro">
+                        <label for="perro">Perro(s)</label>
+                        <input type="radio" name="animales" id="otroAnimal" value="otro">
+                        <label for="otroAnimal">Otro(s)</label>
+                        <input type="radio" name="animales" id="sinAnimales" value="ninguno">
+                        <label for="sinAnimales">No tengo otros animales</label>
+                    </fieldset>
+                    <fieldset id="experiencia">
+                        <legend>&iquest;Tienes experiencia con animales de la especie que buscas?</legend>
+                        <input type="radio" name="experiencia" id="conExp" value="si">
+                        <label for="conExp">S&iacute;</label>
+                        <input type="radio" name="experiencia" id="sinExp" value="no">
+                        <label for="sinExp">No</label>
+                        <br>
+                    </fieldset>
+                    <fieldset id="ninios">
+                        <legend>&iquest;Convives con o tienes visitas habituales de ni&ntilde;os?</legend>
+                        <input type="radio" name="ninios" id="conNinios" value="si">
+                        <label for="conExp">S&iacute;</label>
+                        <input type="radio" name="ninios" id="sinNinios" value="no">
+                        <label for="sinExp">No</label>  
+                    </fieldset>
+                </fieldset>
                 <input type="submit">
                 <input type="reset">
             </form>

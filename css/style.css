@@ -1,52 +1,31 @@
-body {
-    /* Patrón de fondo obtenido de https://www.magicpattern.design/tools/css-backgrounds */
-    background-color: #dedee2;
-    background: linear-gradient(135deg, #c6c7d255 25%, transparent 25%) -20px 0/ 40px 40px, linear-gradient(225deg, #c6c7d2 25%, transparent 25%) -20px 0/ 40px 40px, linear-gradient(315deg, #c6c7d255 25%, transparent 25%) 0px 0/ 40px 40px, linear-gradient(45deg, #c6c7d2 25%, #dedee2 25%) 0px 0/ 40px 40px;
-}
-header{
-    padding: 3%;
-    padding-bottom: 2%;
-    text-align: center;
+/*
+    Esta hoja contiene el código css de todas las páginas.
+    El estilo específico para cada página se ha implementado precediendo
+    todos sus selectores con la clase asociada a dicha página (en la
+    tag <html>
+*/
+
+/* Elementos comunes a todas las páginas*/
+header nav{
+    box-sizing: border-box;
+    clear: both;
+    position: fixed;
+    width: 100%;
+    background-color: #f5f5f5;
+    top: 0;
+    right:0;
+    margin: 0 auto;
+    padding: 1%;
 }
 
 header h1 {
-    padding-bottom: 2%
-}
-
-nav {
-    margin-top: 1%;
-    margin-bottom: 0;
-}
-nav a {
-    background: rgba(128, 0, 0, 0.4);
-    color: #ffffff;
-    border-radius: 5%;
-    padding: 1%;
-    margin: 0 1%;
-    text-decoration: none;
-}
-
-nav a.pagina-actual {
-    background: rgba(128, 0, 0, 0.8);
-}
-
-div {
-    width: 85%;
-    min-height: 100%;
-    display:inline-block;
-
-}
-
-aside {
-    width: 15%;
-    display: block;
-    float: right;
-    background: lightcoral;
-    margin-top: 15%;
+    margin-top: 5%;
+    text-align: center;
 }
 
 
-article {
+/* Estilo específico de mascotas.html*/
+.mascotas article {
     width: 55%;
     margin-top: 2%;
     margin-left: 3%;
@@ -62,52 +41,3 @@ article {
     opacity: 0;
     transition: visibility 0.3s, opacity 0.5s;
 }
-
-#placeholder{
-    width: 30%;
-    display: inline-block;
-    margin-left: 30%;
-    /*margin-right: 30%;*/
-    text-align: center;
-    margin-top: 10%;
-    position:absolute;
-    float: left;
-}
-
-.toggle:focus ~ article {
-    visibility: visible; 
-    opacity: 1;
-    float: right;
-}
-
-article img {
-    width: 40%;
-    display: inline-block;
-    float: left;
-}
-
-
-.toggle {
-    box-sizing: border-box;
-    width: 15%;
-    display: inline-block;    
-    text-align: center;
-    float: left;
-}
-
-img.toggle {
-    display: block;
-    margin: 2%;
-    float: left;
-    clear: left;
-}
-img.toggle:focus {
-    box-shadow: 0 0 5px 8px rgb(255,248,220);
-}
-
-.bio {
-    width: 40%;
-    display: inline-block;
-    margin-left: 3%;
-}
-

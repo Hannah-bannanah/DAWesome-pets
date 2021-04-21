@@ -84,7 +84,7 @@ article img {
     float: left;
 }
 
-.toggle {
+.seleccion {
     box-sizing: border-box;
     width: 15%;
     display: inline-block;    
@@ -106,18 +106,14 @@ article img {
 }
 
 
-img.toggle {
+img.seleccion {
     display: block;
     margin: 2%;
     float: left;
     clear: left;
 }
 
-/*
-img.toggle:focus {
-    box-shadow: 0 0 5px 8px rgb(255,248,220);
-}
-*/
+/*Añade sombra a la imagen seleccionada*/
 :checked + label>img{
     box-shadow: 0 0 5px 8px rgb(255,248,220);
 }

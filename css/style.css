@@ -41,3 +41,17 @@ header h1 {
     opacity: 0;
     transition: visibility 0.3s, opacity 0.5s;
 }
+
+/* Estilo específico de formularioAdopcion.html*/
+/*Deshabilitar el campo de ID mascota por defecto*/
+#idMascota {
+    pointer-events: none;
+    background-color: #cccccc;
+    color: #6d6d6d;
+}
+
+/* Habilitar el campo de ID mascota cuando se marque el checkbox mascotaElegida */
+.formAdop #mascotaElegida:checked ~ input[type="text"]{
+    pointer-events: unset;
+    background-color: unset;
+}

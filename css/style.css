@@ -23,8 +23,27 @@ header h1 {
     text-align: center;
 }
 
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de mascotas.html
+---------------------------------------------
+---------------------------------------------
+*/
 
-/* Estilo específico de mascotas.html*/
+/*Formato de la zona de artículos cuando ningún animal ha sido seleccionado*/
+#placeholder{
+    width: 30%;
+    display: inline-block;
+    margin-left: 30%;
+    /*margin-right: 30%;*/
+    text-align: center;
+    margin-top: 10%;
+    position:absolute;
+    float: left;
+}
+
+/*Formato de los artículos sobre cada animal*/
 .mascotas article {
     width: 55%;
     margin-top: 2%;
@@ -37,13 +56,20 @@ header h1 {
     float: right;
     z-index: 1;
     position: absolute;
-    visibility: hidden;
+    visibility: hidden; /*por defecto no se ven, se habilitarán al seleccionar la foto correspondiente en el panel de selección*/
     opacity: 0;
     transition: visibility 0.3s, opacity 0.5s;
 }
 
-/* Estilo específico de formularioAdopcion.html*/
-/*Deshabilitar el campo de ID mascota por defecto*/
+
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de formularioAdopcion.html
+---------------------------------------------
+---------------------------------------------
+*//*Deshabilitar el campo de ID mascota por defecto*/
 #idMascota {
     pointer-events: none;
     background-color: #cccccc;

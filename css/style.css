@@ -46,7 +46,7 @@ Estilo específico de mascotas.html
 
 /*Formato de los artículos sobre cada animal*/
 .mascotas article {
-    width: 45%;
+    width: 50%;
     margin-top: 2%;
     margin-left: 3%;
     padding: 3%;
@@ -100,7 +100,7 @@ Estilo específico de mascotas.html
     width: 15%;
     display: inline-block;    
     text-align: center;
-    float: left;
+    /*float: left;*/
 }
 
 /*Formato de las imágenes dentro del panel de selección*/

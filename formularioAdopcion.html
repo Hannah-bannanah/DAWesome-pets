@@ -34,21 +34,21 @@
                     <input type="text" name="idMascota" id="idMascota" placeholder="xx-xxxx" pattern="[gpo]{2}-[a-z0-9]{4}">
                     <label for="idMascota">Puedes encontrar el ID de la mascota en su ficha en <a href="mascotas.html">Nuestras mascotas</a></label><br>
                     <label for="especie">Especie</label>
-                    <select name="especie" id="especie" required>
+                    <select name="especie" id="especie" required class="eliminar-seleccion">
                         <option value="" selected>Elige especie</option>
                         <option value="perro">Perro</option>
                         <option value="gato">Gato</option>
                         <option value="pilar">Pilar</option>
                     </select>
                     <label for="sexo">Sexo</label>
-                    <select name="sexo" id="sexo" required>
+                    <select name="sexo" id="sexo" required class="eliminar-seleccion">
                         <option value="" selected>Elige sexo</option>
                         <option value="macho">Macho</option>
                         <option value="hembra">Hembra</option>
                         <option value="irrelevante">Me da igual</option>
                     </select>
                     <label for="edad">Edad</label>
-                    <select name="edad" id="edad" required>
+                    <select name="edad" id="edad" required class="eliminar-seleccion">
                         <option value="" selected>Elige edad</option>
                         <option value="cachorro">Cachorro</option>
                         <option value="joven">Joven</option>
@@ -58,7 +58,7 @@
                     </select>
                     <br>
                     <label for="tamMascota">Tama&ntilde;o</label>
-                    <select name="tamanio" id="tamMascota" multiple>
+                    <select name="tamanio" id="tamMascota" multiple class="eliminar-seleccion">
                         <option value="pequenio" selected>&lt; 10kg</option>
                         <option value="mediano" selected>10kg - 20kg</option>
                         <option value="grande" selected>20kg - 35kg</option>

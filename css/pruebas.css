@@ -129,3 +129,24 @@ img.seleccion {
 body {
     background: #f5f5f5;
 }
+
+
+#idMascota {
+    pointer-events: none;
+    background-color: #cccccc;
+    color: #6d6d6d;
+}
+
+/* Habilitar el campo de ID mascota cuando se marque el checkbox mascotaElegida */
+.formAdop #mascotaElegida:checked ~ input[type="text"]{
+    pointer-events: unset;
+    background-color: unset;
+}
+
+/*Deshabilitar los demás campos sobre la mascota deseada cuando se seleccione una en particular
+.formAdop #mascotaElegida:checked ~ select{
+    pointer-events: none;
+    background-color: #cccccc;
+    color: #6d6d6d;
+}
+*/

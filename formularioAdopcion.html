@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Formulario de Adopcion</title>
-        <link rel="stylesheet" href="css/pruebas.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
@@ -12,7 +12,7 @@
                 <a href="">Quienes somos</a>
                 <a href="mascotas.html">Nuestras mascotas</a>
                 <a href="" class="pagina-actual">Formulario de Adopci&oacute;n</a>
-                <a href="">Cont&aacute;ctanos</a>
+                <a href="formularioContacto.html">Cont&aacute;ctanos</a>
             </nav>
         <h1>Formulario de Adopci&oacute;n</h1>
         </header>
@@ -21,14 +21,18 @@
                 <fieldset>
                     <legend>Datos de Contacto</legend>
                     <label for="nomAdoptante">Nombre</label>
-                    <input type="text" name="nombre" id="nomAdoptante" autofocus required>
+                    <input type="text" name="nombre" id="nomAdoptante" autofocus required placeholder="Introduce tu nombre">
                     <label for="tflAdoptante">Tel&eacute;fono</label>
-                    <input type="tel" name="tlf" id="tflAdoptante" placeholder="+34 xxx xxx xxx" required>
+                    <input type="tel" name="tlf" id="tflAdoptante" placeholder="+34 xxx xxx xxx" required pattern="\+34[0-9]{9}">
                     <label for="emailAdoptante">Email</label>
-                    <input type="email" name="email" id="emailAdoptante" required>
+                    <input type="email" name="email" id="emailAdoptante" required placeholder="Introduce tu email">
                 </fieldset>
                 <fieldset>
                     <legend>Datos sobre la mascota deseada</legend>
+                    <input type="checkbox" name="mascotaElegida" id="mascotaElegida" value="si">
+                    <label for="mascotaElegida">Ya he elegido la mascota que quiero adoptar (introducir ID)</label><br>
+                    <input type="text" name="idMascota" id="idMascota" placeholder="xx-xxxx" pattern="[gpo]{2}-[a-z0-9]{4}">
+                    <label for="idMascota">Puedes encontrar el ID de la mascota en su ficha en <a href="mascotas.html">Nuestras mascotas</a></label><br>
                     <label for="especie">Especie</label>
                     <select name="especie" id="especie" required>
                         <option value="" selected>Elige especie</option>
@@ -73,7 +77,8 @@
                         <input type="radio" name="vivienda" id="casa" value="casa">
                         <label for="casa">Casa&#47;Chalet</label>
                         <input type="radio" name="vivienda" id="otraVivienda" value="otro">
-                        <label for="otraVivienda">Otro</label><br>
+                        <label for="otraVivienda">Otro (introducir explicaci&oacute;n)</label>
+                        <textarea name="descVivienda" id="descVivienda" cols="40" rows="2" maxlength="100" placeholder="Describe tu vivienda"></textarea>
                     </fieldset>
                     <fieldset id="animales">
                         <legend>&iquest;Qu&eacute; otros animales tienes?</legend>
@@ -101,6 +106,8 @@
                         <input type="radio" name="ninios" id="sinNinios" value="no">
                         <label for="sinExp">No</label>  
                     </fieldset>
+                    <label for="comentarios">&iquest;Hay algo más que nos quieras comentar o preguntar relevante para la elección de mascota?</label><br>
+                    <textarea name="comentarios" id="comentarios" cols="70" rows="5" maxlength="300" placeholder="Comentarios"></textarea>
                 </fieldset>
                 <input type="submit">
                 <input type="reset">

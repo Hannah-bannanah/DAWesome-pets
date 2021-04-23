@@ -94,17 +94,18 @@ Estilo específico de mascotas.html
     margin-left: 3%;
 }
 
-/*Formato del panel de selección de animales*/
+/*Formato del panel de selección de animales
 .mascotas .seleccion {
     box-sizing: border-box;
     width: 15%;
     display: inline-block;    
     text-align: center;
-    /*float: left;*/
 }
+*/
 
 /*Formato de las imágenes dentro del panel de selección*/
 .mascotas img.seleccion {
+    width: 15%;
     display: block;
     margin: 2%;
     float: left;

@@ -1,4 +1,10 @@
-/*Este archivo contiene algunas funciones básicas de javascript para algunas de las páginas.*/
+/*
+    Este archivo contiene algunas funciones básicas de javascript para algunas de las páginas.
+    Nota: cierta funcionalidad está implentada con css en lugar de javascript. Esto es porque en principio no  
+    nos planteamos aprender javascript, ya que no entra en el alcance de la asignatura. 
+    Los primeros pasos con javascript se han hecho como experimento y porque la funcionalidad necesaria en los 
+    formularios no se puede implementar sólo con estilo.
+*/
 
 /*Función que abre el formulario de adopción en una pestaña nueva, enviando los datos de la mascota elegida*/
 function adoptar (petId){

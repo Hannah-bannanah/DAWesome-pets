@@ -12,32 +12,96 @@ Elementos comunes a todas las páginas
 ---------------------------------------------
 ---------------------------------------------
 */
+* {
+    margin:0px;
+    padding:0px;
+}
 
 /*Formato de base para el body de las páginas*/
 body {
-    background-color: #fafafa;
+    background-color: #f8f1f1;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    color: #004a7c;
+    color: #2f2f6a;
 }
 
+
 /*Formato de la cabecera*/
-header nav{
+header {
+    margin:auto;
+    width:50em;
+}
+
+ul, ol {
+    list-style:none;
+}
+
+.nav > li {
+    float:left;
+}
+
+.nav li a img {
+    height: 0.75em;
+    width: 0.75em;
+}
+
+.nav li a {
+    background-color:#5eaaa8;
+    color:#000000;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+}
+
+.nav li a:hover {
+    background-color:#a3d2ca;
+}
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.nav li:hover > ul {
+    display:block;
+}
+
+.nav li ul li {
+    position:relative;
+}
+
+.nav li ul li ul {
+    right:-140px;
+    top:0px;
+}
+
+
+
+/*header nav{
     box-sizing: border-box;
     clear: both;
     position: fixed;
     width: 100%;
-    background-color: #fafafa;
+    background-color: #f8f1f1;
     top: 0;
     right:0;
     margin: 0 auto;
     padding: 1%;
     z-index: 100;
-}
+}*/
 
 /*Formato del título en la cabecera*/
-header h1 {
-    margin-top: 5%;
+body h1 {
     text-align: center;
+    height: 30rem;
+    padding:40px 20px 0px 20px;
+    display: block;
+    margin: 0 auto;
+}
+body h1 a img {
+    height: 100%;
+    display:block;
+    margin:0 auto;
 }
 
 /*Formato de h1*/
@@ -45,6 +109,12 @@ h1 {
     font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
     color: #005691;
     font-variant: small-caps;
+    height: 15rem;
+    padding: 0 20px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4em ;
 } 
 
 /*Formato de h2*/
@@ -52,6 +122,12 @@ h2 {
     font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
     font-weight: 300;
     color: #005691;
+    height: 10rem;
+    padding: 0 10px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3em ;
 }
 /*
 ---------------------------------------------
@@ -182,3 +258,37 @@ Estilo específico de formularioAdopcion.html
 ---------------------------------------------
 ---------------------------------------------
 */
+
+/*
+Estilo de index.html
+*/
+.index #bienvenidos p{
+    text-align: justify; 
+    margin:15px; 
+    padding: 10px 150px 10px 150px;
+}
+.index #noticias table{
+    table-layout: fixed;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.index #noticias tr{
+    padding: 20px;
+
+}
+
+.index #noticias th, td
+ {
+    padding: 20px;
+  }
+
+.index #webamiga{
+    width: 15%;
+    background: lightcoral;
+    position: fixed;
+    right:3%;
+    top: 100%;
+}
+

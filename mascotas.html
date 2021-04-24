@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Mascotas</title>
         <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
     </head>
     <body>
         <header>
@@ -22,44 +23,51 @@
             </section>
             <section id="Aslan">
                 <input type="radio" name="selectPet" id="checkAslan">
-                <label for="checkAslan"><img class="seleccion" src="images/Aslan-bostezando.png" alt="Panel de seleccion - Aslan"></label>              
-                <article>
-                    <h2>Aslan</h2>
-                    <h3>#ID: pp-asl1</h3>
-                    <img src="images/Aslan-bostezando.png" alt="Aslan bostezando">
-                    <section class="bio">
-                        <table>
-                            <tr><th>Nombre</th><td>Aslan</td></tr>
-                            <tr><th>Edad</th><td>3 a&ntilde;os</td></tr>
-                            <tr><th>Sexo</th><td>M</td></tr>
-                            <tr><th>Raza</th><td>Galgo</td></tr>
-                        </table>
-                        <p>Aslan es un perro hecho para correr y dormir a partes iguales (preferiblemente soñando que corre). Entre sus actividades favoritas se encuentran picar entre horas y despertar a humanos que se echan la siesta mal (i.e. sin soñar que corren).</p>    
-                    </section>
-                </article>
+                <label for="checkAslan"><img class="seleccion" src="images/Aslan-bostezando.png" alt="Panel de seleccion - Aslan"></label>     
+                <section class="petInfo">
+                    <article>
+                        <h2>Aslan</h2>
+                        <h3>#ID: pp-asl1</h3>
+                        <img src="images/Aslan-bostezando.png" alt="Aslan bostezando">
+                        <section class="bio">
+                            <table>
+                                <tr><th>Nombre</th><td>Aslan</td></tr>
+                                <tr><th>Edad</th><td>3 a&ntilde;os</td></tr>
+                                <tr><th>Sexo</th><td>M</td></tr>
+                                <tr><th>Raza</th><td>Galgo</td></tr>
+                            </table>
+                            <p>Aslan es un perro hecho para correr y dormir a partes iguales (preferiblemente soñando que corre). Entre sus actividades favoritas se encuentran picar entre horas y despertar a humanos que se echan la siesta mal (i.e. sin soñar que corren).</p>    
+                        </section>
+                    </article>
+                    <button class="quieroAdoptar" id="adopAslan" onclick="adoptar('pp-asl1')">Quiero adoptar!!</button>
+                </section>         
             </section>
             <section id = "Onyx">
                 <input type="radio" name="selectPet" id="checkOnyx">
                 <label for="checkOnyx"><img class="seleccion" src="images/Onyx.jpeg" alt="Panel de seleccion - Onyx"></label>
-                <article>
-                    <h2>Onyx</h2>
-                    <h3>#ID: gg-ony5</h3>
-                    <img src="images/Onyx.jpeg" alt="Onyx mirando a Marilyn">
-                    <section class = "bio">
-                        <table>
-                            <tr><th>Nombre</th><td>Onyx</td></tr>
-                            <tr><th>Edad</th><td>6 meses</td></tr>
-                            <tr><th>Sexo</th><td>M</td></tr>
-                            <tr><th>Raza</th><td>Gato de bruja con pedigree hasta sexta generación</td></tr>
-                        </table>
-                        <p>Ideal para brujas novatas, ya que Onyx tiene mucha experiencia y puede encontrar los mejores ratones para cada hechizo. Actualmente está encandilado con Marilyn, pero creemos que una vez adoptado se contentará con enviarle cartas eróticofelinas.</p>
-                    </section>
-                </article>
+                <section class="petInfo">
+                    <article>
+                        <h2>Onyx</h2>
+                        <h3>#ID: gg-ony5</h3>
+                        <img src="images/Onyx.jpeg" alt="Onyx mirando a Marilyn">
+                        <section class = "bio">
+                            <table>
+                                <tr><th>Nombre</th><td>Onyx</td></tr>
+                                <tr><th>Edad</th><td>6 meses</td></tr>
+                                <tr><th>Sexo</th><td>M</td></tr>
+                                <tr><th>Raza</th><td>Gato de bruja con pedigree hasta sexta generación</td></tr>
+                            </table>
+                            <p>Ideal para brujas novatas, ya que Onyx tiene mucha experiencia y puede encontrar los mejores ratones para cada hechizo. Actualmente está encandilado con Marilyn, pero creemos que una vez adoptado se contentará con enviarle cartas eróticofelinas.</p>
+                        </section>
+                    </article>
+                    <button class="quieroAdoptar" id="adopOnyx" onclick="adoptar('gg-ony5')">Quiero adoptar!!</button>
+                </section>
             </section>
             <section id="Marilyn">
                 <input type="radio" name="selectPet" id="checkMarilyn">
                 <label for="checkMarilyn"><img class="seleccion" src="images/Marilyn-zexxy.png" alt="Panel de seleccion - Marilyn"></label>
-                <article>
+                <section class="petInfo">
+                    <article>
                     <h2>Marilyn (alias LA GATA)</h2>
                     <h3>#ID: gg-mar9</h3>
                     <img src="images/Marilyn-zexxy.png" alt="Foto de boudoir de Marilyn">
@@ -73,26 +81,30 @@
                         <p>Marilyn es una gata cariñosa donde las haya, pero hay que tener cuidado porque se te pone en plan seductora en los momentos más incómodos</p>
                     </section>
                 </article>
+                <button class="quieroAdoptar" id="adopMarylin" onclick="adoptar('gg-mar9')">Quiero adoptar!!</button>
+            </section>
             </section>
             <section id = "Pupok">
                 <input type="radio" name="selectPet" id="checkPupok">
                 <label for="checkPupok"><img class="seleccion" src="images/escondite.jpg" alt="Panel de seleccion - Pupok"></label>
-                <article>
-                    <h2>Pupok</h2>
-                    <h3>#ID: pp-pup4</h3>
-                    <img src="images/escondite.jpg" alt="Foto de Pupok escondido">
-                    <section class = "bio">
-                        <table>
-                            <tr><th>Nombre</th><td>Pupok</td></tr>
-                            <tr><th>Edad</th><td>3 a&ntilde;os</td></tr>
-                            <tr><th>Sexo</th><td>M</td></tr>
-                            <tr><th>Raza</th><td>Chucho, pero chucho, chucho</td></tr>
-                        </table>
-                        <p>El compañero ideal para los Mortadelos del mundo, con este perro podrás colarte en todas las zonas donde los perros no están permitidos. Biblioteca? Hospital? No importa donde, Pupok se mimetiza con el entorno, es un maestro del camuflaje.</p>
-                    </section>
-                </article>
+                <section class="petInfo">
+                    <article>
+                        <h2>Pupok</h2>
+                        <h3>#ID: pp-pup4</h3>
+                        <img src="images/escondite.jpg" alt="Foto de Pupok escondido">
+                        <section class = "bio">
+                            <table>
+                                <tr><th>Nombre</th><td>Pupok</td></tr>
+                                <tr><th>Edad</th><td>3 a&ntilde;os</td></tr>
+                                <tr><th>Sexo</th><td>M</td></tr>
+                                <tr><th>Raza</th><td>Chucho, pero chucho, chucho</td></tr>
+                            </table>
+                            <p>El compañero ideal para los Mortadelos del mundo, con este perro podrás colarte en todas las zonas donde los perros no están permitidos. Biblioteca? Hospital? No importa donde, Pupok se mimetiza con el entorno, es un maestro del camuflaje.</p>
+                        </section>
+                    </article>
+                    <button class="quieroAdoptar" id="adopPupok" onclick="adoptar('pp-pup4')">Quiero adoptar!!</button>
+                </section>
             </section>
-            <button name="quieroAdoptar" id="mquieroAdoptar">Quiero adoptar!!</button>
         </main>
         <aside id="wave">
             <p>Página accesible y validada!</p>

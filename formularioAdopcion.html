@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <title>Formulario de Adopcion</title>
         <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
     </head>
-    <body>
+    <body onload="prerrellenarFormulario()"> <!--al cargarse la página, se prellenan los campos que se le hayan pasado por url-->
         <header>
             <nav>
                 <a href="home.html">Home</a>
@@ -17,7 +18,7 @@
         <h1>Formulario de Adopci&oacute;n</h1>
         </header>
         <main>
-            <form action=""> <!--Acción no se ha escogido acción-->
+            <form action="home.html"> <!--Acción no se ha escogido acción-->
                 <fieldset>
                     <legend>Datos de Contacto</legend>
                     <label for="nomAdoptante">Nombre</label>
@@ -29,7 +30,7 @@
                 </fieldset>
                 <fieldset>
                     <legend>Datos sobre la mascota deseada</legend>
-                    <input type="checkbox" name="mascotaElegida" id="mascotaElegida" value="si">
+                    <input type="checkbox" name="mascotaElegida" id="mascotaElegida" value=true onclick="toggleDatosMascota()"> <!--Si el usuario ya ha elegido una mascota concreta, ciertos campos del formulario se deshabilitarán-->
                     <label for="mascotaElegida">Ya he elegido la mascota que quiero adoptar (introducir ID)</label><br>
                     <input type="text" name="idMascota" id="idMascota" placeholder="xx-xxxx" pattern="[gpo]{2}-[a-z0-9]{4}">
                     <label for="idMascota">Puedes encontrar el ID de la mascota en su ficha en <a href="mascotas.html">Nuestras mascotas</a></label><br>
@@ -67,10 +68,10 @@
                 </fieldset>
                 <fieldset>
                     <legend>Datos de tu entorno</legend>
-                    <input type="checkbox" name="acogida" id="acogida" value="si">
+                    <input type="checkbox" name="acogida" id="acogida" value=true>
                     <label for="acogida">Quiero convertirme en casa de acogida, no adoptar de forma permanente</label><br>
                     <p>Nota: no hay respuestas más o menos válidas a las preguntas sobre tu entorno. Queremos asegurar la compatibilidad de nuestras mascotas con el entorno en el que vivirán.</p>
-                    <fieldset id=vivienda>
+                    <fieldset id=vivienda onchange="toggleDescripcionVivienda()">
                         <legend>&iquest;En qué tipo de vivienda vives?</legend>
                         <input type="radio" name="vivienda" id="piso" value="piso">
                         <label for="piso">Piso</label>
@@ -78,7 +79,7 @@
                         <label for="casa">Casa&#47;Chalet</label>
                         <input type="radio" name="vivienda" id="otraVivienda" value="otro">
                         <label for="otraVivienda">Otro (introducir explicaci&oacute;n)</label>
-                        <textarea name="descVivienda" id="descVivienda" cols="40" rows="2" maxlength="100" placeholder="Describe tu vivienda"></textarea>
+                        <textarea name="descVivienda" id="descVivienda" cols="40" rows="2" maxlength="100" placeholder="Describe tu vivienda" disabled></textarea>
                     </fieldset>
                     <fieldset id="animales">
                         <legend>&iquest;Qu&eacute; otros animales tienes?</legend>

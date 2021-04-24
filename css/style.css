@@ -43,45 +43,32 @@ Estilo específico de mascotas.html
     float: left;
 }
 
-
-/*Formato de los artículos sobre cada animal*/
-.mascotas article {
-    width: 50%;
+/*Formato de las secciones sobre cada animal*/
+.mascotas .petInfo {
     margin-top: 2%;
     margin-left: 3%;
-    padding: 3%;
-    text-align: left;
-    background: #f5f5f5;
-    border-radius: 5%/10%;
+    padding:1%;
+    width: 50%;
+    text-align: center;
     display: inline-block;
     z-index: 1;
     position: absolute;
     visibility: hidden; /*por defecto no se ven, se habilitarán al seleccionar la foto correspondiente en el panel de selección*/
     opacity: 0;
     transition: visibility 0.3s, opacity 0.5s;
-    max-height: 40%;
-    overflow: scroll; /*esto hace que se ignore el border-radius - POR QUÉ??*/
 }
 
-
-/*Formato de los artículos sobre cada animal
-.mascotas article {
-    width: 45%;
-    margin-top: 2%;
-    margin-left: 3%;
+/*Formato de los artículos sobre cada animal*/
+.mascotas .petInfo article {
+    width: 100%;
     padding: 3%;
-    text-align: left;
+    display: inline-block;
     background: #f5f5f5;
     border-radius: 5%/10%;
-    display: inline-block;
-    float: right;
-    z-index: 1;
-    position: absolute;
-    visibility: hidden; /*por defecto no se ven, se habilitarán al seleccionar la foto correspondiente en el panel de selección
-    opacity: 0;
-    transition: visibility 0.3s, opacity 0.5s;
+    text-align: left;
+
 }
-*/
+
 /*Formato de las imágenes dentro de cada artículo*/
 .mascotas article img {
     width: 40%;
@@ -96,14 +83,11 @@ Estilo específico de mascotas.html
     margin-left: 4%;
 }
 
-/*Formato del panel de selección de animales
-.mascotas .seleccion {
-    box-sizing: border-box;
-    width: 15%;
-    display: inline-block;    
-    text-align: center;
+/*Formato del botón de adopción de cada animal*/
+.mascotas .quieroAdoptar {
+    padding: 4%;
+    margin-top: 5%;
 }
-*/
 
 /*Formato de las imágenes dentro del panel de selección*/
 .mascotas img.seleccion {
@@ -120,7 +104,7 @@ Estilo específico de mascotas.html
 }
 
 /*Muestra el artículo relacionado con con el animal relacionado*/
-.mascotas :checked ~ article { 
+.mascotas :checked ~ .petInfo { 
     visibility: visible;
     opacity: 1;
     float: right;
@@ -140,13 +124,7 @@ Estilo específico de mascotas.html
     top: 45%;
 }
 
-/*Formato del botón de adopción*/
-.mascotas #mquieroAdoptar {
-    position: absolute;
-    top: 80%;
-    left: 40%;
-    padding: 4%;
-}
+
 /*
 ---------------------------------------------
 ---------------------------------------------

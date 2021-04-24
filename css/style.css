@@ -92,10 +92,11 @@ Estilo específico de mascotas.html
     width: 100%;
     padding: 3%;
     display: inline-block;
-    background: #a3d2ca;
+    border: 3px solid #2f2f6a;
     border-radius: 5%/10%;
     text-align: left;
-
+    background-color: #f8f1f1;
+    box-shadow: 0 0 5px 8px #2f2f6a;
 }
 
 /*Formato de las imágenes dentro de cada artículo*/
@@ -112,10 +113,23 @@ Estilo específico de mascotas.html
     margin-left: 4%;
 }
 
+/*Formato de la tabla dentro de la bio*/
+.mascotas table {
+    line-height: 150%;
+    height: max-content;
+}
+
+.mascotas td {
+    padding: 1%, 2%;
+    border-radius: 1%;
+}
 /*Formato del botón de adopción de cada animal*/
 .mascotas .quieroAdoptar {
     padding: 4%;
     margin-top: 5%;
+    background-color: #2f2f6a;
+    color: #f8f1f1;
+    border-radius: 5%/10%;
 }
 
 /*Formato de las imágenes dentro del panel de selección*/
@@ -141,7 +155,7 @@ Estilo específico de mascotas.html
 
 /*Añade sombra a la imagen seleccionada*/
 .mascotas :checked + label>img{
-    box-shadow: 0 0 5px 8px #a3d2ca;
+    box-shadow: 0 0 5px 8px #2f2f6a;
 }
 
 /*Sitúa el aside a la derecha*/
@@ -151,6 +165,11 @@ Estilo específico de mascotas.html
     position: absolute;
     right:3%;
     top: 45%;
+}
+
+/*Formato del footer*/
+.mascotas footer {
+    clear:both;
 }
 
 

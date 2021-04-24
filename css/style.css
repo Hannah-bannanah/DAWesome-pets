@@ -21,17 +21,53 @@ body {
 }
 
 /*Formato de la cabecera*/
-header nav{
-    box-sizing: border-box;
-    clear: both;
-    position: fixed;
-    width: 100%;
-    background-color: #f5f5f5;
-    top: 0;
-    right:0;
-    margin: 0 auto;
-    padding: 1%;
-    z-index: 100;
+header {
+    margin:auto;
+    width:50em;
+}
+
+.nav ul, ol {
+    list-style:none;
+}
+
+.nav > li {
+    float:left;
+}
+
+.nav li a img {
+    height: 0.75em;
+    width: 0.75em;
+}
+
+.nav li a {
+    background-color:#5eaaa8;
+    color:#000000;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+}
+
+.nav li a:hover {
+    background-color:#a3d2ca;
+}
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.nav li:hover > ul {
+    display:block;
+}
+
+.nav li ul li {
+    position:relative;
+}
+
+.nav li ul li ul {
+    right:-140px;
+    top:0px;
 }
 
 /*Formato del título en la cabecera*/
@@ -41,17 +77,30 @@ header h1 {
 }
 
 /*Formato de h1*/
+/*Formato de h1*/
 h1 {
     font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
-    color: #db6400;
+    color: #005691;
     font-variant: small-caps;
+    height: 15rem;
+    padding: 0 20px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4em ;
 } 
 
 /*Formato de h2*/
 h2 {
     font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
     font-weight: 300;
-    color: #db6400;
+    color: #005691;
+    height: 10rem;
+    padding: 0 10px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3em ;
 }
 /*
 ---------------------------------------------
@@ -179,6 +228,15 @@ Estilo específico de mascotas.html
 ---------------------------------------------
 ---------------------------------------------
 Estilo específico de formularioAdopcion.html
+---------------------------------------------
+---------------------------------------------
+*/
+
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de index.html
 ---------------------------------------------
 ---------------------------------------------
 */

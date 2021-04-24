@@ -3,136 +3,71 @@
     <head>
         <meta charset="UTF-8">
         <title>DAWesomepets</title> 
-     <!-- <link rel="stylesheet" href="css/pruebas.css">-->  
+        <link rel="stylesheet" href="css/pruebas.css">
 
         <head>
             <title>Menu Desplegable</title>
             <style type="text/css">
-                
-                * {
-                    margin:0px;
-                    padding:0px;
-                }
-                
-                #header {
-                    margin:auto;
-                    width:50em;
-                    font-family:Arial, Helvetica, sans-serif;
-                }
-                
-                ul, ol {
-                    list-style:none;
-                }
-                
-                .nav > li {
-                    float:left;
-                }
-
-                .nav li a img {
-                    height: 1em;
-                    width: 1em;
-                }
-                
-                .nav li a {
-                    background-color:#5eaaa8;
-                    color:#000000;
-                    text-decoration:none;
-                    padding:10px 12px;
-                    display:block;
-                }
-                
-                .nav li a:hover {
-                    background-color:#a3d2ca;
-                }
-                
-                .nav li ul {
-                    display:none;
-                    position:absolute;
-                    min-width:140px;
-                }
-                
-                .nav li:hover > ul {
-                    display:block;
-                }
-                
-                .nav li ul li {
-                    position:relative;
-                }
-                
-                .nav li ul li ul {
-                    right:-140px;
-                    top:0px;
-                }
-
-                h1 {
-                    height: 30rem;
-                    padding:0 20px;
-                    text-align: center;
-                }
-                              
-                h1 img {
-                    height: 100%;
-                    display:block;
-                    margin:0 auto;
-                    text-align: center;
-                }
-                
-                table {
-                    margin-right: auto;
-                    margin-left: auto;
-                }
-                h2 {
-                    padding:0 20px;
-                    text-align: center;
-                }
-
+ 
+        
+              
 
 
 
             </style>
     </head>
-    
-    <body> 
 
-            <nav>
-                <ul class="nav">
-                    <li><a href="index.html">
-                        <img src="images/iconindex.png" alt="Icono Home" />
-                        </a>
-                    </li>   
-                    <li><a href="quienesSomos.html">Quienes Somos</a>
-                        <ul>
-                            <li><a href="">Submenu1</a></li>
-                                <ul>
-                                    <li><a href="">Submenu1</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="mascotas.html">Nuestras mascotas</a>
-                        <ul>
-                            <li><a href="">Aslan</a></li>
-                            <li><a href="">Onyx</a></li>
-                            <li><a href="">Marilyn</a></li>
-                            <li><a href="">Submenu4</a></li>
-                        </ul>
-                    </li>
-                    <li> <a href="formularioAdopcion.html">Formulario de Adopcion</a></li>
-                    <li><a href="formularioContacto.html">Cont&aacute;ctanos</a></li>
-                </ul>
+    <header>
+        <nav>
+            <ul class="nav">
+                <li><a href="index.html">
+                    <img src="images/iconindex.png" alt="Icono Home" />
+                    </a>
+                </li>   
+                <li><a href="quienesSomos.html">Quienes Somos</a>
+                </li>
+                <li><a href="mascotas.html">Nuestras mascotas</a>
+                    <ul>
+                        <li><a href="">Aslan</a></li>
+                        <li><a href="">Onyx</a></li>
+                        <li><a href="">Marilyn</a></li>
+                        <li><a href="">Pupok</a></li>
+                    </ul>
+                </li>
+                <li> <a href="formularioAdopcion.html">Formulario de Adopcion</a></li>
+                <li><a href="formularioContacto.html">Cont&aacute;ctanos</a></li>
+            </ul>
         </nav>
+    </header>
 
-        <header>
-            <section id= "banner">
+    <body>
+        <section id= "banner">
             <h1>
                 <a href="index.html">
                     <img src="images/letterhome.png" alt="DAWesome pets" />
                 </a>
             </h1>
-            </section>
-        </header>
+        </section>
+ 
 
+     
         <main>
+            <section id="bienvenidos">
+                <h2>Bienvenidos</h2>
+                <p>
+                DAWsome Pets es una pequeña protectora de la Sierra Norte de Madrid que desde el año 
+                2002 recoge y cuida animales abandonados para que tengan una segunda oportunidad.
+                Sin ninguna subvención de organismos oficiales, empresas o partidos políticos, 
+                tratamos a cada animal de manera única y nos volcamos por completo para garantizar 
+                su bienestar físico y psicológico desde el momento que entra a formar parte de nuestra pequeña familia.
+                El respeto, bienestar y calidad de vida es nuestro objetivo.
+                Algunos dirán que es imposible ayudar a los animales y a la vez respetar estos principios. 
+                Pero nosotros ponemos todos los días nuestro esfuerzo en ello.
+
+                «Y como no sabía que era imposible, lo hizo.»
+
+                </p>
+            </section>
             <section id="noticias">
                 <table>
                     <tr>
@@ -147,26 +82,41 @@
                     </tr>
                     <br>
                 </table>
-
+            
             </section>
 
-            <aside>
-                <section id="webamiga">
-                    <h2>Webs amigas</h2>
-                    <table>
-                        <tr>
-                            <th>Logo</th>
-                            <th>Logo</th>
-                            <th>Logo</th>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <th>Logo</th>
-                            <th>Logo</th>
-                        </tr>
-                    </table>
-                </section>
-            </aside>
-        </main>
+
+            </main>
     </body>
+
+    <aside>
+        <section id="webamiga">
+            <h3>Webs amigas</h3>
+            <table>
+                <tr>
+                    <th>Logo</th>
+                    <th>Logo</th>
+                    <th>Logo</th>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Logo</th>
+                    <th>Logo</th>
+                </tr>
+            </table>
+        </section>
+    </aside>
+
+    <footer>
+        <div class="footer">
+           <p style="text-align: center; margin 2px 0 0 0px !important; font-size: small;">
+            Protectora de Animales de Madrid - DAWsome pets © 2021. Todos los derechos reservados
+           </p> 
+          <p style= "text-align: center; font-size: small;">
+                 | 
+                <a href="/aviso-legal.html"> Aviso legal</a>
+                 | 
+          </p> 
+        </div>
+    </footer>

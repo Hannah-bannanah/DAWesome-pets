@@ -119,10 +119,12 @@ Estilo específico de mascotas.html
     height: max-content;
 }
 
+/*Formato de las celdas de la tabla*/
 .mascotas td {
     padding: 1%, 2%;
     border-radius: 1%;
 }
+
 /*Formato del botón de adopción de cada animal*/
 .mascotas .quieroAdoptar {
     padding: 4%;

@@ -59,6 +59,8 @@ Estilo específico de mascotas.html
     visibility: hidden; /*por defecto no se ven, se habilitarán al seleccionar la foto correspondiente en el panel de selección*/
     opacity: 0;
     transition: visibility 0.3s, opacity 0.5s;
+    max-height: 40%;
+    overflow: scroll; /*esto hace que se ignore el border-radius - POR QUÉ??*/
 }
 
 
@@ -89,9 +91,9 @@ Estilo específico de mascotas.html
 
 /*Formato de la bio del animal dentro de cada artículo*/
 .mascotas .bio {
-    width: 40%;
+    width: 55%;
     display: inline-block;
-    margin-left: 3%;
+    margin-left: 4%;
 }
 
 /*Formato del panel de selección de animales
@@ -138,6 +140,13 @@ Estilo específico de mascotas.html
     top: 45%;
 }
 
+/*Formato del botón de adopción*/
+.mascotas #mquieroAdoptar {
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    padding: 4%;
+}
 /*
 ---------------------------------------------
 ---------------------------------------------

@@ -1,152 +1,184 @@
+/*
+    Esta hoja contiene el código css de todas las páginas.
+    El estilo específico para cada página se ha implementado precediendo
+    todos sus selectores con la clase asociada a dicha página (en la
+    tag <html>
+*/
+
+/*
+---------------------------------------------
+---------------------------------------------
+Elementos comunes a todas las páginas
+---------------------------------------------
+---------------------------------------------
+*/
+
+/*Formato de base para el body de las páginas*/
 body {
-    /* Patrón de fondo obtenido de https://www.magicpattern.design/tools/css-backgrounds */
-    background-color: #dedee2;
-    background: linear-gradient(135deg, #c6c7d255 25%, transparent 25%) -20px 0/ 40px 40px, linear-gradient(225deg, #c6c7d2 25%, transparent 25%) -20px 0/ 40px 40px, linear-gradient(315deg, #c6c7d255 25%, transparent 25%) 0px 0/ 40px 40px, linear-gradient(45deg, #c6c7d2 25%, #dedee2 25%) 0px 0/ 40px 40px;
+    background-color: #fafafa;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: #004a7c;
 }
 
-header{
-    padding: 3%;
-    padding-bottom: 2%;
+/*Formato de la cabecera*/
+header nav{
+    box-sizing: border-box;
+    clear: both;
+    position: fixed;
+    width: 100%;
+    background-color: #fafafa;
+    top: 0;
+    right:0;
+    margin: 0 auto;
+    padding: 1%;
+    z-index: 100;
+}
+
+/*Formato del título en la cabecera*/
+header h1 {
+    margin-top: 5%;
     text-align: center;
 }
 
+/*Formato de h1*/
+h1 {
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    color: #005691;
+    font-variant: small-caps;
+} 
 
-header h1 {
-    padding-bottom: 2%;
+/*Formato de h2*/
+h2 {
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-weight: 300;
+    color: #005691;
 }
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de mascotas.html
+---------------------------------------------
+---------------------------------------------
+*/
 
-
-nav {
-    margin-top: 1%;
-    margin-bottom: 0;
-}
-
-nav a {
-    background: rgba(128, 0, 0, 0.4);
-    color: #ffffff;
-    border-radius: 5%;
-    padding: 1%;
-    margin: 0 1%;
-    text-decoration: none;
-}
-
-nav a.pagina-actual {
-    background: rgba(128, 0, 0, 0.8);
-}
-
-div {
-    width: 85%;
-    min-height: 100%;
-    display:inline-block;
-
-}
-
-aside {
-    width: 15%;
-    display: block;
-    float: right;
-    background: lightcoral;
-    margin-top: 15%;
-}
-
-
-article {
-    width: 55%;
-    margin-top: 2%;
-    margin-left: 3%;
-    padding: 3%;
-    text-align: left;
-    background: #f5f5f5;
-    border-radius: 5%/10%;
-    display: inline-block;
-    float: right;
-    z-index: 1;
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0.3s, opacity 0.5s;
-}
-
-#placeholder{
+/*Formato de la zona de artículos cuando ningún animal ha sido seleccionado*/
+.mascotas #placeholder {
     width: 30%;
     display: inline-block;
     margin-left: 30%;
-    /*margin-right: 30%;*/
     text-align: center;
     margin-top: 10%;
     position:absolute;
     float: left;
 }
 
-article img {
+/*Formato de las secciones sobre cada animal*/
+.mascotas .petInfo {
+    margin-top: 2%;
+    margin-left: 3%;
+    padding:1%;
+    width: 50%;
+    text-align: center;
+    display: inline-block;
+    z-index: 1;
+    position: absolute;
+    visibility: hidden; /*por defecto no se ven, se habilitarán al seleccionar la foto correspondiente en el panel de selección*/
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.5s;
+}
+
+/*Formato de los artículos sobre cada animal*/
+.mascotas .petInfo article {
+    width: 100%;
+    padding: 3%;
+    display: inline-block;
+    border: 3px solid #112d4e;
+    border-radius: 5%/10%;
+    text-align: left;
+    background-color: #e8f1f5;
+    box-shadow: 0 0 5px 8px #112d4e;
+}
+
+/*Formato de las imágenes dentro de cada artículo*/
+.mascotas article img {
     width: 40%;
     display: inline-block;
     float: left;
 }
 
-.seleccion {
-    box-sizing: border-box;
+/*Formato de la bio del animal dentro de cada artículo*/
+.mascotas .bio {
+    width: 55%;
+    display: inline-block;
+    margin-left: 4%;
+}
+
+/*Formato de la tabla dentro de la bio*/
+.mascotas table {
+    line-height: 150%;
+    height: max-content;
+}
+
+/*Formato de las celdas de la tabla*/
+.mascotas td {
+    padding: 1%, 2%;
+    border-radius: 1%;
+}
+
+/*Formato del botón de adopción de cada animal*/
+.mascotas .quieroAdoptar {
+    padding: 4%;
+    margin-top: 5%;
+    background-color: #004a7c;
+    color: #fafafa;
+    border-radius: 5%/10%;
+}
+
+/*Formato de las imágenes dentro del panel de selección*/
+.mascotas img.seleccion {
     width: 15%;
-    display: inline-block;    
-    text-align: center;
-    float: left;
-}
-
-
-/*Esconde los botones de selección del animal*/
-.mascotas input[type="radio"] { 
-    display:none;
-}
-
-/*Muestra el artículo relacionado con con el animal relacionado*/
-.mascotas :checked ~ article { 
-    visibility: visible; 
-    opacity: 1;
-    float: right;
-}
-
-
-img.seleccion {
     display: block;
     margin: 2%;
     float: left;
     clear: left;
 }
 
+/*Esconde los botones de selección del animal, se seleccionará al hacer click sobre la imagen*/
+.mascotas input[type="radio"] { 
+    display:none;
+}
+
+/*Muestra el artículo relacionado con con el animal relacionado*/
+.mascotas :checked ~ .petInfo { 
+    visibility: visible;
+    opacity: 1;
+    float: right;
+}
+
 /*Añade sombra a la imagen seleccionada*/
-:checked + label>img{
-    box-shadow: 0 0 5px 8px rgb(255,248,220);
+.mascotas :checked + label>img{
+    box-shadow: 0 0 5px 8px #112d4e;
 }
 
-.bio {
-    width: 40%;
-    display: inline-block;
-    margin-left: 3%;
+/*Sitúa el aside a la derecha*/
+.mascotas aside {
+    width: 15%;
+    background: lightcoral;
+    position: absolute;
+    right:3%;
+    top: 45%;
+}
+
+/*Formato del footer*/
+.mascotas footer {
+    clear:both;
 }
 
 
-/* Estilo especifico de formulario Adopcion*/
-body {
-    background: #f5f5f5;
-}
-
-
-#idMascota {
-    pointer-events: none;
-    background-color: #cccccc;
-    color: #6d6d6d;
-}
-
-/* Habilitar el campo de ID mascota cuando se marque el checkbox mascotaElegida */
-.formAdop #mascotaElegida:checked ~ input[type="text"]{
-    pointer-events: unset;
-    background-color: unset;
-}
-
-/*Deshabilitar los demás campos sobre la mascota deseada cuando se seleccione una en particular
-.formAdop #mascotaElegida:checked ~ select{
-    pointer-events: none;
-    background-color: #cccccc;
-    color: #6d6d6d;
-}
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de formularioAdopcion.html
+---------------------------------------------
+---------------------------------------------
 */

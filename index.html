@@ -25,19 +25,24 @@
                 }
                 
                 .nav > li {
-                    float:right;
+                    float:left;
+                }
+
+                .nav li a img {
+                    height: 1em;
+                    width: 1em;
                 }
                 
                 .nav li a {
-                    background-color:#000;
-                    color:#fff;
+                    background-color:#5eaaa8;
+                    color:#000000;
                     text-decoration:none;
                     padding:10px 12px;
                     display:block;
                 }
                 
                 .nav li a:hover {
-                    background-color:#434343;
+                    background-color:#a3d2ca;
                 }
                 
                 .nav li ul {
@@ -80,45 +85,44 @@
                     padding:0 20px;
                     text-align: center;
                 }
+
+
+
+
             </style>
     </head>
-    <body>
-        <header>
     
-            <nav>      
-            <div id="header">
+    <body> 
+
+            <nav>
                 <ul class="nav">
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Quienes Somos</a>
+                    <li><a href="index.html">
+                        <img src="images/iconindex.png" alt="Icono Home" />
+                        </a>
+                    </li>   
+                    <li><a href="quienesSomos.html">Quienes Somos</a>
                         <ul>
                             <li><a href="">Submenu1</a></li>
-                            <li><a href="">Submenu2</a></li>
-                            <li><a href="">Submenu3</a></li>
-                            <li><a href="">Submenu4</a>
                                 <ul>
                                     <li><a href="">Submenu1</a></li>
-                                    <li><a href="">Submenu2</a></li>
-                                    <li><a href="">Submenu3</a></li>
-                                    <li><a href="">Submenu4</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li><a href="mascotas.html">Nuestras mascotas</a>
                         <ul>
-                            <li><a href="">Submenu1</a></li>
-                            <li><a href="">Submenu2</a></li>
-                            <li><a href="">Submenu3</a></li>
+                            <li><a href="">Aslan</a></li>
+                            <li><a href="">Onyx</a></li>
+                            <li><a href="">Marilyn</a></li>
                             <li><a href="">Submenu4</a></li>
                         </ul>
                     </li>
                     <li> <a href="formularioAdopcion.html">Formulario de Adopcion</a></li>
-                    <li><a href="">Cont&aacute;ctanos</a></li>
+                    <li><a href="formularioContacto.html">Cont&aacute;ctanos</a></li>
                 </ul>
-            </div>
         </nav>
-        </header>
-        <main>
+
+        <header>
             <section id= "banner">
             <h1>
                 <a href="index.html">
@@ -126,6 +130,9 @@
                 </a>
             </h1>
             </section>
+        </header>
+
+        <main>
             <section id="noticias">
                 <table>
                     <tr>
@@ -138,23 +145,28 @@
                         <td>Entérate de las noticias más recientes.</td>
                         <td>Estos animales necesitan vuestra ayuda urgentemente.</td>
                     </tr>
+                    <br>
                 </table>
+
             </section>
-            <section id="webamiga">
-                <h2>Webs amigas</h2>
-                <table>
-                    <tr>
-                        <th>Logo</th>
-                        <th>Logo</th>
-                        <th>Logo</th>
-                    </tr>
-                </table>
-                <table>
-                    <tr>
-                        <th>Logo</th>
-                        <th>Logo</th>
-                    </tr>
-                </table>
-            </section>
+
+            <aside>
+                <section id="webamiga">
+                    <h2>Webs amigas</h2>
+                    <table>
+                        <tr>
+                            <th>Logo</th>
+                            <th>Logo</th>
+                            <th>Logo</th>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>Logo</th>
+                            <th>Logo</th>
+                        </tr>
+                    </table>
+                </section>
+            </aside>
         </main>
     </body>

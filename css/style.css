@@ -133,15 +133,16 @@ Estilo específico de formularioAdopcion.html
 ---------------------------------------------
 */
 
-/*Deshabilitar el campo de ID mascota por defecto*/
+/*Deshabilitar el campo de ID mascota por defecto
 #idMascota {
     pointer-events: none;
     background-color: #cccccc;
     color: #6d6d6d;
 }
 
-/* Habilitar el campo de ID mascota cuando se marque el checkbox mascotaElegida */
+/* Habilitar el campo de ID mascota cuando se marque el checkbox mascotaElegida 
 .formAdop #mascotaElegida:checked ~ input[type="text"]{
     pointer-events: unset;
     background-color: unset;
 }
+*/

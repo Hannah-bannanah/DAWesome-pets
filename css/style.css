@@ -26,6 +26,7 @@ header {
     width:50em;
 }
 
+
 .nav ul, ol {
     list-style:none;
 }
@@ -258,3 +259,54 @@ Estilo específico de index.html
 ---------------------------------------------
 ---------------------------------------------
 */
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de formularios
+---------------------------------------------
+---------------------------------------------
+*/
+form {
+    width: 45%;
+    margin:auto;
+}
+
+form fieldset {
+    border: none;
+}
+
+fieldset legend {
+    color: #db6400;
+    text-align: center;
+    font-;
+}
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de formularioContacto.html
+---------------------------------------------
+---------------------------------------------
+*/
+
+/*Estructura del formulario*/
+/*.formContacto form {
+    width: 45%;
+    margin:auto;
+}
+.formContacto #introForm {
+    text-align: center;
+}
+
+.formContacto fieldset {
+    border: none;
+}
+
+.formContacto legend {
+    
+}
+*/
+
+    
+

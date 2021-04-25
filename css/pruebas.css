@@ -26,7 +26,7 @@ body {
 
 
 /*Formato de la cabecera*/
-header {
+nav {
     margin:auto;
     width:50em;
 }
@@ -76,19 +76,6 @@ ul, ol {
 }
 
 
-
-/*header nav{
-    box-sizing: border-box;
-    clear: both;
-    position: fixed;
-    width: 100%;
-    background-color: #f8f1f1;
-    top: 0;
-    right:0;
-    margin: 0 auto;
-    padding: 1%;
-    z-index: 100;
-}*/
 
 
 /*Formato de h1*/
@@ -249,6 +236,10 @@ Estilo específico de formularioAdopcion.html
 /*
 Estilo de index.html
 */
+.index #banner{
+    height: 30rem;
+    width: 100%;
+}
 .index #banner h1 a img{
     height: 100%;
     display:block;
@@ -257,13 +248,13 @@ Estilo de index.html
     color: #005691;
     font-variant: small-caps;
     height: 30rem;
-    padding: 10px 10px 10px 10px;
+    padding: 40px 40px 40px 40px;
     display: block;
     margin: 0 auto;
     text-align: center;
     font-size: 4em ;
 }
-.index #bienvenidos p{
+.index #text-bienv p{
     text-align: justify; 
     margin:15px; 
     padding: 10px 150px 10px 150px;

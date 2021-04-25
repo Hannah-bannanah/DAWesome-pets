@@ -210,13 +210,33 @@ Estilo específico de mascotas.html
     box-shadow: 0 0 5px 8px #112d4e;
 }
 
-/*Sitúa el aside a la derecha*/
+/*Formato del aside*/
 .mascotas aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /*distribuye el texto verticalemente*/
+    box-sizing: border-box;
     width: 15%;
-    background: lightcoral;
+    background: #e8f1f5;
     position: absolute;
     right:3%;
-    top: 45%;
+    /*top: 45%;*/
+    height: 100vh;
+    border-radius: 10%/5%;
+    text-align: center;
+    padding: 6% 3%;
+    line-height: 200%;
+}
+
+.mascotas #sabiasque h3 {
+    font-family: 'Poppins', 'Montserrat', Helvetica, sans-serif;
+    color: #005691;
+    font-size: 20px;
+}
+
+.mascotas #sabiasque p {
+    color: #005691;
+    font-weight: 400;
 }
 
 /*Formato del footer*/

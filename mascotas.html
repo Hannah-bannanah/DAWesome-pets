@@ -3,80 +3,146 @@
     <head>
         <meta charset="UTF-8">
         <title>Mascotas</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
+        <link rel="stylesheet" href="css/pruebas.css">
+        <script src="js/script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat&family=Poppins:wght@300;400&family=Roboto+Condensed&family=Roboto:wght@300;500&display=swap" rel="stylesheet">     </head>
+    <body onload="mostrarMascota()">
         <header>
-            <h1>PRUEVAS CON V</h1>
             <nav>
-                <a href="home.html">Home</a>
-                <a href="quienesSomos.html">Quienes somos</a>
-                <a href="" class="pagina-actual">Nuestras mascotas</a>
-                <a href="formularioAdopcion.html">Formulario de Adopcion</a>
-                <a href="formularioContacto.html">Cont&aacute;ctanos</a>
+                <ul class="nav">
+                    <li><a href="index.html">
+                        <img src="images/iconindex.png" alt="Icono Home" />
+                        </a>
+                    </li>   
+                    <li><a href="quienesSomos.html">Quienes Somos</a>
+                    </li>
+                    <li><a href="mascotas.html">Nuestras mascotas</a>
+                        <ul>
+                            <li><a href="mascotas.html?idMascota=pp-asl1">Aslan</a></li>
+                            <li><a href="mascotas.html?idMascota=gg-ony5">Onyx</a></li>
+                            <li><a href="mascotas.html?idMascota=gg-mar9">Marilyn</a></li>
+                            <li><a href="mascotas.html?idMascota=pp-pup4">Pupok</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href="formularioAdopcion.html">Formulario de Adopcion</a></li>
+                    <li><a href="formularioContacto.html">Cont&aacute;ctanos</a></li>
+                    <li><a href="http://www.instagram.com">
+                        <img src="images/iconinsta.png" alt="Icono Instagram">
+                    </a></li>
+                    <li><a href="http://www.twitter.com">
+                        <img src="images/icontwit.png" alt="Icono Twitter">
+                    </a></li>
+                    <li><a href="http://www.facebook.com">
+                        <img src="images/iconface.png" alt="Icono Facebook">
+                    </a></li>
+                </ul>
             </nav>
+            <h1>Nuestras Mascotas</h1>
         </header>
         <main>
             <section id="placeholder">
-                <h2>Pincha foto. Pincha!</h2>
+                <h2>Selecciona una mascota en el panel de la izquierda para ver más información</h2>
             </section>
-            <section id="Escondite">
-                <input type="radio" name="selectPet" id="checkEscondido">
-                <label for="checkEscondido"><img class="seleccion" src="images/escondite.jpg" alt="Perro escondido thumbnail"></label>              
-                <article>
-                    <h2>Escondite</h2>
-                    <p>#ID: pp-esc0</p>
-                    <img src="images/escondite.jpg" alt="Perro escondido">
+            <section id="pp-asl1">
+                <input type="radio" name="selectPet" id="checkpp-asl1">
+                <label for="checkpp-asl1"><img class="seleccion" src="images/Aslan-bostezando.png" alt="Panel de seleccion - Aslan"></label>     
+                <section class="petInfo">
+                    <article>
+                        <h2>Aslan</h2>
+                        <h3>#ID: pp-asl1</h3>
+                        <img src="images/Aslan-bostezando.png" alt="Aslan bostezando">
+                        <section class="bio">
+                            <table>
+                                <tr><th>Nombre</th><td>Aslan</td></tr>
+                                <tr><th>Edad</th><td>3 a&ntilde;os</td></tr>
+                                <tr><th>Sexo</th><td>M</td></tr>
+                                <tr><th>Raza</th><td>Galgo</td></tr>
+                            </table>
+                            <p>Aslan es un perro hecho para correr y dormir a partes iguales (preferiblemente soñando que corre). Entre sus actividades favoritas se encuentran picar entre horas y despertar a humanos que se echan la siesta mal (i.e. sin soñar que corren).</p>    
+                        </section>
+                    </article>
+                    <button class="quieroAdoptar" id="adoppp-asl1" onclick="adoptar('pp-asl1')">Quiero adoptar!!</button>
+                </section>         
+            </section>
+            <section id = "gg-ony5">
+                <input type="radio" name="selectPet" id="checkgg-ony5">
+                <label for="checkgg-ony5"><img class="seleccion" src="images/Onyx.jpeg" alt="Panel de seleccion - Onyx"></label>
+                <section class="petInfo">
+                    <article>
+                        <h2>Onyx</h2>
+                        <h3>#ID: gg-ony5</h3>
+                        <img src="images/Onyx.jpeg" alt="Onyx mirando a Marilyn">
+                        <section class = "bio">
+                            <table>
+                                <tr><th>Nombre</th><td>Onyx</td></tr>
+                                <tr><th>Edad</th><td>6 meses</td></tr>
+                                <tr><th>Sexo</th><td>M</td></tr>
+                                <tr><th>Raza</th><td>Gato de bruja con pedigree hasta sexta generación</td></tr>
+                            </table>
+                            <p>Ideal para brujas novatas, ya que Onyx tiene mucha experiencia y puede encontrar los mejores ratones para cada hechizo. Actualmente está encandilado con Marilyn, pero creemos que una vez adoptado se contentará con enviarle cartas eróticofelinas.</p>
+                        </section>
+                    </article>
+                    <button class="quieroAdoptar" id="adopgg-ony5" onclick="adoptar('gg-ony5')">Quiero adoptar!!</button>
+                </section>
+            </section>
+            <section id="gg-mar9">
+                <input type="radio" name="selectPet" id="checkgg-mar9">
+                <label for="checkgg-mar9"><img class="seleccion" src="images/Marilyn-zexxy.png" alt="Panel de seleccion - Marilyn"></label>
+                <section class="petInfo">
+                    <article>
+                    <h2>Marilyn (alias LA GATA)</h2>
+                    <h3>#ID: gg-mar9</h3>
+                    <img src="images/Marilyn-zexxy.png" alt="Foto de boudoir de Marilyn">
                     <section class="bio">
                         <table>
-                            <tr><th>Nombre</th><td>Escondido</td></tr>
-                            <tr><th>Edad</th><td>6 meses</td></tr>
-                            <tr><th>Sexo</th><td>M</td></tr>
-                            <tr><th>Raza</th><td>Chucho, pero chucho, chucho</td></tr>
+                            <tr><th>Nombre</th><td>Marilyn</td></tr>
+                            <tr><th>Edad</th><td>1 a&ntilde;o</td></tr>
+                            <tr><th>Sexo</th><td>F</td></tr>
+                            <tr><th>Raza</th><td>Ya te gustaría a ti saberlo</td></tr>
                         </table>
-                        <p>Este perro esta escondido y necesita que lo encuentren</p>    
+                        <p>Marilyn es una gata cariñosa donde las haya, pero hay que tener cuidado porque se te pone en plan seductora en los momentos más incómodos</p>
                     </section>
                 </article>
+                <button class="quieroAdoptar" id="adopgg-mar9" onclick="adoptar('gg-mar9')">Quiero adoptar!!</button>
             </section>
-            <section id="Firefox">
-                <input type="radio" name="selectPet" id="checkFirefox">
-                <label for="checkFirefox"><img class="seleccion" src="images/firefox.jpg" alt="Perro firefox thumbnail"></label>
-                <article>
-                    <h2>Firefox</h2>
-                    <img src="images/firefox.jpg" alt="Perro firefox">
-                    <section class="bio">
-                        <table>
-                            <tr><th>Nombre</th><td>Escondido</td></tr>
-                            <tr><th>Edad</th><td>6 meses</td></tr>
-                            <tr><th>Sexo</th><td>M</td></tr>
-                            <tr><th>Raza</th><td>Chucho, pero chucho, chucho</td></tr>
-                        </table>
-                        <p>Este perro está hecho un ovillo. El desovillador que bien lo desovillare, buen desovillador será</p>
-                    </section>
-                </article>
             </section>
-            <section id = "Hipnosis">
-                <input type="radio" name="selectPet" id="checkHipnosis">
-                <label for="checkHipnosis"><img class="seleccion" src="images/hipnosis.jpg" alt="Perro hipnotizado thumbnail"></label>
-                <article>
-                    <h2>Hiponosis</h2>
-                    <img src="images/hipnosis.jpg" alt="Perro hipnotizado">
-                    <section class = "bio">
-                        <table>
-                            <tr><th>Nombre</th><td>Escondido</td></tr>
-                            <tr><th>Edad</th><td>6 meses</td></tr>
-                            <tr><th>Sexo</th><td>M</td></tr>
-                            <tr><th>Raza</th><td>Chucho, pero chucho, chucho</td></tr>
-                        </table>
-                        <p>Este perro está hipnotizado. Viene con una pelota de regalo</p>
-                    </section>
-                </article>
+            <section id = "pp-pup4">
+                <input type="radio" name="selectPet" id="checkpp-pup4">
+                <label for="checkpp-pup4"><img class="seleccion" src="images/escondite.jpg" alt="Panel de seleccion - Pupok"></label>
+                <section class="petInfo">
+                    <article>
+                        <h2>Pupok</h2>
+                        <h3>#ID: pp-pup4</h3>
+                        <img src="images/escondite.jpg" alt="Foto de Pupok escondido">
+                        <section class = "bio">
+                            <table>
+                                <tr><th>Nombre</th><td>Pupok</td></tr>
+                                <tr><th>Edad</th><td>3 a&ntilde;os</td></tr>
+                                <tr><th>Sexo</th><td>M</td></tr>
+                                <tr><th>Raza</th><td>Chucho, pero chucho, chucho</td></tr>
+                            </table>
+                            <p>El compañero ideal para los Mortadelos del mundo, con este perro podrás colarte en todas las zonas donde los perros no están permitidos. Biblioteca? Hospital? No importa donde, Pupok se mimetiza con el entorno, es un maestro del camuflaje.</p>
+                        </section>
+                    </article>
+                    <button class="quieroAdoptar" id="adoppp-pup4" onclick="adoptar('pp-pup4')">Quiero adoptar!!</button>
+                </section>
             </section>
         </main>
         <aside id="wave">
-            <p>Página accesible y validada!</p>
-            <p>El código fuente de esta página ha sido validado por <a href="https://validator.w3.org"> w3 validator</a></p>
-            <p>Esta página ha sido valorada como accesible por la herramienta <a href="https://wave.webaim.org">wave</a></p>
+            <section id='sabiasque'>
+                <h3>Sabías que ...</h3>
+                <p>... convivir con animales tiene efectos muy positivos sobre la salud de las personas</p>
+                <p id='pregunta'>?</p>
+                <a href="https://salud.nih.gov/articulo/el-poder-de-las-mascotas/" target="_blank">Leer más sobre los efectos positivos de las mascotas</a>
+            </section>
+            <section id= 'pagValidada'>
+                <p>Página accesible y validada!</p>
+                <p>El código fuente de esta página ha sido validado por <a href="https://validator.w3.org" target="_blank"> w3 validator</a></p>
+                <p>Esta página ha sido valorada como accesible por la herramienta <a href="https://wave.webaim.org" target="_blank">wave</a></p>
+            </section>
         </aside>
+        <footer>
+            <p>Footer</p>
+        </footer>
     </body>
 </html>

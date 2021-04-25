@@ -12,6 +12,10 @@ Elementos comunes a todas las páginas
 ---------------------------------------------
 ---------------------------------------------
 */
+* {
+    margin:0px;
+    padding:0px;
+}
 
 /*Formato de base para el body de las páginas*/
 body {
@@ -20,14 +24,14 @@ body {
     color: #2f2f6a;
 }
 
+
 /*Formato de la cabecera*/
-header {
+nav {
     margin:auto;
     width:50em;
 }
 
-
-.nav ul, ol {
+ul, ol {
     list-style:none;
 }
 
@@ -71,11 +75,8 @@ header {
     top:0px;
 }
 
-/*Formato del título en la cabecera
-header h1 {
-    margin-top: 5%;
-    text-align: center;
-}*/
+
+
 
 /*Formato de h1*/
 h1 {
@@ -83,7 +84,7 @@ h1 {
     color: #005691;
     font-variant: small-caps;
     height: 8%;
-    padding: 20px 20px 20px 20px;
+    padding: 10px 10px 10px 10px;
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -96,7 +97,7 @@ h2 {
     font-weight: 300;
     color: #005691;
     height: 6%;
-    padding: 10px 10px 10px 10px;
+    padding: 0 10px;
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -141,11 +142,11 @@ Estilo específico de mascotas.html
     width: 100%;
     padding: 3%;
     display: inline-block;
-    border: 3px solid #2f2f6a;
+    border: 3px solid #112d4e;
     border-radius: 5%/10%;
     text-align: left;
-    background-color: #f8f1f1;
-    box-shadow: 0 0 5px 8px #2f2f6a;
+    background-color: #e8f1f5;
+    box-shadow: 0 0 5px 8px #112d4e;
 }
 
 /*Formato de las imágenes dentro de cada artículo*/
@@ -178,8 +179,8 @@ Estilo específico de mascotas.html
 .mascotas .quieroAdoptar {
     padding: 4%;
     margin-top: 5%;
-    background-color: #2f2f6a;
-    color: #f8f1f1;
+    background-color: #004a7c;
+    color: #fafafa;
     border-radius: 5%/10%;
 }
 
@@ -206,7 +207,7 @@ Estilo específico de mascotas.html
 
 /*Añade sombra a la imagen seleccionada*/
 .mascotas :checked + label>img{
-    box-shadow: 0 0 5px 8px #2f2f6a;
+    box-shadow: 0 0 5px 8px #112d4e;
 }
 
 /*Formato del aside*/
@@ -243,6 +244,7 @@ Estilo específico de mascotas.html
     clear:both;
 }
 
+
 /*
 ---------------------------------------------
 ---------------------------------------------
@@ -251,7 +253,6 @@ Estilo específico de formularioAdopcion.html
 ---------------------------------------------
 */
 
-
 /*
 ---------------------------------------------
 ---------------------------------------------
@@ -259,54 +260,58 @@ Estilo específico de index.html
 ---------------------------------------------
 ---------------------------------------------
 */
-
-/*
----------------------------------------------
----------------------------------------------
-Estilo específico de formularios
----------------------------------------------
----------------------------------------------
-*/
-form {
-    width: 45%;
-    margin:auto;
+.index #banner{
+    height: 30rem;
+    width: 100%;
 }
-
-form fieldset {
-    border: none;
-}
-
-fieldset legend {
-    color: #db6400;
+.index #banner h1 a img{
+    height: 100%;
+    display:block;
+    margin:0 auto;
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    color: #005691;
+    font-variant: small-caps;
+    height: 30rem;
+    padding: 40px 40px 40px 40px;
+    display: block;
+    margin: 0 auto;
     text-align: center;
-    font-;
+    font-size: 4em ;
+}
+.index #text-bienv p{
+    text-align: justify; 
+    margin:15px; 
+    padding: 10px 20% 5px 20%
+}
+.index #noticias table{
+    table-layout: fixed;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.index #noticias tr{
+    padding: 20px;
+
 }
 
-/*
----------------------------------------------
----------------------------------------------
-Estilo específico de formularioContacto.html
----------------------------------------------
----------------------------------------------
-*/
+.index #noticias th, td
+ {
+    padding: 20px;
+  }
 
-/*Estructura del formulario*/
-/*.formContacto form {
-    width: 45%;
-    margin:auto;
-}
-.formContacto #introForm {
+.index aside #webamiga {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    box-sizing: border-box;
+    width: 15%;
+    background: #a3d2ca;
+    position: absolute;
+    right:3%;
+    top: 75%;
+    height: 100vh;
+    border-radius: 10%/5%;
     text-align: center;
-}
-
-.formContacto fieldset {
-    border: none;
-}
-
-.formContacto legend {
-    
-}
-*/
-
-    
-
+    padding: 6% 3%;
+    line-height: 200%;

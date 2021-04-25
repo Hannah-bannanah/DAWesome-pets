@@ -4,17 +4,19 @@
         <meta charset="UTF-8">
         <title>Formulario de Adopcion</title>
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat&family=Poppins:wght@300;400&family=Roboto+Condensed&family=Roboto:wght@300;500&display=swap" rel="stylesheet">     </head>
+        <script src="js/script.js"></script>
     </head>
-    <body>
+    <body onload="prerrellenarFormulario()"> <!--al cargarse la página, se prellenan los campos que se le hayan pasado por url-->
         <header>
             <nav>
-                <a href="home.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="quienesSomos.html">Quienes somos</a>
                 <a href="mascotas.html">Nuestras mascotas</a>
                 <a href="formularioAdopcion.html" class="pagina-actual">Formulario de Adopci&oacute;n</a>
                 <a href="formularioContacto.html">Cont&aacute;ctanos</a>
             </nav>
-        <h1>Formulario de Adopci&oacute;n</h1>
+            <h1>Formulario de Adopci&oacute;n</h1>
         </header>
         <main>
             <form action=""> <!--Acción no se ha escogido acción-->
@@ -29,26 +31,26 @@
                 </fieldset>
                 <fieldset>
                     <legend>Datos sobre la mascota deseada</legend>
-                    <input type="checkbox" name="mascotaElegida" id="mascotaElegida" value="si">
+                    <input type="checkbox" name="mascotaElegida" id="mascotaElegida" value=true onclick="toggleDatosMascota()"> <!--Si el usuario ya ha elegido una mascota concreta, ciertos campos del formulario se deshabilitarán-->
                     <label for="mascotaElegida">Ya he elegido la mascota que quiero adoptar (introducir ID)</label><br>
                     <input type="text" name="idMascota" id="idMascota" placeholder="xx-xxxx" pattern="[gpo]{2}-[a-z0-9]{4}">
                     <label for="idMascota">Puedes encontrar el ID de la mascota en su ficha en <a href="mascotas.html">Nuestras mascotas</a></label><br>
                     <label for="especie">Especie</label>
-                    <select name="especie" id="especie" required>
+                    <select name="especie" id="especie" required class="eliminar-seleccion">
                         <option value="" selected>Elige especie</option>
                         <option value="perro">Perro</option>
                         <option value="gato">Gato</option>
                         <option value="pilar">Pilar</option>
                     </select>
                     <label for="sexo">Sexo</label>
-                    <select name="sexo" id="sexo" required>
+                    <select name="sexo" id="sexo" required class="eliminar-seleccion">
                         <option value="" selected>Elige sexo</option>
                         <option value="macho">Macho</option>
                         <option value="hembra">Hembra</option>
                         <option value="irrelevante">Me da igual</option>
                     </select>
                     <label for="edad">Edad</label>
-                    <select name="edad" id="edad" required>
+                    <select name="edad" id="edad" required class="eliminar-seleccion">
                         <option value="" selected>Elige edad</option>
                         <option value="cachorro">Cachorro</option>
                         <option value="joven">Joven</option>
@@ -58,7 +60,7 @@
                     </select>
                     <br>
                     <label for="tamMascota">Tama&ntilde;o</label>
-                    <select name="tamanio" id="tamMascota" multiple>
+                    <select name="tamanio" id="tamMascota" multiple class="eliminar-seleccion">
                         <option value="pequenio" selected>&lt; 10kg</option>
                         <option value="mediano" selected>10kg - 20kg</option>
                         <option value="grande" selected>20kg - 35kg</option>
@@ -67,10 +69,10 @@
                 </fieldset>
                 <fieldset>
                     <legend>Datos de tu entorno</legend>
-                    <input type="checkbox" name="acogida" id="acogida" value="si">
+                    <input type="checkbox" name="acogida" id="acogida" value=true>
                     <label for="acogida">Quiero convertirme en casa de acogida, no adoptar de forma permanente</label><br>
                     <p>Nota: no hay respuestas más o menos válidas a las preguntas sobre tu entorno. Queremos asegurar la compatibilidad de nuestras mascotas con el entorno en el que vivirán.</p>
-                    <fieldset id=vivienda>
+                    <fieldset id=vivienda onchange="toggleDescripcionVivienda()">
                         <legend>&iquest;En qué tipo de vivienda vives?</legend>
                         <input type="radio" name="vivienda" id="piso" value="piso">
                         <label for="piso">Piso</label>
@@ -78,7 +80,7 @@
                         <label for="casa">Casa&#47;Chalet</label>
                         <input type="radio" name="vivienda" id="otraVivienda" value="otro">
                         <label for="otraVivienda">Otro (introducir explicaci&oacute;n)</label>
-                        <textarea name="descVivienda" id="descVivienda" cols="40" rows="2" maxlength="100" placeholder="Describe tu vivienda"></textarea>
+                        <textarea name="descVivienda" id="descVivienda" cols="40" rows="2" maxlength="100" placeholder="Describe tu vivienda" disabled></textarea>
                     </fieldset>
                     <fieldset id="animales">
                         <legend>&iquest;Qu&eacute; otros animales tienes?</legend>
@@ -106,12 +108,13 @@
                         <input type="radio" name="ninios" id="sinNinios" value="no">
                         <label for="sinExp">No</label>  
                     </fieldset>
-                    <label for="comentarios">&iquest;Hay algo más que nos quieras comentar o preguntar relevante para la elección de mascota?</label><br>
-                    <textarea name="comentarios" id="comentarios" cols="70" rows="5" maxlength="300" placeholder="Comentarios"></textarea>
                 </fieldset>
                 <input type="submit">
                 <input type="reset">
             </form>
         </main>
+        <footer>
+            <p>Footer</p>
+        </footer>
     </body>
 </html>

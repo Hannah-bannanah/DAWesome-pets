@@ -36,10 +36,20 @@ function prerrellenarFormulario(){
 function toggleDatosMascota () {
     const valorToggle = document.getElementById('mascotaElegida').checked;
     document.getElementById('idMascota').disabled = !valorToggle;
+    document.getElementById('idMascota').disabled = !valorToggle;
+
     document.getElementById('especie').disabled = valorToggle;
+    document.getElementById('especie').value= "";
+
     document.getElementById('sexo').disabled = valorToggle;
+    document.getElementById('sexo').value= "";
+
     document.getElementById('edad').disabled = valorToggle;
+    document.getElementById('edad').value= "";
+
     document.getElementById('tamMascota').disabled = valorToggle;
+    document.getElementById('tamMascota').selectedIndex = -1;
+
 }
 
 /*Función que habilita y deshabilita la sección de descripción de vivienda según la opción elegida en Vivienda*/

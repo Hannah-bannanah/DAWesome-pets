@@ -83,7 +83,7 @@ h1 {
     font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
     color: #005691;
     font-variant: small-caps;
-    height: 15rem;
+    height: 8%;
     padding: 10px 10px 10px 10px;
     display: block;
     margin: 0 auto;
@@ -96,7 +96,7 @@ h2 {
     font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
     font-weight: 300;
     color: #005691;
-    height: 10rem;
+    height: 6%;
     padding: 0 10px;
     display: block;
     margin: 0 auto;
@@ -254,7 +254,11 @@ Estilo específico de formularioAdopcion.html
 */
 
 /*
-Estilo de index.html
+---------------------------------------------
+---------------------------------------------
+Estilo específico de index.html
+---------------------------------------------
+---------------------------------------------
 */
 .index #banner{
     height: 30rem;
@@ -277,7 +281,7 @@ Estilo de index.html
 .index #text-bienv p{
     text-align: justify; 
     margin:15px; 
-    padding: 10px 150px 10px 150px;
+    padding: 10px 20% 5px 20%
 }
 .index #noticias table{
     table-layout: fixed;
@@ -296,11 +300,18 @@ Estilo de index.html
     padding: 20px;
   }
 
-.index #webamiga{
+.index aside #webamiga {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    box-sizing: border-box;
     width: 15%;
-    background: lightcoral;
-    position: fixed;
+    background: #a3d2ca;
+    position: absolute;
     right:3%;
-    top: 100%;
-}
-
+    top: 75%;
+    height: 100vh;
+    border-radius: 10%/5%;
+    text-align: center;
+    padding: 6% 3%;
+    line-height: 200%;

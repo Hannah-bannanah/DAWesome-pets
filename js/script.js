@@ -1,7 +1,8 @@
 /*
     Este archivo contiene algunas funciones básicas de javascript para algunas de las páginas.
     Nota: cierta funcionalidad está implentada con css en lugar de javascript. Esto es porque en principio no  
-    nos planteamos aprender javascript, ya que no entra en el alcance de la asignatura. 
+    nos planteamos aprender javascript, ya que no entra en el alcance de la asignatura. Hemos decidido dejarlo así
+    porque nos parece interesante el haber implementado esa funcionalidad con css.
     Los primeros pasos con javascript se han hecho como experimento y porque la funcionalidad necesaria en los 
     formularios no se puede implementar sólo con estilo.
 */
@@ -12,7 +13,10 @@ function adoptar (petId){
     window.open(cadenaUrl, "_blank");
 }
 
-/*Función que prerrellena parte del formulario de adopción al cargarse, si se le han enviado parámetros*/
+/*
+    Función que prerrellena parte del formulario de adopción al cargarse, si se le han enviado parámetros.
+    El método para coger parámetros de la url se ha obtenido de https://www.sitepoint.com/get-url-parameters-with-javascript/
+*/
 function prerrellenarFormulario(){
     const urlParam = new URLSearchParams(window.location.search); /*obtiene la parte de la url que contiene los parámetros*/
 
@@ -43,4 +47,14 @@ function toggleDescripcionVivienda(){
     const valorToggle = document.getElementById('otraVivienda').checked;
     document.getElementById('descVivienda').disabled = !valorToggle;
     document.getElementById('descVivienda').required = valorToggle;
+}
+
+/*Función que al cargar mascotas.html muestra la mascota pasada como parámetro*/
+function mostrarMascota(){
+    const urlParam = new URLSearchParams(window.location.search);
+    const idMascota = urlParam.get('idMascota')
+    if (idMascota) {
+        const radioMascota = "check"+idMascota;
+        document.getElementById(radioMascota).checked=true;
+    }
 }

@@ -269,6 +269,7 @@ Estilo específico de mascotas.html
     transition-timing-function: ease-in-out;
 }
 
+/*Animación del botón de adopción*/
 @keyframes example {
     0% {
         height: 100%;
@@ -295,9 +296,6 @@ Estilo específico de mascotas.html
 .mascotas .quieroAdoptar:hover {
     cursor: pointer;
     animation: example 1s ease-in-out;
-    /*
-    transform: rotate(360deg);
-    transform: scale(1, 1.1);*/
 }
 
 /*Formato de las imágenes dentro del panel de selección*/
@@ -510,6 +508,3 @@ Estilo específico de formularioContacto.html
     
 }
 */
-
-    
-

@@ -164,6 +164,14 @@ h2 {
     text-align: center;
     font-size: 3em ;
 }
+
+/*footer{
+    position:static;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+}
 /*
 ---------------------------------------------
 ---------------------------------------------
@@ -337,10 +345,13 @@ Estilo específico de index.html
 ---------------------------------------------
 ---------------------------------------------
 */
-.index #banner{
-    height: 30rem;
-    width: 100%;
-
+.index header {
+    vertical-align: bottom;
+    font-variant: small-caps;
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    padding-left: 5%;
+    color: #f8f1f1;
+    font-size: 4em;
 }
 
 .index #banner h1{
@@ -361,7 +372,7 @@ Estilo específico de index.html
         font-weight: 300;
         color: #005691;
         height: 6%;
-        padding: 0 10px;
+        padding: 100px 30px 100px 30px;
         display: block;
         margin: 0 auto;
         text-align: center;
@@ -382,17 +393,11 @@ Estilo específico de index.html
     text-align: center;
     font-size: 4em ;
 }
-.index .contenedor{
-    position: relative;
-    display: inline-block;
-    text-align: center;
+.index #text-bnv p{
+    padding: 10px 20% 10px 20%;
+    text-align: justify;
 }
-.index .texto-encima {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: #3f6170;
-    transform: translate(-50%, -50%);
+
 }
 .index #noticias table{
     table-layout: fixed;
@@ -417,11 +422,12 @@ Estilo específico de index.html
     justify-content: space-between; 
     box-sizing: border-box;
     width: 15%;
+    position: absolute;
     background: #a3d2ca;
     position: absolute;
     right:3%;
-    top: 75%;
-    height: 100vh;
+    top: 700px;
+    height: 70vh;
     border-radius: 10%/5%;
     text-align: center;
     padding: 6% 3%;

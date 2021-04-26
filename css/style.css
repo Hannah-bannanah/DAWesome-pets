@@ -18,29 +18,55 @@ body {
     background-color: #f8f1f1;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: #2f2f6a;
+    margin:0;
+    padding-top: 0;
 }
 
-/*Formato de la cabecera*/
+/*Formato del header*/
 header {
-    margin:auto;
-    width:50em;
+    height: 30vh;
+    width: 100vw;
+    top:0;
+    background-color: #005691;
+    display: table-cell;
+    vertical-align: bottom;
 }
 
+header h1 {
+    margin-top: 0vh;
+    vertical-align: bottom;
+    font-variant: small-caps;
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    padding-left: 5%;
+    color: #f8f1f1;
+    font-size: 4em;
+}
+/*Formato de la barra de navegación*/
+nav {
+    margin-top: 0;
+    top:0;
+    position: fixed;
+    z-index: 100;
+}
 
-.nav ul, ol {
+/*meu principal*/
+nav .menu { 
     list-style:none;
 }
 
-.nav > li {
-    float:left;
+/*Sitúa el menu principal en una barra superior en lugar de un panel vertical*/
+nav .menu > li {
+    float:left;;
 }
 
-.nav li a img {
+/*Dimensiona los iconos de la barra de navegación*/
+nav .menu li a img {
     height: 0.75em;
     width: 0.75em;
 }
 
-.nav li a {
+/*Formato de cada elemento en la barra de navegación*/
+nav .menu li a {
     background-color:#5eaaa8;
     color:#000000;
     text-decoration:none;
@@ -48,47 +74,48 @@ header {
     display:block;
 }
 
-.nav li a:hover {
+/*Cambia el color de un elemento de la barra de navegación al situar el cursor sobre él*/
+nav .menu li a:hover {
     background-color:#a3d2ca;
 }
 
-.nav li ul {
+/*Oculta el submenú de la barra de navegación*/
+nav .submenu {
     display:none;
     position:absolute;
     min-width:140px;
+    list-style: none;
 }
 
-.nav li:hover > ul {
+/*Muestra el submenú de la barra de navegación al pasar el cursor sobre el elemento 
+correspondiente del menú principal*/
+nav .menu li:hover .submenu {
     display:block;
 }
 
-.nav li ul li {
+/*
+nav .submenu li {
     position:relative;
-}
-
-.nav li ul li ul {
-    right:-140px;
-    top:0px;
-}
-
-/*Formato del título en la cabecera
-header h1 {
-    margin-top: 5%;
-    text-align: center;
 }*/
 
-/*Formato de h1*/
+/*
+nav .menu li ul li ul {
+    right:-140px;
+    top:0px;
+}*/
+
+/*Formato de h1
 h1 {
+    margin-top:0
     font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
     color: #005691;
     font-variant: small-caps;
-    height: 8%;
     padding: 20px 20px 20px 20px;
     display: block;
-    margin: 0 auto;
     text-align: center;
-    font-size: 4em ;
-} 
+    font-size: 4em;
+    vertical-align: text-bottom;
+}*/
 
 /*Formato de h2*/
 h2 {
@@ -111,6 +138,11 @@ Estilo específico de mascotas.html
 */
 
 /*Formato de la zona de artículos cuando ningún animal ha sido seleccionado*/
+.mascotas main{
+    margin-left: 7%;
+    align-items: center;
+}
+
 .mascotas #placeholder {
     width: 30%;
     display: inline-block;
@@ -119,12 +151,21 @@ Estilo específico de mascotas.html
     margin-top: 10%;
     position:absolute;
     float: left;
+    max-height: 30vh;
+    overflow: scroll;
+}
+
+.mascotas #placeholder p {
+    font-size: 2em;
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-weight: 400;
+    color: #005691;
 }
 
 /*Formato de las secciones sobre cada animal*/
 .mascotas .petInfo {
     margin-top: 2%;
-    margin-left: 3%;
+    margin-left: 10%;
     padding:1%;
     width: 50%;
     text-align: center;
@@ -141,11 +182,13 @@ Estilo específico de mascotas.html
     width: 100%;
     padding: 3%;
     display: inline-block;
-    border: 3px solid #2f2f6a;
-    border-radius: 5%/10%;
+    border: 3px solid #5eaaa8;
+    /*border-radius: 5%/10%;*/
     text-align: left;
-    background-color: #f8f1f1;
-    box-shadow: 0 0 5px 8px #2f2f6a;
+    background-color: #e7f3f1;
+    max-height: 50vh;
+    overflow: scroll;
+    /*box-shadow: 0 0 5px 8px #a3d2ca;*/
 }
 
 /*Formato de las imágenes dentro de cada artículo*/
@@ -155,6 +198,10 @@ Estilo específico de mascotas.html
     float: left;
 }
 
+/*Alineación del título dentro de cada artículo*/
+.mascotas article h2 {
+    text-align: left;
+}
 /*Formato de la bio del animal dentro de cada artículo*/
 .mascotas .bio {
     width: 55%;
@@ -178,7 +225,7 @@ Estilo específico de mascotas.html
 .mascotas .quieroAdoptar {
     padding: 4%;
     margin-top: 5%;
-    background-color: #2f2f6a;
+    background-color: #005691;
     color: #f8f1f1;
     border-radius: 5%/10%;
 }
@@ -206,38 +253,34 @@ Estilo específico de mascotas.html
 
 /*Añade sombra a la imagen seleccionada*/
 .mascotas :checked + label>img{
-    box-shadow: 0 0 5px 8px #2f2f6a;
+    box-shadow: 0 0 3px 6px #5eaaa8;
 }
 
-/*Formato del aside*/
+/*Posicionamiento del aside*/
 .mascotas aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /*distribuye el texto verticalemente*/
-    box-sizing: border-box;
-    width: 15%;
-    background: #e8f1f5;
-    position: absolute;
-    right:3%;
-    /*top: 45%;*/
-    height: 100vh;
-    border-radius: 10%/5%;
+    float: right;
+    width: 40%;
+    margin-right: 20%;
     text-align: center;
-    padding: 6% 3%;
-    line-height: 200%;
 }
 
+/*Formato del título del aside*/
 .mascotas #sabiasque h3 {
     font-family: 'Poppins', 'Montserrat', Helvetica, sans-serif;
     color: #005691;
-    font-size: 20px;
+    font-size: 1.5em;
 }
 
+/*Formato del texto del aside*/
 .mascotas #sabiasque p {
     color: #005691;
     font-weight: 400;
 }
 
+/*Eliminar decoración del link del aside cuando se ha visitado*/
+.mascotas #sabiasque a, a:visited{
+    color:chocolate;
+}
 /*Formato del footer*/
 .mascotas footer {
     clear:both;

@@ -3,45 +3,46 @@
     <head>
         <meta charset="UTF-8">
         <title>Mascotas</title>
-        <link rel="stylesheet" href="css/pruebas.css">
+        <link rel="stylesheet" href="css/style.css">
         <script src="js/script.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat&family=Poppins:wght@300;400&family=Roboto+Condensed&family=Roboto:wght@300;500&display=swap" rel="stylesheet">     </head>
     <body onload="mostrarMascota()">
+        <nav>
+            <ul class="menu nav">
+                <li><a href="index.html">
+                    <img src="images/iconindex.png" alt="Icono Home" />
+                    </a>
+                </li>   
+                <li><a href="quienesSomos.html">Quienes Somos</a>
+                </li>
+                <li><a href="mascotas.html">Nuestras mascotas</a>
+                    <ul class="submenu">
+                        <li><a href="mascotas.html?idMascota=pp-asl1">Aslan</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-ony5">Onyx</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-mar9">Marilyn</a></li>
+                        <li><a href="mascotas.html?idMascota=pp-pup4">Pupok</a></li>
+                    </ul>
+                </li>
+                <li> <a href="formularioAdopcion.html">Formulario de Adopcion</a></li>
+                <li><a href="formularioContacto.html">Cont&aacute;ctanos</a></li>
+                <li><a href="http://www.instagram.com">
+                    <img src="images/iconinsta.png" alt="Icono Instagram">
+                </a></li>
+                <li><a href="http://www.twitter.com">
+                    <img src="images/icontwit.png" alt="Icono Twitter">
+                </a></li>
+                <li><a href="http://www.facebook.com">
+                    <img src="images/iconface.png" alt="Icono Facebook">
+                </a></li>
+            </ul>
+        </nav>
         <header>
-            <nav>
-                <ul class="nav">
-                    <li><a href="index.html">
-                        <img src="images/iconindex.png" alt="Icono Home" />
-                        </a>
-                    </li>   
-                    <li><a href="quienesSomos.html">Quienes Somos</a>
-                    </li>
-                    <li><a href="mascotas.html">Nuestras mascotas</a>
-                        <ul>
-                            <li><a href="mascotas.html?idMascota=pp-asl1">Aslan</a></li>
-                            <li><a href="mascotas.html?idMascota=gg-ony5">Onyx</a></li>
-                            <li><a href="mascotas.html?idMascota=gg-mar9">Marilyn</a></li>
-                            <li><a href="mascotas.html?idMascota=pp-pup4">Pupok</a></li>
-                        </ul>
-                    </li>
-                    <li> <a href="formularioAdopcion.html">Formulario de Adopcion</a></li>
-                    <li><a href="formularioContacto.html">Cont&aacute;ctanos</a></li>
-                    <li><a href="http://www.instagram.com">
-                        <img src="images/iconinsta.png" alt="Icono Instagram">
-                    </a></li>
-                    <li><a href="http://www.twitter.com">
-                        <img src="images/icontwit.png" alt="Icono Twitter">
-                    </a></li>
-                    <li><a href="http://www.facebook.com">
-                        <img src="images/iconface.png" alt="Icono Facebook">
-                    </a></li>
-                </ul>
-            </nav>
+
             <h1>Nuestras Mascotas</h1>
         </header>
         <main>
             <section id="placeholder">
-                <h2>Selecciona una mascota en el panel de la izquierda para ver más información</h2>
+                <p>Selecciona una mascota en el panel de la izquierda para ver más información<p>
             </section>
             <section id="pp-asl1">
                 <input type="radio" name="selectPet" id="checkpp-asl1">
@@ -128,18 +129,17 @@
                 </section>
             </section>
         </main>
-        <aside id="wave">
+        <aside>
             <section id='sabiasque'>
                 <h3>Sabías que ...</h3>
-                <p>... convivir con animales tiene efectos muy positivos sobre la salud de las personas</p>
-                <p id='pregunta'>?</p>
+                <p>... convivir con animales tiene efectos muy positivos sobre la salud de las personas?</p>
                 <a href="https://salud.nih.gov/articulo/el-poder-de-las-mascotas/" target="_blank">Leer más sobre los efectos positivos de las mascotas</a>
             </section>
-            <section id= 'pagValidada'>
+            <!--section id= 'pagValidada'>
                 <p>Página accesible y validada!</p>
                 <p>El código fuente de esta página ha sido validado por <a href="https://validator.w3.org" target="_blank"> w3 validator</a></p>
                 <p>Esta página ha sido valorada como accesible por la herramienta <a href="https://wave.webaim.org" target="_blank">wave</a></p>
-            </section>
+            </section-->
         </aside>
         <footer>
             <p>Footer</p>

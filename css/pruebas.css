@@ -26,6 +26,15 @@ body {
 
 
 /*Formato de la cabecera*/
+
+header{
+    background-image:url("../images/cap9.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Barra de navegación*/
 nav {
     margin:auto;
     width:50em;
@@ -95,7 +104,7 @@ h1 {
 h2 {
     font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
     font-weight: 300;
-    color: #005691;
+    color: #e8f1f5;
     height: 6%;
     padding: 0 10px;
     display: block;
@@ -278,10 +287,17 @@ Estilo específico de index.html
     text-align: center;
     font-size: 4em ;
 }
-.index #text-bienv p{
-    text-align: justify; 
-    margin:15px; 
-    padding: 10px 20% 5px 20%
+.index .contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.index .texto-encima {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #3f6170;
+    transform: translate(-50%, -50%);
 }
 .index #noticias table{
     table-layout: fixed;
@@ -315,3 +331,4 @@ Estilo específico de index.html
     text-align: center;
     padding: 6% 3%;
     line-height: 200%;
+}

@@ -122,13 +122,43 @@ h1 {
 
 /*Formato del header*/
 header {
-    height: 25vh;
+    height: 70vh;
     width: 100vw;
     background-color: #005691;
     display: table-cell;
     vertical-align: bottom;
     clear: both;
     padding-top: 3%;
+
+}
+.index header{
+    background-image: url(../images/bannerstormi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mascotas header{
+    background-image: url(../images/banneraslan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quienesSomos header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/bannergato.jpg);
+}
+
+.formularioContacto header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/bannerhappy.jpg);
+}
+
+.formularioAdopcion header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/bannersnoppy.jpg);
 }
 
 header h1 {
@@ -324,6 +354,96 @@ Estilo específico de index.html
 ---------------------------------------------
 ---------------------------------------------
 */
+.index #banner{
+    height: 30rem;
+    width: 100%;
+
+}
+
+.index #banner h1{
+    
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    color: #e8f1f5;
+    font-variant: small-caps;
+    height: 8%;
+    padding: 10px 10px 10px 10px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4em ;
+}
+
+.index h2{
+        font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+        font-weight: 300;
+        color: #005691;
+        height: 6%;
+        padding: 0 10px;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 3em ;
+}
+
+.index #banner h1 a img{
+    height: 100%;
+    display:block;
+    margin:0 auto;
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    color: #005691;
+    font-variant: small-caps;
+    height: 30rem;
+    padding: 40px 40px 40px 40px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4em ;
+}
+.index .contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.index .texto-encima {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #3f6170;
+    transform: translate(-50%, -50%);
+}
+.index #noticias table{
+    table-layout: fixed;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.index #noticias tr{
+    padding: 20px;
+
+}
+
+.index #noticias th, td
+ {
+    padding: 20px;
+  }
+
+.index aside #webamiga {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    box-sizing: border-box;
+    width: 15%;
+    background: #a3d2ca;
+    position: absolute;
+    right:3%;
+    top: 75%;
+    height: 100vh;
+    border-radius: 10%/5%;
+    text-align: center;
+    padding: 6% 3%;
+    line-height: 200%;
+}
 
 /*
 ---------------------------------------------

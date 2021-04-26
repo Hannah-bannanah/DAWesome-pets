@@ -22,47 +22,35 @@ body {
     padding-top: 0;
 }
 
-/*Formato del header*/
-header {
-    height: 30vh;
-    width: 100vw;
-    top:0;
-    background-color: #005691;
-    display: table-cell;
-    vertical-align: bottom;
-}
-
-header h1 {
-    margin-top: 0vh;
-    vertical-align: bottom;
-    font-variant: small-caps;
-    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
-    padding-left: 5%;
-    color: #f8f1f1;
-    font-size: 4em;
-}
 /*Formato de la barra de navegación*/
 nav {
+    box-sizing: border-box;
     margin-top: 0;
+    padding:0.5% 0;
+    padding-right: 3%;
     top:0;
     position: fixed;
     z-index: 100;
+    width: 100%;
+    background-color: #5eaaa8;
+    opacity: 0.7;
 }
 
-
 nav ul{
-    margin:0;
     width: 100%;
+    margin-top: 0;
+    margin-right: 40px;
 }
 
 /*meu principal*/
 nav .menu { 
+    padding-right:5%;
     list-style:none;
 }
 
 /*Sitúa el menu principal en una barra superior en lugar de un panel vertical*/
 nav .menu > li {
-    float:left;;
+    float:right;
 }
 
 /*Dimensiona los iconos de la barra de navegación*/
@@ -83,16 +71,25 @@ nav .menu li a {
 /*Cambia el color de un elemento de la barra de navegación al situar el cursor sobre él*/
 nav .menu li a:hover {
     background-color:#a3d2ca;
+    opacity: 1;
 }
 
-/*Oculta el submenú de la barra de navegación*/
+/*Oculta el submenú de la barra de navegación
 nav .submenu {
     display:none;
     position:absolute;
     min-width:140px;
     list-style: none;
+}*/
+nav .submenu {
+    display: none;
+    background-color: #92CCDA;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    position: relative;
+    list-style: none;
 }
-
 /*Muestra el submenú de la barra de navegación al pasar el cursor sobre el elemento 
 correspondiente del menú principal*/
 nav .menu li:hover .submenu {
@@ -123,6 +120,25 @@ h1 {
     vertical-align: text-bottom;
 }*/
 
+/*Formato del header*/
+header {
+    height: 25vh;
+    width: 100vw;
+    background-color: #005691;
+    display: table-cell;
+    vertical-align: bottom;
+    clear: both;
+    padding-top: 3%;
+}
+
+header h1 {
+    vertical-align: bottom;
+    font-variant: small-caps;
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    padding-left: 5%;
+    color: #f8f1f1;
+    font-size: 4em;
+}
 /*Formato de h2*/
 h2 {
     font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;

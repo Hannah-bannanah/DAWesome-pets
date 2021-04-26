@@ -28,9 +28,10 @@ body {
 /*Formato de la cabecera*/
 
 header{
-    background-image:url("../images/cap9.png");
+    background-image:url("../images/bannerstormi.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
 }
 
 
@@ -90,21 +91,22 @@ ul, ol {
 /*Formato de h1*/
 h1 {
     font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
-    color: #005691;
+    color: #e8f1f5;
     font-variant: small-caps;
-    height: 8%;
+    height: 8%;0
     padding: 10px 10px 10px 10px;
     display: block;
     margin: 0 auto;
     text-align: center;
     font-size: 4em ;
+
 } 
 
 /*Formato de h2*/
 h2 {
     font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
     font-weight: 300;
-    color: #e8f1f5;
+    color: #005691;
     height: 6%;
     padding: 0 10px;
     display: block;
@@ -272,6 +274,7 @@ Estilo específico de index.html
 .index #banner{
     height: 30rem;
     width: 100%;
+
 }
 .index #banner h1 a img{
     height: 100%;

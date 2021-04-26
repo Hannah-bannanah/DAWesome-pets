@@ -26,103 +26,85 @@ body {
 nav {
     box-sizing: border-box;
     margin-top: 0;
-    padding:0.5% 0;
-    padding-right: 3%;
-    top:0;
+    top: 0;
     position: fixed;
     z-index: 100;
     width: 100%;
-    background-color: #5eaaa8;
-    opacity: 0.7;
+    background-color:rgba(94,170,168, 0.8);
 }
 
-nav ul{
+/*Posiciona las lista del menú de navegación*/
+nav ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
     width: 100%;
-    margin-top: 0;
-    margin-right: 40px;
 }
 
-/*meu principal*/
-nav .menu { 
-    padding-right:5%;
-    list-style:none;
-}
-
-/*Sitúa el menu principal en una barra superior en lugar de un panel vertical*/
+/*menú principal*/
 nav .menu > li {
-    float:right;
+    float: right;
+    height: 100%;
 }
 
 /*Dimensiona los iconos de la barra de navegación*/
 nav .menu li a img {
-    height: 0.75em;
-    width: 0.75em;
+    height: 1em;
+    width: 1em;
 }
 
-/*Formato de cada elemento en la barra de navegación*/
-nav .menu li a {
-    background-color:#5eaaa8;
-    color:#000000;
-    text-decoration:none;
-    padding:10px 12px;
-    display:block;
+/*Formato de los links de la barra de navegación*/
+nav a {
+    box-sizing: content-box;
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    height: 45px;
+    padding: 12px 12px 0 12px;
 }
 
-/*Cambia el color de un elemento de la barra de navegación al situar el cursor sobre él*/
-nav .menu li a:hover {
-    background-color:#a3d2ca;
-    opacity: 1;
-}
-
-/*Oculta el submenú de la barra de navegación
-nav .submenu {
-    display:none;
-    position:absolute;
-    min-width:140px;
-    list-style: none;
-}*/
+/*Oculta el submenú*/
 nav .submenu {
     display: none;
-    background-color: #92CCDA;
+}
+
+/*Posiciona los elementos del submenú*/
+nav .submenu li {
+    display: block;
+    position: relative;
+}
+
+/*Formato de los links del submenú*/
+nav .submenu a {
+    display: block;
+    width: 140px;
+    padding: 12px 12px 0 12px;
+    background-color: rgba(94,170,168, 0.8);
     text-align: center;
-    padding: 10px;
     text-decoration: none;
     position: relative;
-    list-style: none;
-}
-/*Muestra el submenú de la barra de navegación al pasar el cursor sobre el elemento 
-correspondiente del menú principal*/
-nav .menu li:hover .submenu {
-    display:block;
-}
-
-/*
-nav .submenu li {
-    position:relative;
-}*/
-
-/*
-nav .menu li ul li ul {
-    right:-140px;
-    top:0px;
-}*/
-
-/*Formato de h1
-h1 {
-    margin-top:0
-    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
-    color: #005691;
-    font-variant: small-caps;
-    padding: 20px 20px 20px 20px;
-    display: block;
     text-align: center;
-    font-size: 4em;
-    vertical-align: text-bottom;
-}*/
+}
+
+/*Muestra el submenú cuando se pasa el cursor por el elemento del
+menú principal correspondiente*/
+
+nav li:hover ul.submenu {
+    display: block;
+    position: absolute;
+}
+
+/*Cambia el color del links del menú de navegación al pasar el cursor*/
+nav a:hover, nav a.pagina-actual {
+    background-color: #a3d2ca;
+}
+
 
 /*Formato del header*/
 header {
-    height: 70vh;
+    height: 30vh;
     width: 100vw;
     background-color: #005691;
     display: table-cell;
@@ -161,6 +143,7 @@ header {
     background-image: url(../images/bannersnoppy.jpg);
 }
 
+/*Formato del título del header de cada página*/
 header h1 {
     vertical-align: bottom;
     font-variant: small-caps;
@@ -330,7 +313,7 @@ Estilo específico de mascotas.html
 }
 
 /*Eliminar decoración del link del aside cuando se ha visitado*/
-.mascotas #sabiasque a, a:visited{
+.mascotas #sabiasque a, .mascotas #sabiasque a:visited{
     color:chocolate;
 }
 /*Formato del footer*/

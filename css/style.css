@@ -444,6 +444,15 @@ Estilo específico de formularios
 form {
     width: 45%;
     margin:auto;
+    padding:16px;
+}
+
+form label{
+	width: 100%;
+	font-weight:bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+	
 }
 
 form fieldset {
@@ -453,8 +462,48 @@ form fieldset {
 fieldset legend {
     color: #db6400;
     text-align: center;
-    font-;
+    font-size: 30px;
+    margin-top: 25px;
+
 }
+input {
+    width:100%;
+	height:20px;
+	border:1px solid white;
+    background-color:white;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+textarea{
+	width:100%;
+	height:100px;
+	border:1px solid white;
+	border-radius:3px;
+	background-color: white;	
+    margin-top: 5px;
+    margin-bottom: 15px;		
+	/*margin:0px;*/
+	display:inherit;
+}
+
+select{
+    width:25%;
+	height:20px;
+    background-color: white;
+    border: white;
+}
+
+form input[type="submit"]:hover, [type="reset"]:hover{
+	cursor:pointer;
+    color:white;
+    background-color:#5eaaa8;
+}
+
+form input[type="submit"], [type="reset"]{
+	display: inline;
+}
+
 
 /*
 ---------------------------------------------

@@ -26,6 +26,16 @@ body {
 
 
 /*Formato de la cabecera*/
+
+header{
+    background-image:url("../images/bannerstormi.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+
+/* Barra de navegación*/
 nav {
     margin:auto;
     width:50em;
@@ -81,14 +91,15 @@ ul, ol {
 /*Formato de h1*/
 h1 {
     font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
-    color: #005691;
+    color: #e8f1f5;
     font-variant: small-caps;
-    height: 8%;
+    height: 8%;0
     padding: 10px 10px 10px 10px;
     display: block;
     margin: 0 auto;
     text-align: center;
     font-size: 4em ;
+
 } 
 
 /*Formato de h2*/
@@ -263,6 +274,7 @@ Estilo específico de index.html
 .index #banner{
     height: 30rem;
     width: 100%;
+
 }
 .index #banner h1 a img{
     height: 100%;
@@ -278,10 +290,17 @@ Estilo específico de index.html
     text-align: center;
     font-size: 4em ;
 }
-.index #text-bienv p{
-    text-align: justify; 
-    margin:15px; 
-    padding: 10px 20% 5px 20%
+.index .contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.index .texto-encima {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #3f6170;
+    transform: translate(-50%, -50%);
 }
 .index #noticias table{
     table-layout: fixed;
@@ -315,3 +334,4 @@ Estilo específico de index.html
     text-align: center;
     padding: 6% 3%;
     line-height: 200%;
+}

@@ -18,78 +18,140 @@ body {
     background-color: #f8f1f1;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: #2f2f6a;
+    margin:0;
+    padding-top: 0;
 }
 
-/*Formato de la cabecera*/
-header {
-    margin:auto;
-    width:50em;
+/*Formato de la barra de navegación*/
+nav {
+    box-sizing: border-box;
+    margin-top: 0;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color:rgba(94,170,168, 0.8);
 }
 
-
-.nav ul, ol {
-    list-style:none;
+/*Posiciona las lista del menú de navegación*/
+nav ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
 }
 
-.nav > li {
-    float:left;
+/*menú principal*/
+nav .menu > li {
+    float: right;
+    height: 100%;
 }
 
-.nav li a img {
-    height: 0.75em;
-    width: 0.75em;
+/*Dimensiona los iconos de la barra de navegación*/
+nav .menu li a img {
+    height: 1em;
+    width: 1em;
 }
 
-.nav li a {
-    background-color:#5eaaa8;
-    color:#000000;
-    text-decoration:none;
-    padding:10px 12px;
-    display:block;
-}
-
-.nav li a:hover {
-    background-color:#a3d2ca;
-}
-
-.nav li ul {
-    display:none;
-    position:absolute;
-    min-width:140px;
-}
-
-.nav li:hover > ul {
-    display:block;
-}
-
-.nav li ul li {
-    position:relative;
-}
-
-.nav li ul li ul {
-    right:-140px;
-    top:0px;
-}
-
-/*Formato del título en la cabecera
-header h1 {
-    margin-top: 5%;
-    text-align: center;
-}*/
-
-/*Formato de h1*/
-h1 {
-    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
-    color: #005691;
-    font-variant: small-caps;
-    height: 8%;
-    padding: 20px 20px 20px 20px;
+/*Formato de los links de la barra de navegación*/
+nav a {
+    box-sizing: content-box;
     display: block;
-    margin: 0 auto;
+    color: black;
+    text-decoration: none;
     text-align: center;
-    font-size: 4em ;
-} 
+    height: 45px;
+    padding: 12px 12px 0 12px;
+}
 
+/*Oculta el submenú*/
+nav .submenu {
+    display: none;
+}
+
+/*Posiciona los elementos del submenú*/
+nav .submenu li {
+    display: block;
+    position: relative;
+}
+
+/*Formato de los links del submenú*/
+nav .submenu a {
+    display: block;
+    width: 140px;
+    padding: 12px 12px 0 12px;
+    background-color: rgba(94,170,168, 0.8);
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+}
+
+/*Muestra el submenú cuando se pasa el cursor por el elemento del
+menú principal correspondiente*/
+
+nav li:hover ul.submenu {
+    display: block;
+    position: absolute;
+}
+
+/*Cambia el color del links del menú de navegación al pasar el cursor*/
+nav a:hover, nav a.pagina-actual {
+    background-color: #a3d2ca;
+}
+
+
+/*Formato del header*/
+header {
+    height: 30vh;
+    width: 100vw;
+    background-color: #005691;
+    display: table-cell;
+    vertical-align: bottom;
+    clear: both;
+    padding-top: 3%;
+
+}
+.index header{
+    background-image: url(../images/bannerstormi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mascotas header{
+    background-image: url(../images/banneraslan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quienesSomos header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/bannergato.jpg);
+}
+
+.formularioContacto header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/bannerhappy.jpg);
+}
+
+.formularioAdopcion header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/bannersnoppy.jpg);
+}
+
+/*Formato del título del header de cada página*/
+header h1 {
+    vertical-align: bottom;
+    font-variant: small-caps;
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    padding-left: 5%;
+    color: #f8f1f1;
+    font-size: 4em;
+}
 /*Formato de h2*/
 h2 {
     font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
@@ -112,25 +174,36 @@ h3 {
     padding: 5px 5px 5px 5px;
     display: block;
     margin-bottom: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
     text-align: left;
     font-size: 2em ;
 }
 
 /*Formato del footer*/
 footer {
-    background-color:#5eaaa8;
+    background-color:rgba(94,170,168, 0.8);
     clear:both;
     width:100%;
     height:150px;
     text-align: left; 
-    margin-left: 20px !important;
+    margin-left: 0px !important;
     margin-top: 10px; 
-    font-size: small;"
+    font-size: small;
+    line-height: 25px;
+    opacity: 1;
 }
-.redes li a img {
-    height: 0.75em;
-    width: 0.75em;
+
+footer #contacto {
+    margin-top: 20px;
+    margin-left: 20px;
 }
+
+footer #redes li a img {
+    height: 2em;
+    width: 2em;
+}
+
 
 /*
 ---------------------------------------------
@@ -141,6 +214,11 @@ Estilo específico de mascotas.html
 */
 
 /*Formato de la zona de artículos cuando ningún animal ha sido seleccionado*/
+.mascotas main{
+    margin-left: 7%;
+    align-items: center;
+}
+
 .mascotas #placeholder {
     width: 30%;
     display: inline-block;
@@ -149,12 +227,21 @@ Estilo específico de mascotas.html
     margin-top: 10%;
     position:absolute;
     float: left;
+    max-height: 30vh;
+    overflow: scroll;
+}
+
+.mascotas #placeholder p {
+    font-size: 2em;
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-weight: 400;
+    color: #005691;
 }
 
 /*Formato de las secciones sobre cada animal*/
 .mascotas .petInfo {
     margin-top: 2%;
-    margin-left: 3%;
+    margin-left: 10%;
     padding:1%;
     width: 50%;
     text-align: center;
@@ -171,11 +258,13 @@ Estilo específico de mascotas.html
     width: 100%;
     padding: 3%;
     display: inline-block;
-    border: 3px solid #2f2f6a;
-    border-radius: 5%/10%;
+    border: 3px solid #5eaaa8;
+    /*border-radius: 5%/10%;*/
     text-align: left;
-    background-color: #f8f1f1;
-    box-shadow: 0 0 5px 8px #2f2f6a;
+    background-color: #e7f3f1;
+    max-height: 50vh;
+    overflow: scroll;
+    /*box-shadow: 0 0 5px 8px #a3d2ca;*/
 }
 
 /*Formato de las imágenes dentro de cada artículo*/
@@ -185,6 +274,10 @@ Estilo específico de mascotas.html
     float: left;
 }
 
+/*Alineación del título dentro de cada artículo*/
+.mascotas article h2 {
+    text-align: left;
+}
 /*Formato de la bio del animal dentro de cada artículo*/
 .mascotas .bio {
     width: 55%;
@@ -211,6 +304,39 @@ Estilo específico de mascotas.html
     background-color: #2f2f6a;
     color: #f8f1f1;
     border-radius: 5%/10%;
+    font-weight: bold;
+    font-size: 1.25em;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+/*Animación del botón de adopción*/
+@keyframes example {
+    0% {
+        height: 100%;
+        rotate: 0;   
+    }
+    25% {
+        height: 105%;
+        rotate: 30deg; 
+    }
+    50% {
+        height: 110%;
+        rotate: 0; 
+    }
+    50% {
+        height: 105%;
+        rotate: -30deg; 
+    }
+    100% {
+        height: 100%;
+        rotate: 0deg; 
+    }
+}
+/*Formato del botón de adopción de cada cuando se pasa el cursor sobre él*/
+.mascotas .quieroAdoptar:hover {
+    cursor: pointer;
+    animation: example 1s ease-in-out;
 }
 
 /*Formato de las imágenes dentro del panel de selección*/
@@ -236,38 +362,34 @@ Estilo específico de mascotas.html
 
 /*Añade sombra a la imagen seleccionada*/
 .mascotas :checked + label>img{
-    box-shadow: 0 0 5px 8px #2f2f6a;
+    box-shadow: 0 0 3px 6px #5eaaa8;
 }
 
-/*Formato del aside*/
+/*Posicionamiento del aside*/
 .mascotas aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /*distribuye el texto verticalemente*/
-    box-sizing: border-box;
-    width: 15%;
-    background: #e8f1f5;
-    position: absolute;
-    right:3%;
-    /*top: 45%;*/
-    height: 100vh;
-    border-radius: 10%/5%;
+    float: right;
+    width: 40%;
+    margin-right: 20%;
     text-align: center;
-    padding: 6% 3%;
-    line-height: 200%;
 }
 
+/*Formato del título del aside*/
 .mascotas #sabiasque h3 {
     font-family: 'Poppins', 'Montserrat', Helvetica, sans-serif;
     color: #005691;
-    font-size: 20px;
+    font-size: 1.5em;
 }
 
+/*Formato del texto del aside*/
 .mascotas #sabiasque p {
     color: #005691;
     font-weight: 400;
 }
 
+/*Eliminar decoración del link del aside cuando se ha visitado*/
+.mascotas #sabiasque a, .mascotas #sabiasque a:visited{
+    color:chocolate;
+}
 /*Formato del footer*/
 .mascotas footer {
     clear:both;
@@ -289,6 +411,94 @@ Estilo específico de index.html
 ---------------------------------------------
 ---------------------------------------------
 */
+.index header {
+    vertical-align: bottom;
+    font-variant: small-caps;
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    padding-left: 5%;
+    color: #f8f1f1;
+    font-size: 4em;
+}
+
+.index #banner h1{
+    
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    color: #e8f1f5;
+    font-variant: small-caps;
+    height: 8%;
+    padding: 10px 10px 10px 10px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4em ;
+}
+
+.index h2{
+        font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+        font-weight: 300;
+        color: #005691;
+        height: 6%;
+        padding: 100px 30px 100px 30px;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 3em ;
+}
+
+.index #banner h1 a img{
+    height: 100%;
+    display:block;
+    margin:0 auto;
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    color: #005691;
+    font-variant: small-caps;
+    height: 30rem;
+    padding: 40px 40px 40px 40px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4em ;
+}
+.index #text-bnv p{
+    padding: 10px 20% 10px 20%;
+    text-align: justify;
+}
+
+}
+.index #noticias table{
+    table-layout: fixed;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.index #noticias tr{
+    padding: 20px;
+
+}
+
+.index #noticias th, td
+ {
+    padding: 20px;
+  }
+
+.index aside #webamiga {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    box-sizing: border-box;
+    width: 15%;
+    position: absolute;
+    background: #a3d2ca;
+    position: absolute;
+    right:3%;
+    top: 700px;
+    height: 70vh;
+    border-radius: 10%/5%;
+    text-align: center;
+    padding: 6% 3%;
+    line-height: 200%;
+}
 
 /*
 ---------------------------------------------
@@ -300,6 +510,15 @@ Estilo específico de formularios
 form {
     width: 45%;
     margin:auto;
+    padding:16px;
+}
+
+form label{
+	width: 100%;
+	font-weight:bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+	
 }
 
 form fieldset {
@@ -309,8 +528,48 @@ form fieldset {
 fieldset legend {
     color: #db6400;
     text-align: center;
-    font-;
+    font-size: 30px;
+    margin-top: 25px;
+
 }
+input {
+    width:100%;
+	height:20px;
+	border:1px solid white;
+    background-color:white;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+textarea{
+	width:100%;
+	height:100px;
+	border:1px solid white;
+	border-radius:3px;
+	background-color: white;	
+    margin-top: 5px;
+    margin-bottom: 15px;		
+	/*margin:0px;*/
+	display:inherit;
+}
+
+select{
+    width:25%;
+	height:20px;
+    background-color: white;
+    border: white;
+}
+
+form input[type="submit"]:hover, [type="reset"]:hover{
+	cursor:pointer;
+    color:white;
+    background-color:#5eaaa8;
+}
+
+form input[type="submit"], [type="reset"]{
+	display: inline;
+}
+
 
 /*
 ---------------------------------------------

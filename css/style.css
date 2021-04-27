@@ -165,13 +165,46 @@ h2 {
     font-size: 3em ;
 }
 
-/*footer{
-    position:static;
-    left:0px;
-    bottom:0px;
-    height:30px;
-    width:100%;
+/*Formato de h3*/
+h3 {
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-weight: 200;
+    color: #005691;
+    height: 4%;
+    padding: 5px 5px 5px 5px;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 2em ;
 }
+
+/*Formato del footer*/
+footer {
+    background-color:rgba(94,170,168, 0.8);
+    clear:both;
+    width:100%;
+    height:150px;
+    text-align: left; 
+    margin-left: 0px !important;
+    margin-top: 10px; 
+    font-size: small;
+    line-height: 25px;
+    opacity: 1;
+}
+
+footer #contacto {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+footer #redes li a img {
+    height: 2em;
+    width: 2em;
+}
+
+
 /*
 ---------------------------------------------
 ---------------------------------------------
@@ -563,3 +596,41 @@ Estilo específico de formularioContacto.html
     
 }
 */
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de quienesSomos.html
+---------------------------------------------
+---------------------------------------------
+*/
+
+/*Bloque de texto*/
+.quienesSomos #quienesSomos {
+    margin-right:20px;
+    margin-left:20px;
+    line-height: 25px;
+    width:50%;
+    height:40%;
+    float: left;
+    overflow:auto;
+    margin-bottom:10px;
+    text-align: justify;
+    
+}
+
+/*Vídeo. Solo hay que separarlo del título principal. 
+Las dimensiones vienen por defecto en el enlace que proporciona Youtube.*/
+.quienesSomos #video {
+    margin-top: 20px;
+    margin-bottom:10px;
+    float: left;
+    overflow: auto;
+}
+
+/*Aside de publicidad*/
+.quienesSomos #publicidad {
+    float: left;
+}
+
+    

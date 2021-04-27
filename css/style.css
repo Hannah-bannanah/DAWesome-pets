@@ -131,13 +131,13 @@ header {
     background-image: url(../images/bannergato.jpg);
 }
 
-.formularioContacto header{
+.formContacto header{
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../images/bannerhappy.jpg);
 }
 
-.formularioAdopcion header{
+.formAdopcion header{
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../images/bannersnoppy.jpg);

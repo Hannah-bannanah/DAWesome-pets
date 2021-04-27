@@ -7,22 +7,31 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat&family=Poppins:wght@300;400&family=Roboto+Condensed&family=Roboto:wght@300;500&display=swap" rel="stylesheet">     </head>
 
     </head>
-    <body>
+    <body">
+        <nav>
+            <ul class="menu nav"> 
+                <li><a href="formularioContacto.html" class="pagina-actual">Cont&aacute;ctanos</a></li>            
+                <li> <a href="formularioAdopcion.html">Formulario de Adopcion</a></li>
+                <li><a href="mascotas.html">Nuestras mascotas</a>
+                    <ul class="submenu">
+                        <li><a href="mascotas.html?idMascota=pp-asl1">Aslan</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-ony5">Onyx</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-mar9">Marilyn</a></li>
+                        <li><a href="mascotas.html?idMascota=pp-pup4">Pupok</a></li>
+                    </ul>
+                </li>
+                <li><a href="quienesSomos.html">Quienes Somos</a>
+                </li>
+                <li><a href="index.html">
+                    <img src="images/iconindex.png" alt="Icono Home" />
+                    </a>
+                </li>   
+            </ul>
+        </nav>
         <header>
-            <!--<nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="quienesSomos.html">Quienes somos</a></li>
-                    <li><a href="mascotas.html">Nuestras mascotas</a></li>
-                    <li><a href="mascotas.html">Nuestras mascotas</a></li>
-                    <li><a href="#">Formularios</a></li>
-                        <ul>
-                            <li><a href="formularioAdopcion.html">Formulario de adopcion</a></li>
-                            <li><a href="#">Contáctanos</a></li>
-                        </ul>
-                </ul>
-            </nav> -->
-        <h1>Contáctanos</h1>
+            <h1>Contáctanos</h1>
+        </header>
+        
         </header>
 
         <main>
@@ -38,7 +47,7 @@
                     <input type="email" id="email" name="user_email" required/><br>
                     <label for="prov">Provincia</label>
                     <select id="prov" name="prov">
-                        <option value="vacio">Elije una provincia</option>
+                        <option value="vacio">Elige una provincia</option>
                         <option value="Aco">A Coruña</option>
                         <option value="Ala">Álava</option>
                         <option value="Alb">Albacete</option>

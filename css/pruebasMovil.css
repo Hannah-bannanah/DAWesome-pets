@@ -204,7 +204,6 @@ footer #redes li a img {
     width: 2em;
 }
 
-
 /*
 ---------------------------------------------
 ---------------------------------------------
@@ -214,13 +213,8 @@ Estilo específico de mascotas.html
 */
 
 /*Formato de la zona de artículos cuando ningún animal ha sido seleccionado*/
-.mascotas main{
-    margin-left: 7%;
-    align-items: center;
-}
-
 .mascotas #placeholder {
-    width: 30%;
+    width: 50%;
     display: inline-block;
     margin-left: 30%;
     text-align: center;
@@ -343,7 +337,7 @@ Estilo específico de mascotas.html
 .mascotas img.seleccion {
     width: 15%;
     display: block;
-    margin: 2%;
+    margin: 3%;
     float: left;
     clear: left;
 }
@@ -394,6 +388,43 @@ Estilo específico de mascotas.html
 .mascotas footer {
     clear:both;
 }
+
+/*Responsive design*/
+@media screen and (min-width: 2000px){
+    .mascotas main{
+        margin-left: 7%;
+        align-items: center;
+    }
+
+    .mascotas img.seleccion {
+        width: 15%;
+        display: block;
+        margin: 2%;
+        float: left;
+        clear: left;
+    }
+ }
+ 
+ @media screen and (max-width: 700px){
+
+    .mascotas .seleccion, .mascotas #placeholder{
+        display: none;
+    }
+    
+    /*
+    .mascotas main{
+        width: 95%;
+    }*/  
+    
+    .mascotas main .mascotas section, .mascotas .petInfo, .masctoas article, .mascotas article > * {
+        display: block;
+        width: 100%;
+        clear: both;
+        margin:0;
+    }
+
+ }
+
 
 /*
 ---------------------------------------------
@@ -561,7 +592,18 @@ form input[type="submit"], [type="reset"]{
 	display: inline;
 }
 
-
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de formularioAdopcion.html
+---------------------------------------------
+---------------------------------------------
+*/
+@media screen and (max-width: 700px){
+    .formAdopcion fieldset > *{
+       width:100%;
+    }
+ }
 /*
 ---------------------------------------------
 ---------------------------------------------

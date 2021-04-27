@@ -131,7 +131,7 @@ header {
     background-image: url(../images/bannergato.jpg);
 }
 
-.formularioContacto header{
+.formContacto header{
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../images/bannerhappy.jpg);
@@ -470,7 +470,7 @@ Estilo específico de index.html
 /*
 ---------------------------------------------
 ---------------------------------------------
-Estilo específico de formularios
+Estilo genérico de formularios
 ---------------------------------------------
 ---------------------------------------------
 */
@@ -497,6 +497,7 @@ fieldset legend {
     text-align: center;
     font-size: 30px;
     margin-top: 25px;
+    margin-bottom: 15px;
 
 }
 input {
@@ -527,15 +528,21 @@ select{
     border: white;
 }
 
+form input[type="submit"], [type="reset"]{
+	font-size: 15px;
+    height:30px;
+    width:125px;
+    display:inline;
+
+}
+
 form input[type="submit"]:hover, [type="reset"]:hover{
 	cursor:pointer;
     color:white;
     background-color:#5eaaa8;
+    Border:#5eaaa8;
 }
 
-form input[type="submit"], [type="reset"]{
-	display: inline;
-}
 
 
 /*
@@ -546,20 +553,32 @@ Estilo específico de formularioContacto.html
 ---------------------------------------------
 */
 
-/*Estructura del formulario*/
-/*.formContacto form {
-    width: 45%;
-    margin:auto;
-}
 .formContacto #introForm {
     text-align: center;
+    margin: 50px;
 }
 
-.formContacto fieldset {
-    border: none;
+.formContacto #tlf {
+    width:35%;
+    margin-left: 1em;
 }
 
-.formContacto legend {
-    
+.formContacto #email {
+    width:35%;
+    margin-left: 1em;
 }
+<<<<<<< HEAD
 */
+=======
+
+
+.formContacto #prov {
+    width:40%
+}
+
+
+.formContacto #loc {
+    width:40%
+}
+
+>>>>>>> Pilar

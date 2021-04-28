@@ -185,23 +185,30 @@ footer {
     background-color:rgba(94,170,168, 0.8);
     clear:both;
     width:100%;
-    height:150px;
+    height:20%;
     text-align: left; 
-    margin-left: 0px !important;
-    margin-top: 10px; 
+    margin-left: 0% !important;
+    margin-top: 10%; 
     font-size: small;
     line-height: 25px;
-    opacity: 1;
 }
 
 footer #contacto {
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 0%;
+    margin-left: 1%;
 }
 
-footer #redes li a img {
-    height: 2em;
-    width: 2em;
+footer #redes {
+    list-style: none;
+    margin-right: 0%;
+    margin-top: 0%;
+    float: right;
+}
+
+footer #redes a img {
+    font-size: 15px;
+    height: 20px;
+    width: 22px;
 }
 
 
@@ -611,32 +618,62 @@ Estilo específico de quienesSomos.html
 ---------------------------------------------
 */
 
+.quienesSomos main{
+    align-items: center;
+}
+
 /*Bloque de texto*/
 .quienesSomos #quienesSomos {
-    margin-right:20px;
-    margin-left:20px;
+    margin-right:5%;
+    margin-left:2%;
     line-height: 25px;
-    width:50%;
+    width:45%;
     height:40%;
     float: left;
     overflow:auto;
-    margin-bottom:10px;
+    margin-bottom:2%;
     text-align: justify;
+    display: inline-block;
     
 }
 
 /*Vídeo. Solo hay que separarlo del título principal. 
 Las dimensiones vienen por defecto en el enlace que proporciona Youtube.*/
-.quienesSomos #video {
-    margin-top: 20px;
-    margin-bottom:10px;
+.quienesSomos #video iframe{
+    margin-top: 2%;
+    margin-bottom:2%;
     float: left;
-    overflow: auto;
+    width: 45vw; 
+    height: 50vh; 
 }
 
-/*Aside de publicidad*/
-.quienesSomos #publicidad {
-    float: left;
+/*Aside. Publicidad*/
+.quienesSomos #publititulo {
+    position:relative;
+    float:inherit;
+    margin-left: 5%;
 }
 
+<<<<<<< HEAD
+/*Aside. Publicidad: imagen 1*/
+.quienesSomos #publicidad #train {
+    position:relative;
+    float:left;
+    margin-left: 5%;
+    width: 15%; 
+    height: 25%;
+}
+
+/*Aside. Publicidad: imagen 2*/
+.quienesSomos #publicidad #vet {
+    position:relative;
+    float:left;
+    margin-left: 5%;
+    width: 20%; 
+    height: 10%;
+}
+
+
+=======
    
+>>>>>>> 07bb3e1910f7bae6719e8427ff76da424a9fa34c

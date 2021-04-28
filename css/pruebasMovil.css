@@ -185,32 +185,24 @@ footer {
     background-color:rgba(94,170,168, 0.8);
     clear:both;
     width:100%;
-    height:20%;
+    height:150px;
     text-align: left; 
-    margin-left: 0% !important;
-    margin-top: 10%; 
+    margin-left: 0px !important;
+    margin-top: 10px; 
     font-size: small;
     line-height: 25px;
+    opacity: 1;
 }
 
 footer #contacto {
-    margin-top: 0%;
-    margin-left: 1%;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
-footer #redes {
-    list-style: none;
-    margin-right: 0%;
-    margin-top: 0%;
-    float: right;
+footer #redes li a img {
+    height: 2em;
+    width: 2em;
 }
-
-footer #redes a img {
-    font-size: 15px;
-    height: 20px;
-    width: 22px;
-}
-
 
 /*
 ---------------------------------------------
@@ -221,13 +213,8 @@ Estilo específico de mascotas.html
 */
 
 /*Formato de la zona de artículos cuando ningún animal ha sido seleccionado*/
-.mascotas main{
-    margin-left: 7%;
-    align-items: center;
-}
-
 .mascotas #placeholder {
-    width: 30%;
+    width: 50%;
     display: inline-block;
     margin-left: 30%;
     text-align: center;
@@ -350,7 +337,7 @@ Estilo específico de mascotas.html
 .mascotas img.seleccion {
     width: 15%;
     display: block;
-    margin: 2%;
+    margin: 3%;
     float: left;
     clear: left;
 }
@@ -401,6 +388,43 @@ Estilo específico de mascotas.html
 .mascotas footer {
     clear:both;
 }
+
+/*Responsive design*/
+@media screen and (min-width: 2000px){
+    .mascotas main{
+        margin-left: 7%;
+        align-items: center;
+    }
+
+    .mascotas img.seleccion {
+        width: 15%;
+        display: block;
+        margin: 2%;
+        float: left;
+        clear: left;
+    }
+ }
+ 
+ @media screen and (max-width: 700px){
+
+    .mascotas .seleccion, .mascotas #placeholder{
+        display: none;
+    }
+    
+    /*
+    .mascotas main{
+        width: 95%;
+    }*/  
+    
+    .mascotas main .mascotas section, .mascotas .petInfo, .masctoas article, .mascotas article > * {
+        display: block;
+        width: 100%;
+        clear: both;
+        margin:0;
+    }
+
+ }
+
 
 /*
 ---------------------------------------------
@@ -501,7 +525,7 @@ Estilo específico de index.html
 /*
 ---------------------------------------------
 ---------------------------------------------
-Estilo genérico de formularios
+Estilo específico de formularios
 ---------------------------------------------
 ---------------------------------------------
 */
@@ -528,7 +552,6 @@ fieldset legend {
     text-align: center;
     font-size: 30px;
     margin-top: 25px;
-    margin-bottom: 15px;
 
 }
 input {
@@ -559,23 +582,28 @@ select{
     border: white;
 }
 
-form input[type="submit"], [type="reset"]{
-	font-size: 15px;
-    height:30px;
-    width:125px;
-    display:inline;
-
-}
-
 form input[type="submit"]:hover, [type="reset"]:hover{
 	cursor:pointer;
     color:white;
     background-color:#5eaaa8;
-    Border:#5eaaa8;
 }
 
+form input[type="submit"], [type="reset"]{
+	display: inline;
+}
 
-
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de formularioAdopcion.html
+---------------------------------------------
+---------------------------------------------
+*/
+@media screen and (max-width: 700px){
+    .formAdopcion fieldset > *{
+       width:100%;
+    }
+ }
 /*
 ---------------------------------------------
 ---------------------------------------------
@@ -584,31 +612,23 @@ Estilo específico de formularioContacto.html
 ---------------------------------------------
 */
 
+/*Estructura del formulario*/
+/*.formContacto form {
+    width: 45%;
+    margin:auto;
+}
 .formContacto #introForm {
     text-align: center;
-    margin: 50px;
 }
 
-.formContacto #tlf {
-    width:35%;
-    margin-left: 1em;
+.formContacto fieldset {
+    border: none;
 }
 
-.formContacto #email {
-    width:35%;
-    margin-left: 1em;
+.formContacto legend {
+    
 }
-
-
-.formContacto #prov {
-    width:40%
-}
-
-
-.formContacto #loc {
-    width:40%
-}
-
+*/
 
 /*
 ---------------------------------------------
@@ -618,62 +638,32 @@ Estilo específico de quienesSomos.html
 ---------------------------------------------
 */
 
-.quienesSomos main{
-    align-items: center;
-}
-
 /*Bloque de texto*/
 .quienesSomos #quienesSomos {
-    margin-right:5%;
-    margin-left:2%;
+    margin-right:20px;
+    margin-left:20px;
     line-height: 25px;
-    width:45%;
+    width:50%;
     height:40%;
     float: left;
     overflow:auto;
-    margin-bottom:2%;
+    margin-bottom:10px;
     text-align: justify;
-    display: inline-block;
     
 }
 
 /*Vídeo. Solo hay que separarlo del título principal. 
 Las dimensiones vienen por defecto en el enlace que proporciona Youtube.*/
-.quienesSomos #video iframe{
-    margin-top: 2%;
-    margin-bottom:2%;
+.quienesSomos #video {
+    margin-top: 20px;
+    margin-bottom:10px;
     float: left;
-    width: 45vw; 
-    height: 50vh; 
+    overflow: auto;
 }
 
-/*Aside. Publicidad*/
-.quienesSomos #publititulo {
-    position:relative;
-    float:inherit;
-    margin-left: 5%;
+/*Aside de publicidad*/
+.quienesSomos #publicidad {
+    float: left;
 }
 
-<<<<<<< HEAD
-/*Aside. Publicidad: imagen 1*/
-.quienesSomos #publicidad #train {
-    position:relative;
-    float:left;
-    margin-left: 5%;
-    width: 15%; 
-    height: 25%;
-}
-
-/*Aside. Publicidad: imagen 2*/
-.quienesSomos #publicidad #vet {
-    position:relative;
-    float:left;
-    margin-left: 5%;
-    width: 20%; 
-    height: 10%;
-}
-
-
-=======
-   
->>>>>>> 07bb3e1910f7bae6719e8427ff76da424a9fa34c
+    

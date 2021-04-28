@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="formAdop">
+<html lang="en" class="formAdopcion">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width"/>
         <title>Formulario de Adopcion</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/pruebasMovil.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat&family=Poppins:wght@300;400&family=Roboto+Condensed&family=Roboto:wght@300;500&display=swap" rel="stylesheet">     </head>
         <script src="js/script.js"></script>
     </head>
@@ -46,7 +47,7 @@
                     <legend>Datos sobre la mascota deseada</legend>
                     <input type="checkbox" name="mascotaElegida" id="mascotaElegida" value=true onclick="toggleDatosMascota()"> <!--Si el usuario ya ha elegido una mascota concreta, ciertos campos del formulario se deshabilitarán-->
                     <label for="mascotaElegida">Ya he elegido la mascota que quiero adoptar (introducir ID)</label><br>
-                    <input type="text" name="idMascota" id="idMascota" placeholder="xx-xxxx" pattern="[gpo]{2}-[a-z0-9]{4}">
+                    <input type="text" name="idMascota" id="idMascota" placeholder="xx-xxxx" pattern="[gpo]{2}-[a-z0-9]{4}" disabled>
                     <label for="idMascota">Puedes encontrar el ID de la mascota en su ficha en <a href="mascotas.html">Nuestras mascotas</a></label><br>
                     <label for="especie">Especie</label>
                     <select name="especie" id="especie" required class="eliminar-seleccion">

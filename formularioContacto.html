@@ -36,73 +36,84 @@
 
         <main>
             <p id="introForm">Rellena este formulario y nos pondremos en contacto lo antes posible.</p>
-            <form class="contacto" action="#" method="post"> <!--Acción no se ha escogido acción-->
+            <form class="contacto" action="" method="post"> <!--Acción no se ha escogido acción-->
             <fieldset>
                 <legend>Datos de contacto</legend>
                     <label for="name">Nombre y apellidos</label>
                     <input type="text" id="name" name="user_name" required/><br>
-                    <label for="tlf">Teléfono</label>
-                    <input type="tel" id="tlf" name="user_telefono" required/>
-                    <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" name="user_email" required/><br>
-                    <label for="prov">Provincia</label>
-                    <select id="prov" name="prov">
-                        <option value="vacio">Elige una provincia</option>
-                        <option value="Aco">A Coruña</option>
-                        <option value="Ala">Álava</option>
-                        <option value="Alb">Albacete</option>
-                        <option value="Ali">Alicante</option>
-                        <option value="Alm">Almería</option>
-                        <option value="Ast">Asturias</option>
-                        <option value="Ávi">Ávila</option>
-                        <option value="Bad">Badajoz</option>
-                        <option value="Bal">Baleares</option>
-                        <option value="Bar">Barcelona</option>
-                        <option value="Bur">Burgos</option>
-                        <option value="Các">Cáceres</option>
-                        <option value="Cád">Cádiz</option>
-                        <option value="Can">Cantabria</option>
-                        <option value="Cas">Castellón</option>
-                        <option value="Ceu">Ceuta</option>
-                        <option value="Ciu">Ciudad Real</option>
-                        <option value="Cór">Córdoba</option>
-                        <option value="Cue">Cuenca</option>
-                        <option value="Gip">Gipuzkoa</option>
-                        <option value="Gir">Girona</option>
-                        <option value="Gra">Granada</option>
-                        <option value="Gua">Guadalajara</option>
-                        <option value="Hue">Huelva</option>
-                        <option value="Hue">Huesca</option>
-                        <option value="Jae">Jaén</option>
-                        <option value="Lar">La Rioja</option>
-                        <option value="Las">Las Palmas</option>
-                        <option value="Leo">León</option>
-                        <option value="Ler">Lérida</option>
-                        <option value="Lug">Lugo</option>
-                        <option value="Mad">Madrid</option>
-                        <option value="Mál">Málaga</option>
-                        <option value="Mel">Melilla</option>
-                        <option value="Mur">Murcia</option>
-                        <option value="Nav">Navarra</option>
-                        <option value="Our">Ourense</option>
-                        <option value="Pal">Palencia</option>
-                        <option value="Pon">Pontevedra</option>
-                        <option value="Sal">Salamanca</option>
-                        <option value="San">Santa Cruz de Tenerife</option>
-                        <option value="Seg">Segovia</option>
-                        <option value="Sev">Sevilla</option>
-                        <option value="Sor">Soria</option>
-                        <option value="Tar">Tarragona</option>
-                        <option value="Ter">Teruel</option>
-                        <option value="Tol">Toledo</option>
-                        <option value="Vln">Valencia</option>
-                        <option value="Vll">Valladolid</option>
-                        <option value="Viz">Vizcaya</option>
-                        <option value="Zam">Zamora</option>
-                        <option value="Zar">Zaragoza</option>
-                    </select>
-                    <label for="loc">Localidad</label>
-                    <input type="text" id="loc" name="user_loc"><br>
+                    <section class="columna">
+                        <label for="tlf">Teléfono</label>
+                        <input type="tel" id="tlf" name="user_telefono" required/>
+                    </section>
+                    <section class="columna dcha">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="user_email" required/><br>
+                    </section>   
+                    
+                    <section class="columna">
+                        <label for="prov">Provincia</label><br>
+                        <select id="prov" name="prov">
+                            <option value="vacio">Elige una provincia</option>
+                            <option value="Aco">A Coruña</option>
+                            <option value="Ala">Álava</option>
+                            <option value="Alb">Albacete</option>
+                            <option value="Ali">Alicante</option>
+                            <option value="Alm">Almería</option>
+                            <option value="Ast">Asturias</option>
+                            <option value="Ávi">Ávila</option>
+                            <option value="Bad">Badajoz</option>
+                            <option value="Bal">Baleares</option>
+                            <option value="Bar">Barcelona</option>
+                            <option value="Bur">Burgos</option>
+                            <option value="Các">Cáceres</option>
+                            <option value="Cád">Cádiz</option>
+                            <option value="Can">Cantabria</option>
+                            <option value="Cas">Castellón</option>
+                            <option value="Ceu">Ceuta</option>
+                            <option value="Ciu">Ciudad Real</option>
+                            <option value="Cór">Córdoba</option>
+                            <option value="Cue">Cuenca</option>
+                            <option value="Gip">Gipuzkoa</option>
+                            <option value="Gir">Girona</option>
+                            <option value="Gra">Granada</option>
+                            <option value="Gua">Guadalajara</option>
+                            <option value="Hue">Huelva</option>
+                            <option value="Hue">Huesca</option>
+                            <option value="Jae">Jaén</option>
+                            <option value="Lar">La Rioja</option>
+                            <option value="Las">Las Palmas</option>
+                            <option value="Leo">León</option>
+                            <option value="Ler">Lérida</option>
+                            <option value="Lug">Lugo</option>
+                            <option value="Mad">Madrid</option>
+                            <option value="Mál">Málaga</option>
+                            <option value="Mel">Melilla</option>
+                            <option value="Mur">Murcia</option>
+                            <option value="Nav">Navarra</option>
+                            <option value="Our">Ourense</option>
+                            <option value="Pal">Palencia</option>
+                            <option value="Pon">Pontevedra</option>
+                            <option value="Sal">Salamanca</option>
+                            <option value="San">Santa Cruz de Tenerife</option>
+                            <option value="Seg">Segovia</option>
+                            <option value="Sev">Sevilla</option>
+                            <option value="Sor">Soria</option>
+                            <option value="Tar">Tarragona</option>
+                            <option value="Ter">Teruel</option>
+                            <option value="Tol">Toledo</option>
+                            <option value="Vln">Valencia</option>
+                            <option value="Vll">Valladolid</option>
+                            <option value="Viz">Vizcaya</option>
+                            <option value="Zam">Zamora</option>
+                            <option value="Zar">Zaragoza</option>
+                        </select>                    
+                    </section>
+                    
+                    <section class="columna">
+                        <label for="loc">Localidad</label><br>
+                        <input type="text" id="loc" name="user_loc">
+                    </section>
+                    
             </fieldset>
 
             <fieldset> <legend>Mensaje</legend>
@@ -112,13 +123,35 @@
                     <textarea id="msg" name="msg" rows="4" cols="50">Escribe aquí tu mensaje
                     </textarea>
             </fieldset>
-            <input type="submit">
-            <input type="reset">
+            
+            <section class="botones">
+                <input type="submit">
+                <input type="reset">
+            </section>
+
             </form>
         </main>
 
         <footer>
-            <p>Este es el footer</p>
+            <h3>Contacto</h3>
+            <p id="contacto">
+            C/Desengaño, 23, Madrid <br>
+            936 77 77 77<br>
+            dawesomepets@gmail.com
+            Protectora de Animales de Madrid - DAWsome pets © 2021. Todos los derechos reservados. <a href="/aviso-legal.html"> Aviso legal</a> 
+            </p>
+            
+            <section id="redes">
+                <a href="http://www.instagram.com">
+                    <img src="images/iconinsta.png" alt="Icono Instagram">
+                </a>
+                <a href="http://www.twitter.com">
+                    <img src="images/icontwit.png" alt="Icono Twitter">
+                </a>
+                <a href="http://www.facebook.com">
+                    <img src="images/iconface.png" alt="Icono Facebook">
+                </a>
+            </section>
         </footer>
 
     </body>

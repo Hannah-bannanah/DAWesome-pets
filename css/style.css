@@ -605,14 +605,13 @@ Estilo genérico de formularios
 form {
     width: 45%;
     margin:auto;
-    padding:16px;
 }
 
 form label{
 	width: 100%;
 	font-weight:bold;
-    margin-top: 15px;
-    margin-bottom: 5px;
+    margin-top: 15%;
+    margin-bottom: 5%;
 	
 }
 
@@ -624,17 +623,18 @@ fieldset legend {
     color: #db6400;
     text-align: center;
     font-size: 30px;
-    margin-top: 25px;
-    margin-bottom: 15px;
+    margin-top: 5%;
+    margin-bottom: 3%;
 
 }
 input {
     width:100%;
-	height:20px;
-	border:1px solid white;
+	height:25px;
+    padding: 1px 1px 1px 1px;
+	border: none;
     background-color:white;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    margin-top: 1%;
+    margin-bottom: 4%;
 }
 
 textarea{
@@ -643,28 +643,30 @@ textarea{
 	border:1px solid white;
 	border-radius:3px;
 	background-color: white;	
-    margin-top: 5px;
-    margin-bottom: 15px;		
-	/*margin:0px;*/
-	display:inherit;
+    margin-top: 1%;
+    margin-bottom: 4%;
+	
 }
 
 select{
-    width:25%;
-	height:20px;
+	height: 25px;
+    padding: 1px;
     background-color: white;
     border: white;
+    margin-top: 1%;
+    margin-bottom: 4%;
 }
 
-form input[type="submit"], [type="reset"]{
+
+form input[type="submit"], form input[type="reset"]{
 	font-size: 15px;
     height:30px;
-    width:125px;
-    display:inline;
+    width: 27%;
+    display: inline;
 
 }
 
-form input[type="submit"]:hover, [type="reset"]:hover{
+form input[type="submit"]:hover, form input[type="reset"]:hover{
 	cursor:pointer;
     color:white;
     background-color:#5eaaa8;
@@ -687,27 +689,39 @@ Estilo específico de formularioContacto.html
 }
 
 .formContacto #tlf {
-    width:35%;
-    margin-left: 1em;
+    width:100%;
 }
 
 .formContacto #email {
-    width:35%;
-    margin-left: 1em;
+    width:100%;
+    margin-right: 0;
 }
 
 
 .formContacto #prov {
-    width:40%
+    width:100%;
 }
 
 
 .formContacto #loc {
-    width:40%
+    width:100%;
+}
+
+.formContacto .columna{
+    width: 49%;
+    display: inline-block;
+    margin: 1px;
+}
+
+.formContacto .botones{
+    display:inline-block;
+    width: 100%;
+    margin-left: 20%;
+    align-items: normal;
 }
 
 
-/*
+
 ---------------------------------------------
 ---------------------------------------------
 Estilo específico de quienesSomos.html

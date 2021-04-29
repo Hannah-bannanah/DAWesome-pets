@@ -836,33 +836,13 @@ Responsive design
     }
 }
 
-/*
- .mascotas .petInfo {
-    box-sizing: content-box;
-    margin-top: 2%;
-    margin-left: 7%;
-    padding:1%;
-    width: 60%;
-    text-align: center;
-    display: inline-block;
-    z-index: 1;
-    position: absolute;
-    visibility: hidden; /*por defecto no se ven, se habilitarán al seleccionar la foto correspondiente en el panel de selección
-    opacity: 0;
-    transition: visibility 0.3s, opacity 0.5s;
-}*/
- /*
- @media screen and (max-width: 700px){
-
-    .mascotas .seleccion, .mascotas #placeholder{
-        display: none;
-    } 
+/*Cambios para monitores de menos de 600px de ancho 
+    iPhone en vertical*/
+    @media screen and (max-width: 700px) {
+        .mascotas article img, .mascotas .bio {
+            width: 95%;
+            display: block;
+            clear:both;
+        }
     
-    .mascotas main .mascotas section, .mascotas .petInfo, .masctoas article, .mascotas article > * {
-        display: block;
-        width: 100%;
-        clear: both;
-        margin:0;
     }
-
- }*/

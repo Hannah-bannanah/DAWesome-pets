@@ -829,12 +829,27 @@ Responsive design
         float: none;
     }
 
+    .mascotas .petInfo article {
+        max-height: unset;
+    }
+
     .mascotas aside {
         width: 90%;
         display: block;
         float: none;
         margin:auto;
     }
+}
+
+/*Cambios para monitores de menos de 600px de ancho 
+    iPhone en vertical*/
+@media screen and (max-width: 700px) {
+    .mascotas article img, .mascotas .bio {
+        width: 95%;
+        display: block;
+        clear:both;
+    }
+
 }
 
 /*

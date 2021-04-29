@@ -158,7 +158,7 @@ h2 {
     font-weight: 300;
     color: #005691;
     height: 6%;
-    padding: 10px 10px 10px 10px;
+    padding: 1%;
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -171,11 +171,7 @@ h3 {
     font-weight: 200;
     color: #005691;
     height: 4%;
-    padding: 5px 5px 5px 5px;
     display: block;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-top: 20px;
     text-align: left;
     font-size: 2em ;
 }
@@ -185,24 +181,32 @@ footer {
     background-color:rgba(94,170,168, 0.8);
     clear:both;
     width:100%;
-    height:150px;
+    height:20%;
     text-align: left; 
-    margin-left: 0px !important;
-    margin-top: 10px; 
+    margin-left: 0% !important;
+    margin-top: 10%; 
     font-size: small;
     line-height: 25px;
-    opacity: 1;
 }
 
 footer #contacto {
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 0%;
+    margin-left: 1%;
 }
 
-footer #redes li a img {
-    height: 2em;
-    width: 2em;
+footer #redes {
+    list-style: none;
+    margin-right: 0%;
+    margin-top: 0%;
+    float: right;
 }
+
+footer #redes a img {
+    font-size: 15px;
+    height: 20px;
+    width: 22px;
+}
+
 
 /*
 ---------------------------------------------
@@ -211,22 +215,21 @@ Estilo específico de mascotas.html
 ---------------------------------------------
 ---------------------------------------------
 */
-
 /*Formato de la zona de artículos cuando ningún animal ha sido seleccionado*/
 .mascotas #placeholder {
-    width: 50%;
+    width: 30%;
     display: inline-block;
-    margin-left: 30%;
+    margin-left: 40%;
     text-align: center;
     margin-top: 10%;
     position:absolute;
     float: left;
     max-height: 30vh;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .mascotas #placeholder p {
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
     font-weight: 400;
     color: #005691;
@@ -234,10 +237,11 @@ Estilo específico de mascotas.html
 
 /*Formato de las secciones sobre cada animal*/
 .mascotas .petInfo {
+    box-sizing: content-box;
     margin-top: 2%;
-    margin-left: 10%;
+    margin-left: 7%;
     padding:1%;
-    width: 50%;
+    width: 60%;
     text-align: center;
     display: inline-block;
     z-index: 1;
@@ -272,6 +276,15 @@ Estilo específico de mascotas.html
 .mascotas article h2 {
     text-align: left;
 }
+
+/*Formato del id de Mascota*/
+.mascotas .idMascota {
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-size: 1.75em;
+    color: #005691;
+    margin-top: 0;
+}
+
 /*Formato de la bio del animal dentro de cada artículo*/
 .mascotas .bio {
     width: 55%;
@@ -305,7 +318,100 @@ Estilo específico de mascotas.html
 }
 
 /*Animación del botón de adopción*/
-@keyframes example {
+
+@-webkit-keyframes giro {
+    0% {
+        height: 100%;
+        rotate: 0;   
+    }
+    25% {
+        height: 105%;
+        rotate: 30deg; 
+    }
+    50% {
+        height: 110%;
+        rotate: 0; 
+    }
+    50% {
+        height: 105%;
+        rotate: -30deg; 
+    }
+    100% {
+        height: 100%;
+        rotate: 0deg; 
+    }
+}
+
+@-moz-keyframes giro {
+    0% {
+        height: 100%;
+        rotate: 0;   
+    }
+    25% {
+        height: 105%;
+        rotate: 30deg; 
+    }
+    50% {
+        height: 110%;
+        rotate: 0; 
+    }
+    50% {
+        height: 105%;
+        rotate: -30deg; 
+    }
+    100% {
+        height: 100%;
+        rotate: 0deg; 
+    }
+}
+
+@-o-keyframes giro {
+    0% {
+        height: 100%;
+        rotate: 0;   
+    }
+    25% {
+        height: 105%;
+        rotate: 30deg; 
+    }
+    50% {
+        height: 110%;
+        rotate: 0; 
+    }
+    50% {
+        height: 105%;
+        rotate: -30deg; 
+    }
+    100% {
+        height: 100%;
+        rotate: 0deg; 
+    }
+}
+
+@-ms-keyframes giro {
+    0% {
+        height: 100%;
+        rotate: 0;   
+    }
+    25% {
+        height: 105%;
+        rotate: 30deg; 
+    }
+    50% {
+        height: 110%;
+        rotate: 0; 
+    }
+    50% {
+        height: 105%;
+        rotate: -30deg; 
+    }
+    100% {
+        height: 100%;
+        rotate: 0deg; 
+    }
+}
+
+@keyframes giro {
     0% {
         height: 100%;
         rotate: 0;   
@@ -330,21 +436,24 @@ Estilo específico de mascotas.html
 /*Formato del botón de adopción de cada cuando se pasa el cursor sobre él*/
 .mascotas .quieroAdoptar:hover {
     cursor: pointer;
-    animation: example 1s ease-in-out;
+    -webkit-animation: giro 1s ease-in-out;
+    -moz-animation: giro 1s ease-in-out;
+    -o-animation: giro 1s ease-in-out;
+    -ms-animation: giro 1s ease-in-out;
+    animation: giro 1s ease-in-out;
 }
-
 /*Formato de las imágenes dentro del panel de selección*/
 .mascotas img.seleccion {
     width: 15%;
     display: block;
-    margin: 3%;
+    margin: 2%;
     float: left;
     clear: left;
 }
 
 /*Esconde los botones de selección del animal, se seleccionará al hacer click sobre la imagen*/
 .mascotas input[type="radio"] { 
-    display:none;
+    display:none !important;
 }
 
 /*Muestra el artículo relacionado con con el animal relacionado*/
@@ -365,6 +474,7 @@ Estilo específico de mascotas.html
     width: 40%;
     margin-right: 20%;
     text-align: center;
+    margin-top: 10%;
 }
 
 /*Formato del título del aside*/
@@ -388,43 +498,6 @@ Estilo específico de mascotas.html
 .mascotas footer {
     clear:both;
 }
-
-/*Responsive design*/
-@media screen and (min-width: 2000px){
-    .mascotas main{
-        margin-left: 7%;
-        align-items: center;
-    }
-
-    .mascotas img.seleccion {
-        width: 15%;
-        display: block;
-        margin: 2%;
-        float: left;
-        clear: left;
-    }
- }
- 
- @media screen and (max-width: 700px){
-
-    .mascotas .seleccion, .mascotas #placeholder{
-        display: none;
-    }
-    
-    /*
-    .mascotas main{
-        width: 95%;
-    }*/  
-    
-    .mascotas main .mascotas section, .mascotas .petInfo, .masctoas article, .mascotas article > * {
-        display: block;
-        width: 100%;
-        clear: both;
-        margin:0;
-    }
-
- }
-
 
 /*
 ---------------------------------------------
@@ -525,7 +598,7 @@ Estilo específico de index.html
 /*
 ---------------------------------------------
 ---------------------------------------------
-Estilo específico de formularios
+Estilo genérico de formularios
 ---------------------------------------------
 ---------------------------------------------
 */
@@ -552,6 +625,7 @@ fieldset legend {
     text-align: center;
     font-size: 30px;
     margin-top: 25px;
+    margin-bottom: 15px;
 
 }
 input {
@@ -582,28 +656,23 @@ select{
     border: white;
 }
 
+form input[type="submit"], [type="reset"]{
+	font-size: 15px;
+    height:30px;
+    width:125px;
+    display:inline;
+
+}
+
 form input[type="submit"]:hover, [type="reset"]:hover{
 	cursor:pointer;
     color:white;
     background-color:#5eaaa8;
+    Border:#5eaaa8;
 }
 
-form input[type="submit"], [type="reset"]{
-	display: inline;
-}
 
-/*
----------------------------------------------
----------------------------------------------
-Estilo específico de formularioAdopcion.html
----------------------------------------------
----------------------------------------------
-*/
-@media screen and (max-width: 700px){
-    .formAdopcion fieldset > *{
-       width:100%;
-    }
- }
+
 /*
 ---------------------------------------------
 ---------------------------------------------
@@ -612,23 +681,31 @@ Estilo específico de formularioContacto.html
 ---------------------------------------------
 */
 
-/*Estructura del formulario*/
-/*.formContacto form {
-    width: 45%;
-    margin:auto;
-}
 .formContacto #introForm {
     text-align: center;
+    margin: 50px;
 }
 
-.formContacto fieldset {
-    border: none;
+.formContacto #tlf {
+    width:35%;
+    margin-left: 1em;
 }
 
-.formContacto legend {
-    
+.formContacto #email {
+    width:35%;
+    margin-left: 1em;
 }
-*/
+
+
+.formContacto #prov {
+    width:40%
+}
+
+
+.formContacto #loc {
+    width:40%
+}
+
 
 /*
 ---------------------------------------------
@@ -638,32 +715,170 @@ Estilo específico de quienesSomos.html
 ---------------------------------------------
 */
 
+.quienesSomos main{
+    align-items: center;
+}
+
 /*Bloque de texto*/
 .quienesSomos #quienesSomos {
-    margin-right:20px;
-    margin-left:20px;
+    margin-right:5%;
+    margin-left:2%;
     line-height: 25px;
-    width:50%;
+    width:45%;
     height:40%;
     float: left;
     overflow:auto;
-    margin-bottom:10px;
+    margin-bottom:2%;
     text-align: justify;
+    display: inline-block;
     
 }
 
 /*Vídeo. Solo hay que separarlo del título principal. 
 Las dimensiones vienen por defecto en el enlace que proporciona Youtube.*/
-.quienesSomos #video {
-    margin-top: 20px;
-    margin-bottom:10px;
+.quienesSomos #video iframe{
+    margin-top: 2%;
+    margin-bottom:2%;
     float: left;
-    overflow: auto;
+    width: 45vw; 
+    height: 50vh; 
 }
 
-/*Aside de publicidad*/
-.quienesSomos #publicidad {
-    float: left;
+/*Aside. Publicidad*/
+.quienesSomos #publititulo {
+    position:relative;
+    float:inherit;
+    margin-left: 5%;
 }
+
+/*Aside. Publicidad: imagen 1*/
+.quienesSomos #publicidad #train {
+    position:relative;
+    float:left;
+    margin-left: 5%;
+    width: 15%; 
+    height: 25%;
+}
+
+/*Aside. Publicidad: imagen 2*/
+.quienesSomos #publicidad #vet {
+    position:relative;
+    float:left;
+    margin-left: 5%;
+    width: 20%; 
+    height: 10%;
+}
+
 
     
+/*
+---------------------------------------------
+---------------------------------------------
+Responsive design
+---------------------------------------------
+---------------------------------------------
+*/
+/*Cambios para monitores de más de 1300px de ancho*/
+@media screen and (min-width: 1300px) {
+    .mascotas main {
+        margin-left: 7%;
+    }
+    .mascotas #placeholder p {
+        font-size: 2em;
+    }
+
+    .mascotas aside {
+        margin-top: unset;
+    }
+
+    .mascotas .petInfo {
+        width: 50%;
+        margin-left:10%
+    }
+}
+/*
+    No hay cambios necesarios para monitores de anchura entre 900 y 1300,
+    ya que la web se ha diseñado con esa anchura en mente.
+    El diseño por defecto incluye compatibilidad con iPad, iPad Mini y iPad Pro
+    en posición horizontal
+*/
+
+/*Cambios para monitores de menos de 900px de ancho 
+    iPad, iPad Mini, iPad Pro en vertical*/
+@media screen and (max-width: 900px) {
+    .mascotas .seleccion, .mascotas #placeholder {
+        display: none;
+    }
+    
+    .mascotas section {
+        display: block;
+        position: relative;
+    }
+    
+    .mascotas .petInfo {
+        width: 80%;
+        display: block;
+        visibility: visible;
+        opacity: unset;
+        position: relative;
+    }
+    
+    .mascotas :checked ~ .petInfo { 
+        visibility: visible;
+        opacity: 1;
+        float: none;
+    }
+
+    .mascotas .petInfo article {
+        max-height: unset;
+    }
+
+    .mascotas aside {
+        width: 90%;
+        display: block;
+        float: none;
+        margin:auto;
+    }
+}
+
+/*Cambios para monitores de menos de 600px de ancho 
+    iPhone en vertical*/
+@media screen and (max-width: 700px) {
+    .mascotas article img, .mascotas .bio {
+        width: 95%;
+        display: block;
+        clear:both;
+    }
+
+}
+
+/*
+ .mascotas .petInfo {
+    box-sizing: content-box;
+    margin-top: 2%;
+    margin-left: 7%;
+    padding:1%;
+    width: 60%;
+    text-align: center;
+    display: inline-block;
+    z-index: 1;
+    position: absolute;
+    visibility: hidden; /*por defecto no se ven, se habilitarán al seleccionar la foto correspondiente en el panel de selección
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.5s;
+}*/
+ /*
+ @media screen and (max-width: 700px){
+
+    .mascotas .seleccion, .mascotas #placeholder{
+        display: none;
+    } 
+    
+    .mascotas main .mascotas section, .mascotas .petInfo, .masctoas article, .mascotas article > * {
+        display: block;
+        width: 100%;
+        clear: both;
+        margin:0;
+    }
+
+ }*/

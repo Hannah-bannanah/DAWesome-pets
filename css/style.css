@@ -158,11 +158,11 @@ h2 {
     font-weight: 300;
     color: #005691;
     height: 6%;
-    padding: 10px 10px 10px 10px;
+    padding: 1%;
     display: block;
     margin: 0 auto;
     text-align: center;
-    font-size: 3em ;
+    font-size: 2.5em ;
 }
 
 /*Formato de h3*/
@@ -171,11 +171,7 @@ h3 {
     font-weight: 200;
     color: #005691;
     height: 4%;
-    padding: 5px 5px 5px 5px;
     display: block;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-top: 20px;
     text-align: left;
     font-size: 2em ;
 }
@@ -225,27 +221,21 @@ Estilo específico de mascotas.html
 ---------------------------------------------
 ---------------------------------------------
 */
-
 /*Formato de la zona de artículos cuando ningún animal ha sido seleccionado*/
-.mascotas main{
-    margin-left: 7%;
-    align-items: center;
-}
-
 .mascotas #placeholder {
     width: 30%;
     display: inline-block;
-    margin-left: 30%;
+    margin-left: 40%;
     text-align: center;
     margin-top: 10%;
     position:absolute;
     float: left;
     max-height: 30vh;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .mascotas #placeholder p {
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
     font-weight: 400;
     color: #005691;
@@ -253,10 +243,11 @@ Estilo específico de mascotas.html
 
 /*Formato de las secciones sobre cada animal*/
 .mascotas .petInfo {
+    box-sizing: content-box;
     margin-top: 2%;
-    margin-left: 10%;
+    margin-left: 7%;
     padding:1%;
-    width: 50%;
+    width: 60%;
     text-align: center;
     display: inline-block;
     z-index: 1;
@@ -291,6 +282,15 @@ Estilo específico de mascotas.html
 .mascotas article h2 {
     text-align: left;
 }
+
+/*Formato del id de Mascota*/
+.mascotas .idMascota {
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-size: 1.75em;
+    color: #005691;
+    margin-top: 0;
+}
+
 /*Formato de la bio del animal dentro de cada artículo*/
 .mascotas .bio {
     width: 55%;
@@ -324,7 +324,100 @@ Estilo específico de mascotas.html
 }
 
 /*Animación del botón de adopción*/
-@keyframes example {
+
+@-webkit-keyframes giro {
+    0% {
+        height: 100%;
+        rotate: 0;   
+    }
+    25% {
+        height: 105%;
+        rotate: 30deg; 
+    }
+    50% {
+        height: 110%;
+        rotate: 0; 
+    }
+    50% {
+        height: 105%;
+        rotate: -30deg; 
+    }
+    100% {
+        height: 100%;
+        rotate: 0deg; 
+    }
+}
+
+@-moz-keyframes giro {
+    0% {
+        height: 100%;
+        rotate: 0;   
+    }
+    25% {
+        height: 105%;
+        rotate: 30deg; 
+    }
+    50% {
+        height: 110%;
+        rotate: 0; 
+    }
+    50% {
+        height: 105%;
+        rotate: -30deg; 
+    }
+    100% {
+        height: 100%;
+        rotate: 0deg; 
+    }
+}
+
+@-o-keyframes giro {
+    0% {
+        height: 100%;
+        rotate: 0;   
+    }
+    25% {
+        height: 105%;
+        rotate: 30deg; 
+    }
+    50% {
+        height: 110%;
+        rotate: 0; 
+    }
+    50% {
+        height: 105%;
+        rotate: -30deg; 
+    }
+    100% {
+        height: 100%;
+        rotate: 0deg; 
+    }
+}
+
+@-ms-keyframes giro {
+    0% {
+        height: 100%;
+        rotate: 0;   
+    }
+    25% {
+        height: 105%;
+        rotate: 30deg; 
+    }
+    50% {
+        height: 110%;
+        rotate: 0; 
+    }
+    50% {
+        height: 105%;
+        rotate: -30deg; 
+    }
+    100% {
+        height: 100%;
+        rotate: 0deg; 
+    }
+}
+
+@keyframes giro {
     0% {
         height: 100%;
         rotate: 0;   
@@ -349,9 +442,12 @@ Estilo específico de mascotas.html
 /*Formato del botón de adopción de cada cuando se pasa el cursor sobre él*/
 .mascotas .quieroAdoptar:hover {
     cursor: pointer;
-    animation: example 1s ease-in-out;
+    -webkit-animation: giro 1s ease-in-out;
+    -moz-animation: giro 1s ease-in-out;
+    -o-animation: giro 1s ease-in-out;
+    -ms-animation: giro 1s ease-in-out;
+    animation: giro 1s ease-in-out;
 }
-
 /*Formato de las imágenes dentro del panel de selección*/
 .mascotas img.seleccion {
     width: 15%;
@@ -384,6 +480,7 @@ Estilo específico de mascotas.html
     width: 40%;
     margin-right: 20%;
     text-align: center;
+    margin-top: 10%;
 }
 
 /*Formato del título del aside*/
@@ -679,3 +776,79 @@ Las dimensiones vienen por defecto en el enlace que proporciona Youtube.*/
 }
 
 
+/*
+---------------------------------------------
+---------------------------------------------
+Responsive design
+---------------------------------------------
+---------------------------------------------
+*/
+/*Cambios para monitores de más de 1300px de ancho*/
+@media screen and (min-width: 1300px) {
+    .mascotas main {
+        margin-left: 7%;
+    }
+    .mascotas #placeholder p {
+        font-size: 2em;
+    }
+
+    .mascotas aside {
+        margin-top: unset;
+    }
+
+    .mascotas .petInfo {
+        width: 50%;
+        margin-left:10%
+    }
+}
+/*
+    No hay cambios necesarios para monitores de anchura entre 900 y 1300,
+    ya que la web se ha diseñado con esa anchura en mente.
+    El diseño por defecto incluye compatibilidad con iPad, iPad Mini y iPad Pro
+    en posición horizontal
+*/
+
+/*Cambios para monitores de menos de 900px de ancho 
+    iPad, iPad Mini, iPad Pro en vertical*/
+@media screen and (max-width: 900px) {
+    .mascotas .seleccion, .mascotas #placeholder {
+        display: none;
+    }
+    
+    .mascotas section {
+        display: block;
+        position: relative;
+    }
+    
+    .mascotas .petInfo {
+        width: 80%;
+        display: block;
+        visibility: visible;
+        opacity: unset;
+        position: relative;
+    }
+    
+    .mascotas :checked ~ .petInfo { 
+        visibility: visible;
+        opacity: 1;
+        float: none;
+    }
+
+    .mascotas aside {
+        width: 90%;
+        display: block;
+        float: none;
+        margin:auto;
+    }
+}
+
+/*Cambios para monitores de menos de 600px de ancho 
+    iPhone en vertical*/
+    @media screen and (max-width: 700px) {
+        .mascotas article img, .mascotas .bio {
+            width: 95%;
+            display: block;
+            clear:both;
+        }
+    
+    }

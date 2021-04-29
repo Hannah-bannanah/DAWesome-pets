@@ -453,7 +453,7 @@ Estilo específico de mascotas.html
 
 /*Esconde los botones de selección del animal, se seleccionará al hacer click sobre la imagen*/
 .mascotas input[type="radio"] { 
-    display:none;
+    display:none !important;
 }
 
 /*Muestra el artículo relacionado con con el animal relacionado*/
@@ -805,28 +805,59 @@ Responsive design
 
 /*Cambios para monitores de menos de 900px de ancho 
     iPad, iPad Mini, iPad Pro en vertical*/
- @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
+    .mascotas .seleccion, .mascotas #placeholder {
+        display: none;
+    }
+    
+    .mascotas section {
+        display: block;
+        position: relative;
+    }
+    
+    .mascotas .petInfo {
+        width: 80%;
+        display: block;
+        visibility: visible;
+        opacity: unset;
+        position: relative;
+    }
+    
+    .mascotas :checked ~ .petInfo { 
+        visibility: visible;
+        opacity: 1;
+        float: none;
+    }
 
-     .mascotas #placeholder p {
-         font-size: 1.5em;
-     }
+    .mascotas aside {
+        width: 90%;
+        display: block;
+        float: none;
+        margin:auto;
+    }
+}
 
-     .mascotas .petInfo {
-         margin-left: 5%;
-         width: 60%;
-     }
-
- }
+/*
+ .mascotas .petInfo {
+    box-sizing: content-box;
+    margin-top: 2%;
+    margin-left: 7%;
+    padding:1%;
+    width: 60%;
+    text-align: center;
+    display: inline-block;
+    z-index: 1;
+    position: absolute;
+    visibility: hidden; /*por defecto no se ven, se habilitarán al seleccionar la foto correspondiente en el panel de selección
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.5s;
+}*/
+ /*
  @media screen and (max-width: 700px){
 
     .mascotas .seleccion, .mascotas #placeholder{
         display: none;
-    }
-    
-    /*
-    .mascotas main{
-        width: 95%;
-    }*/  
+    } 
     
     .mascotas main .mascotas section, .mascotas .petInfo, .masctoas article, .mascotas article > * {
         display: block;
@@ -835,4 +866,4 @@ Responsive design
         margin:0;
     }
 
- }
+ }*/

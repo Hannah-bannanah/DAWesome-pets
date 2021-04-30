@@ -197,6 +197,7 @@ footer #texto{
 footer #contacto {
     margin-top: 0%;
     margin-left: 1%;
+
 }
 
 footer #redes {
@@ -608,6 +609,7 @@ Estilo genérico de formularios
 ---------------------------------------------
 ---------------------------------------------
 */
+
 form {
     width: 45%;
     margin:auto;
@@ -631,8 +633,8 @@ fieldset legend {
     font-size: 30px;
     margin-top: 5%;
     margin-bottom: 3%;
-
 }
+/*
 input {
     width:100%;
 	height:25px;
@@ -662,7 +664,7 @@ select{
     margin-top: 1%;
     margin-bottom: 4%;
 }
-
+*/
 
 form input[type="submit"], form input[type="reset"]{
 	font-size: 15px;
@@ -727,7 +729,7 @@ Estilo específico de formularioContacto.html
 }
 
 
-
+/*
 ---------------------------------------------
 ---------------------------------------------
 Estilo específico de quienesSomos.html
@@ -789,6 +791,65 @@ Las dimensiones vienen por defecto en el enlace que proporciona Youtube.*/
     height: 10%;
 }
 
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de formularioAdopcion
+---------------------------------------------
+---------------------------------------------
+*/
+
+.formAdopcion {
+    line-height: 1.5em;
+}
+.formAdopcion form label{
+	width: 100%;
+	font-weight:bold;
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+
+.formAdopcion form fieldset {
+    border: none;
+}
+
+.formAdopcion fieldset fieldset legend {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: #2f2f6a;
+    text-align: center;
+    font-size: 1em;
+    margin-top: unset;
+    margin-bottom: unset;
+    font-weight: bold;
+}
+
+.formAdopcion input:not([type="submit"]):not([type="reset"]), .formAdopcion textarea {
+    margin: 1%;
+    padding: 1%;
+}
+
+.formAdopcion select {
+    margin: 1%;
+}
+
+.formAdopcion .observacion {
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+}
+
+.formAdopcion label[for="tamMascota"] {
+    vertical-align:top;
+}
+
+.formAdopcion fieldset fieldset label {
+    font-weight: lighter;
+}
+
+.formAdopcion #otraVivienda, .formAdopcion label[for="otraVivienda"]  {
+    margin-top: 1%;
+    vertical-align: top;
+}
 
 /*
 ---------------------------------------------
@@ -814,6 +875,7 @@ Responsive design
         width: 50%;
         margin-left:10%
     }
+
 }
 /*
     No hay cambios necesarios para monitores de anchura entre 900 y 1300,

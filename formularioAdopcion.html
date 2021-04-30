@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width"/>
         <title>Formulario de Adopcion</title>
-        <link rel="stylesheet" href="css/pruebasMovil.css">
+        <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat&family=Poppins:wght@300;400&family=Roboto+Condensed&family=Roboto:wght@300;500&display=swap" rel="stylesheet">     </head>
         <script src="js/script.js"></script>
     </head>
@@ -34,21 +34,22 @@
         </header>
         <main>
             <form action="recibido.html" method="POST"> <!--Acción no se ha escogido acción-->
-                <fieldset>
+                <fieldset id="datos-contacto">
                     <legend>Datos de Contacto</legend>
                     <label for="nomAdoptante">Nombre</label>
-                    <input type="text" name="nombre" id="nomAdoptante" autofocus required placeholder="Introduce tu nombre">
+                    <input type="text" name="nombre" id="nomAdoptante" autofocus required placeholder="Introduce tu nombre"><br>
                     <label for="tflAdoptante">Tel&eacute;fono</label>
-                    <input type="tel" name="tlf" id="tflAdoptante" placeholder="+34 xxx xxx xxx" required pattern="\+34[0-9]{9}">
+                    <input type="tel" name="tlf" id="tflAdoptante" placeholder="+34xxxxxxxxx" required pattern="\+34[0-9]{9}">
                     <label for="emailAdoptante">Email</label>
                     <input type="email" name="email" id="emailAdoptante" required placeholder="Introduce tu email">
                 </fieldset>
-                <fieldset>
+                <fieldset id="datos-mascota">
                     <legend>Datos sobre la mascota deseada</legend>
                     <input type="checkbox" name="mascotaElegida" id="mascotaElegida" value=true onclick="toggleDatosMascota()"> <!--Si el usuario ya ha elegido una mascota concreta, ciertos campos del formulario se deshabilitarán-->
                     <label for="mascotaElegida">Ya he elegido la mascota que quiero adoptar (introducir ID)</label><br>
                     <input type="text" name="idMascota" id="idMascota" placeholder="xx-xxxx" pattern="[gpo]{2}-[a-z0-9]{4}" disabled>
-                    <label for="idMascota">Puedes encontrar el ID de la mascota en su ficha en <a href="mascotas.html">Nuestras mascotas</a></label><br>
+                    <label for="idMascota">ID Mascota*</label><br>
+                    <p class="observacion">*Puedes encontrar el ID de la mascota en su ficha en <a href="mascotas.html">Nuestras mascotas</a></p><br>
                     <label for="especie">Especie</label>
                     <select name="especie" id="especie" required class="eliminar-seleccion">
                         <option value="" selected>Elige especie</option>
@@ -81,7 +82,7 @@
                         <option value="gigante" selected>&gt; 35kg</option>
                     </select>
                 </fieldset>
-                <fieldset>
+                <fieldset id="datos-entorno">
                     <legend>Datos de tu entorno</legend>
                     <input type="checkbox" name="acogida" id="acogida" value=true>
                     <label for="acogida">Quiero convertirme en casa de acogida, no adoptar de forma permanente</label><br>
@@ -89,9 +90,9 @@
                     <fieldset id=vivienda onchange="toggleDescripcionVivienda()">
                         <legend>&iquest;En qué tipo de vivienda vives?</legend>
                         <input type="radio" name="vivienda" id="piso" value="piso">
-                        <label for="piso">Piso</label>
+                        <label for="piso">Piso</label><br>
                         <input type="radio" name="vivienda" id="casa" value="casa">
-                        <label for="casa">Casa&#47;Chalet</label>
+                        <label for="casa">Casa&#47;Chalet</label><br>
                         <input type="radio" name="vivienda" id="otraVivienda" value="otro">
                         <label for="otraVivienda">Otro (introducir explicaci&oacute;n)</label>
                         <textarea name="descVivienda" id="descVivienda" cols="40" rows="2" maxlength="100" placeholder="Describe tu vivienda" disabled></textarea>
@@ -99,11 +100,11 @@
                     <fieldset id="animales">
                         <legend>&iquest;Qu&eacute; otros animales tienes?</legend>
                         <input type="radio" name="animales" id="gato" value="gato">
-                        <label for="gato">Gato(s)</label>
+                        <label for="gato">Gato(s)</label><br>
                         <input type="radio" name="animales" id="perro" value="perro">
-                        <label for="perro">Perro(s)</label>
+                        <label for="perro">Perro(s)</label><br>
                         <input type="radio" name="animales" id="otroAnimal" value="otro">
-                        <label for="otroAnimal">Otro(s)</label>
+                        <label for="otroAnimal">Otro(s)</label><br>
                         <input type="radio" name="animales" id="sinAnimales" value="ninguno">
                         <label for="sinAnimales">No tengo otros animales</label>
                     </fieldset>

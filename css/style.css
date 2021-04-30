@@ -22,8 +22,19 @@ body {
     padding-top: 0;
 }
 
+/*Dimensiona los iconos de la barra de navegación*/
+nav img {
+    height: 1em;
+    width: 1em;
+}
+
+/*Esconde el menú de navegación móvil*/
+nav.movil {
+    display: none;
+} 
+
 /*Formato de la barra de navegación*/
-nav {
+nav.barra {
     box-sizing: border-box;
     margin-top: 0;
     top: 0;
@@ -34,7 +45,7 @@ nav {
 }
 
 /*Posiciona las lista del menú de navegación*/
-nav ul {
+nav.barra ul {
     float: right;
     padding: 0;
     margin: 0;
@@ -43,15 +54,9 @@ nav ul {
 }
 
 /*menú principal*/
-nav .menu > li {
+nav.barra .menu > li {
     float: right;
     height: 100%;
-}
-
-/*Dimensiona los iconos de la barra de navegación*/
-nav .menu li a img {
-    height: 1em;
-    width: 1em;
 }
 
 /*Formato de los links de la barra de navegación*/
@@ -66,18 +71,18 @@ nav a {
 }
 
 /*Oculta el submenú*/
-nav .submenu {
+nav.barra .submenu {
     display: none;
 }
 
 /*Posiciona los elementos del submenú*/
-nav .submenu li {
+nav.barra .submenu li {
     display: block;
     position: relative;
 }
 
 /*Formato de los links del submenú*/
-nav .submenu a {
+nav.barra .submenu a {
     display: block;
     width: 140px;
     padding: 12px 12px 0 12px;
@@ -91,13 +96,13 @@ nav .submenu a {
 /*Muestra el submenú cuando se pasa el cursor por el elemento del
 menú principal correspondiente*/
 
-nav li:hover ul.submenu {
+nav.barra li:hover ul.submenu {
     display: block;
     position: absolute;
 }
 
 /*Cambia el color del links del menú de navegación al pasar el cursor*/
-nav a:hover, nav a.pagina-actual {
+nav.barra a:hover, nav.barra a.pagina-actual {
     background-color: #a3d2ca;
 }
 
@@ -111,8 +116,8 @@ header {
     vertical-align: bottom;
     clear: both;
     padding-top: 3%;
-
 }
+
 .index header{
     background-image: url(../images/bannerstormi.jpg);
     background-repeat: no-repeat;
@@ -197,7 +202,6 @@ footer #texto{
 footer #contacto {
     margin-top: 0%;
     margin-left: 1%;
-
 }
 
 footer #redes {
@@ -460,7 +464,7 @@ Estilo específico de mascotas.html
 
 /*Esconde los botones de selección del animal, se seleccionará al hacer click sobre la imagen*/
 .mascotas input[type="radio"] { 
-    display:none;
+    display:none !important;
 }
 
 /*Muestra el artículo relacionado con con el animal relacionado*/
@@ -471,7 +475,7 @@ Estilo específico de mascotas.html
 }
 
 /*Añade sombra a la imagen seleccionada*/
-.mascotas :checked + label>img{
+.mascotas input[type="radio"]:checked + label>img{
     box-shadow: 0 0 3px 6px #5eaaa8;
 }
 
@@ -875,7 +879,6 @@ Responsive design
         width: 50%;
         margin-left:10%
     }
-
 }
 /*
     No hay cambios necesarios para monitores de anchura entre 900 y 1300,
@@ -910,6 +913,10 @@ Responsive design
         float: none;
     }
 
+    .mascotas .petInfo article {
+        max-height: unset;
+    }
+
     .mascotas aside {
         width: 90%;
         display: block;
@@ -919,12 +926,120 @@ Responsive design
 }
 
 /*Cambios para monitores de menos de 600px de ancho 
-    iPhone en vertical*/
-    @media screen and (max-width: 700px) {
-        .mascotas article img, .mascotas .bio {
-            width: 95%;
-            display: block;
-            clear:both;
-        }
-    
+iPhone en vertical*/
+@media screen and (max-width: 700px) {
+
+    /*Esconde la barra de navegación de la version web*/
+    .barra {
+        display: none;
     }
+
+    header {
+        height: 50px;
+        padding: 0;
+        margin: 0;
+    }
+
+    header h1 {
+        font-size: 1em;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    /*Revela el menú de navegación móvil*/
+    nav.movil {
+        display: unset;
+    }
+
+    /*Esconde la checkbox que abre y cierra el menú de navegación
+    para que se active/desactive sólo con el label asociado*/
+    #menu-movil {
+        display: none;
+    }
+
+    /*Formato del icono de activación del menú*/
+    label[for="menu-movil"] img{
+        background-color:rgba(94,170,168);
+        height: 50px;
+        width: 50px;
+    }
+
+    /*Esconde el icono de cerrar el menu*/
+    #cerrar-menu {
+        display: none;
+    }
+
+    /*Muestra el menú cuando la checkbox está activada*/
+    #menu-movil:checked ~ .menu {
+        display: unset;
+    }
+
+    /*Muestra el icono de cerrar el menú cuando el menú está abierto*/
+    #menu-movil:checked ~ label > #cerrar-menu {
+        display: unset;
+    }
+
+    /*Esconde el icono de abrir el menú cuando el menú está abierto*/
+    #menu-movil:checked ~ label > #abrir-menu {
+        display: none;
+    }
+
+    /*Esconde el menú de navegación*/
+    .movil ul.menu {
+        display: none;
+    }
+
+    /*Formato de menú de navegación móvil cuando no está abierto*/
+    nav.movil {
+        width: 70%;
+        box-sizing: border-box;
+        margin-top: 0;
+        top: 0;
+        position: absolute;
+        z-index: 100;
+        text-align: left;
+    }
+
+    /*Formato de cada elemento del menú de navegación*/
+    .movil ul, .movil ul li {
+        list-style:none;
+        padding-left: 0;
+        background-color:rgba(94,170,168);
+    }
+
+    /*Cambia la alineación del texto de los links a la izquierda*/
+    nav.movil a {
+        text-align: left;
+        padding-left: 5%;
+        border-top: 3px solid gray;
+    }
+    /*Formato del link a la página actual*/
+    .movil a.pagina-actual {
+        background-color: #a3d2ca;
+    }
+
+    /*Mueve los elementos del submenú más a la derecha*/ 
+    nav.movil .submenu li a{
+        padding-left: 20%;
+        border-top: 1px dashed gray;
+    }
+
+    /*Formato del header en la versión móvil*/
+    .mascotas header {
+        background-image: none;
+    }
+
+    /*Cambia el formato de los artículos para ocupar toda la pantalla
+    y mostrar una sección detrás de otra */
+    .mascotas article img, .mascotas .bio {
+        width: 95%;
+        display: block;
+        clear:both;
+    }
+
+    /*Quita la animación del botón de adopción -NO FUNCIONA*/
+    .mascotas button {
+        animation:none;
+    }
+        
+}

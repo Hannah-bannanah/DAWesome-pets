@@ -22,8 +22,19 @@ body {
     padding-top: 0;
 }
 
+/*Dimensiona los iconos de la barra de navegación*/
+nav img {
+    height: 1em;
+    width: 1em;
+}
+
+/*Esconde el menú de navegación móvil*/
+.movil {
+    display: none;
+} 
+
 /*Formato de la barra de navegación*/
-nav {
+nav.barra {
     box-sizing: border-box;
     margin-top: 0;
     top: 0;
@@ -34,7 +45,7 @@ nav {
 }
 
 /*Posiciona las lista del menú de navegación*/
-nav ul {
+nav.barra ul {
     float: right;
     padding: 0;
     margin: 0;
@@ -43,15 +54,9 @@ nav ul {
 }
 
 /*menú principal*/
-nav .menu > li {
+nav.barra .menu > li {
     float: right;
     height: 100%;
-}
-
-/*Dimensiona los iconos de la barra de navegación*/
-nav .menu li a img {
-    height: 1em;
-    width: 1em;
 }
 
 /*Formato de los links de la barra de navegación*/
@@ -66,18 +71,18 @@ nav a {
 }
 
 /*Oculta el submenú*/
-nav .submenu {
+nav.barra .submenu {
     display: none;
 }
 
 /*Posiciona los elementos del submenú*/
-nav .submenu li {
+nav.barra .submenu li {
     display: block;
     position: relative;
 }
 
 /*Formato de los links del submenú*/
-nav .submenu a {
+nav.barra .submenu a {
     display: block;
     width: 140px;
     padding: 12px 12px 0 12px;
@@ -91,13 +96,13 @@ nav .submenu a {
 /*Muestra el submenú cuando se pasa el cursor por el elemento del
 menú principal correspondiente*/
 
-nav li:hover ul.submenu {
+nav.barra li:hover ul.submenu {
     display: block;
     position: absolute;
 }
 
 /*Cambia el color del links del menú de navegación al pasar el cursor*/
-nav a:hover, nav a.pagina-actual {
+nav.barra a:hover, nav.barra a.pagina-actual {
     background-color: #a3d2ca;
 }
 
@@ -111,8 +116,8 @@ header {
     vertical-align: bottom;
     clear: both;
     padding-top: 3%;
-
 }
+
 .index header{
     background-image: url(../images/bannerstormi.jpg);
     background-repeat: no-repeat;
@@ -162,7 +167,7 @@ h2 {
     display: block;
     margin: 0 auto;
     text-align: center;
-    font-size: 3em ;
+    font-size: 2.5em ;
 }
 
 /*Formato de h3*/
@@ -189,6 +194,11 @@ footer {
     line-height: 25px;
 }
 
+footer #texto{
+    width: 80%;
+    display: inline-block;
+}
+
 footer #contacto {
     margin-top: 0%;
     margin-left: 1%;
@@ -196,6 +206,7 @@ footer #contacto {
 
 footer #redes {
     list-style: none;
+    width: 10%;
     margin-right: 0%;
     margin-top: 0%;
     float: right;
@@ -464,7 +475,7 @@ Estilo específico de mascotas.html
 }
 
 /*Añade sombra a la imagen seleccionada*/
-.mascotas :checked + label>img{
+.mascotas input[type="radio"]:checked + label>img{
     box-shadow: 0 0 3px 6px #5eaaa8;
 }
 
@@ -605,14 +616,13 @@ Estilo genérico de formularios
 form {
     width: 45%;
     margin:auto;
-    padding:16px;
 }
 
 form label{
 	width: 100%;
 	font-weight:bold;
-    margin-top: 15px;
-    margin-bottom: 5px;
+    margin-top: 15%;
+    margin-bottom: 5%;
 	
 }
 
@@ -624,17 +634,18 @@ fieldset legend {
     color: #db6400;
     text-align: center;
     font-size: 30px;
-    margin-top: 25px;
-    margin-bottom: 15px;
-
+    margin-top: 5%;
+    margin-bottom: 3%;
 }
+/*
 input {
     width:100%;
-	height:20px;
-	border:1px solid white;
+	height:25px;
+    padding: 1px 1px 1px 1px;
+	border: none;
     background-color:white;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    margin-top: 1%;
+    margin-bottom: 4%;
 }
 
 textarea{
@@ -643,28 +654,30 @@ textarea{
 	border:1px solid white;
 	border-radius:3px;
 	background-color: white;	
-    margin-top: 5px;
-    margin-bottom: 15px;		
-	/*margin:0px;*/
-	display:inherit;
+    margin-top: 1%;
+    margin-bottom: 4%;
+	
 }
 
 select{
-    width:25%;
-	height:20px;
+	height: 25px;
+    padding: 1px;
     background-color: white;
     border: white;
+    margin-top: 1%;
+    margin-bottom: 4%;
 }
+*/
 
-form input[type="submit"], [type="reset"]{
+form input[type="submit"], form input[type="reset"]{
 	font-size: 15px;
     height:30px;
-    width:125px;
-    display:inline;
+    width: 27%;
+    display: inline;
 
 }
 
-form input[type="submit"]:hover, [type="reset"]:hover{
+form input[type="submit"]:hover, form input[type="reset"]:hover{
 	cursor:pointer;
     color:white;
     background-color:#5eaaa8;
@@ -687,23 +700,35 @@ Estilo específico de formularioContacto.html
 }
 
 .formContacto #tlf {
-    width:35%;
-    margin-left: 1em;
+    width:100%;
 }
 
 .formContacto #email {
-    width:35%;
-    margin-left: 1em;
+    width:100%;
+    margin-right: 0;
 }
 
 
 .formContacto #prov {
-    width:40%
+    width:100%;
 }
 
 
 .formContacto #loc {
-    width:40%
+    width:100%;
+}
+
+.formContacto .columna{
+    width: 49%;
+    display: inline-block;
+    margin: 1px;
+}
+
+.formContacto .botones{
+    display:inline-block;
+    width: 100%;
+    margin-left: 20%;
+    align-items: normal;
 }
 
 
@@ -769,8 +794,66 @@ Las dimensiones vienen por defecto en el enlace que proporciona Youtube.*/
     height: 10%;
 }
 
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de formularioAdopcion
+---------------------------------------------
+---------------------------------------------
+*/
 
-    
+.formAdopcion {
+    line-height: 1.5em;
+}
+.formAdopcion form label{
+	width: 100%;
+	font-weight:bold;
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+
+.formAdopcion form fieldset {
+    border: none;
+}
+
+.formAdopcion fieldset fieldset legend {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: #2f2f6a;
+    text-align: center;
+    font-size: 1em;
+    margin-top: unset;
+    margin-bottom: unset;
+    font-weight: bold;
+}
+
+.formAdopcion input:not([type="submit"]):not([type="reset"]), .formAdopcion textarea {
+    margin: 1%;
+    padding: 1%;
+}
+
+.formAdopcion select {
+    margin: 1%;
+}
+
+.formAdopcion .observacion {
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+}
+
+.formAdopcion label[for="tamMascota"] {
+    vertical-align:top;
+}
+
+.formAdopcion fieldset fieldset label {
+    font-weight: lighter;
+}
+
+.formAdopcion #otraVivienda, .formAdopcion label[for="otraVivienda"]  {
+    margin-top: 1%;
+    vertical-align: top;
+}
+
 /*
 ---------------------------------------------
 ---------------------------------------------
@@ -844,12 +927,94 @@ Responsive design
 /*Cambios para monitores de menos de 600px de ancho 
     iPhone en vertical*/
 @media screen and (max-width: 700px) {
+
+    /*Esconde la barra de navegación de la version web*/
+    .barra {
+        display: none;
+    }
+
+    header {
+        height: 50px;
+        padding: 0;
+        margin: 0;
+    }
+
+    header h1 {
+        font-size: 1em;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    /*Revela el menú de navegación móvil*/
+    .movil {
+        display: unset;
+    }
+
+    /*Esconde la checkbox que abre y cierra el menú de navegación
+    para que se active/desactive sólo con el label asociado*/
+    #menu-movil {
+        display: none;
+    }
+
+    /*Formato del icono de activación del menú*/
+    label[for="menu-movil"] img{
+        background-color:rgba(94,170,168);
+        height: 50px;
+        width: 50px;
+    }
+
+    /*Muestra el menú cuando la checkbox está activada*/
+    #menu-movil:checked ~ .menu {
+        display: unset;
+    }
+
+    .movil ul.menu {
+        display: none;
+    }
+
+    .movil ul.menu {
+        display: none;
+    }
+    nav.movil {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 0;
+        top: 0;
+        position: fixed;
+        z-index: 100;
+        /*background-color:rgba(94,170,168);*/
+        text-align: left;
+    }
+
+    .movil ul, .movil ul li {
+        list-style:none;
+        padding-left: 0;
+        background-color:rgba(94,170,168);
+    }
+
+    .movil a.pagina-actual {
+        background-color: #a3d2ca;
+    }
+
+    /*
+    nav.movil img {
+        height: 1em;
+        width: 1em;
+    }*/
+    .mascotas header {
+        background-image: none;
+    }
+
     .mascotas article img, .mascotas .bio {
         width: 95%;
         display: block;
         clear:both;
     }
 
+    .mascotas button {
+        animation:none;
+    }
+        
 }
 
 /*

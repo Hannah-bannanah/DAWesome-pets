@@ -59,23 +59,24 @@ function toggleDescripcionVivienda(){
     document.getElementById('descVivienda').required = valorToggle;
 }
 
-/*Función que al cargar mascotas.html muestra la mascota pasada como parámetro
+/*Función que al cargar mascotas.html muestra la mascota pasada como parámetro*/
 function mostrarMascota(){
     const urlParam = new URLSearchParams(window.location.search);
     const idMascota = urlParam.get('idMascota')
     if (idMascota) {
         const radioMascota = "check"+idMascota;
         document.getElementById(radioMascota).checked=true;
+        window.location = window.location+"#"+idMascota;
     }
-}*/
+}
 
-/*Función que al cargar mascotas.html muestra la mascota pasada como parámetro*/
+/*Función que al cargar mascotas.html muestra la mascota pasada como parámetro
 function mostrarMascota(){
     /*Obtiene la parte de la url que va detrás del símbolo # - sacado de 
-    https://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/*/
+    https://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/
     const idMascota = window.location.hash.split('#')[1];  
     if (idMascota) {
         const radioMascota = "check"+idMascota;
         document.getElementById(radioMascota).checked=true;
     }
-}
+}*/

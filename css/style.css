@@ -1106,35 +1106,36 @@ iPhone en vertical*/
         padding: 2%;
         overflow-x:hidden;
     }
-    /*Cambia los formularios para mostrar sólo un campo por línea*/
-    form * {
-        display: block !important;
-        width: 95% !important;
-        margin: unset !important;
-        clear: both !important;
-        float: unset !important;
-    }
 
-    /*
-    form .columna {
-        display: block;
+    /*Los botones de Enviar y Reestablecer los disponemos uno debajo de otro*/
+    form .botones input {
         width: 100%;
-        margin: unset;
-        clear: both;
-        float: unset;
-    }
-
-    form .dcha, .izq {
         display: block;
-        width: 100%;
-        margin: unset;
-        clear: both;
-        float: unset;
-    }*/
-
+       
+    }
     form .botones {
-        width:90%
+        width: 93%;
+        display: block;
+        margin-left: 5%;
+        margin-right: 5%;
+        position: auto;
+     
+    }  
+
+    /*Cambia el formato del FORMULARIO DE CONTACTO para que cada input ocupe toda la pantalla
+    y mostrarlos uno detrás de otro */
+    form .columna {
+        width: 95%;
     }
+
+    form .izq {
+        width: 99%;
+    }
+
+    form .dcha {
+        width: 100%;
+    }
+
 
     /*Formato del header en la versión móvil*/
     .mascotas header {
@@ -1155,37 +1156,13 @@ iPhone en vertical*/
     }
 
 
-    /*Cambia el formato del FORMULARIO DE CONTACTO para que cada input ocupe toda la pantalla
-    y mostrarlos uno detrás de otro */
-    form .columna {
-        width: 95%;
-    }
 
-    form .izq {
-        width: 99%;
-    }
-
-    form .dcha {
-        width: 100%;
-    }
 
     .formContacto input #loc {
         width: 98%;
         padding: 0
     }
 
-    /*Los botones de Enviar y Reestablecer los disponemos uno debajo de otro*/
-    form .botones input {
-        width: 100%;
-        display: block;
-       
-    }
-    form .botones {
-        width: 93%;
-        display: block;
-        margin-left: 5%;
-        margin-right: 5%;
-        position: auto;
 
     /*Formato del header en la versión móvil*/
     .formAdopcion header {

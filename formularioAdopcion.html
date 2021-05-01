@@ -74,37 +74,44 @@
                     <input type="text" name="idMascota" id="idMascota" placeholder="xx-xxxx" pattern="[gpo]{2}-[a-z0-9]{4}" disabled>
                     <label for="idMascota">ID Mascota*</label><br>
                     <p class="observacion">*Puedes encontrar el ID de la mascota en su ficha en <a href="mascotas.html">Nuestras mascotas</a></p><br>
-                    <label for="especie">Especie</label>
-                    <select name="especie" id="especie" required class="eliminar-seleccion">
-                        <option value="" selected>Elige especie</option>
-                        <option value="perro">Perro</option>
-                        <option value="gato">Gato</option>
-                        <option value="pilar">Pilar</option>
-                    </select>
-                    <label for="sexo">Sexo</label>
-                    <select name="sexo" id="sexo" required class="eliminar-seleccion">
-                        <option value="" selected>Elige sexo</option>
-                        <option value="macho">Macho</option>
-                        <option value="hembra">Hembra</option>
-                        <option value="irrelevante">Me da igual</option>
-                    </select>
-                    <label for="edad">Edad</label>
-                    <select name="edad" id="edad" required class="eliminar-seleccion">
-                        <option value="" selected>Elige edad</option>
-                        <option value="cachorro">Cachorro</option>
-                        <option value="joven">Joven</option>
-                        <option value="adulto">Adulto</option>
-                        <option value="mayor">Mayor</option>
-                        <option value="irrelevante">Me da igual</option>
-                    </select>
-                    <br>
-                    <label for="tamMascota">Tama&ntilde;o</label>
-                    <select name="tamanio" id="tamMascota" multiple class="eliminar-seleccion">
-                        <option value="pequenio" selected>&lt; 10kg</option>
-                        <option value="mediano" selected>10kg - 20kg</option>
-                        <option value="grande" selected>20kg - 35kg</option>
-                        <option value="gigante" selected>&gt; 35kg</option>
-                    </select>
+                    <section class="columna izq">
+                        <label for="especie">Especie</label>
+                        <select name="especie" id="especie" required class="izq">
+                            <option value="" selected>Elige especie</option>
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                            <option value="pilar">Pilar</option>
+                        </select>
+                    </section>
+                    <section class="columna dcha">
+                        <label for="sexo">Sexo</label><br>
+                        <select name="sexo" id="sexo" required class="dcha">
+                            <option value="" selected>Elige sexo</option>
+                            <option value="macho">Macho</option>
+                            <option value="hembra">Hembra</option>
+                            <option value="irrelevante">Me da igual</option>
+                        </select>
+                    </section>
+                    <section class="columna izq">
+                        <label for="edad">Edad</label><br>
+                        <select name="edad" id="edad" required class="izq">
+                            <option value="" selected>Elige edad</option>
+                            <option value="cachorro">Cachorro</option>
+                            <option value="joven">Joven</option>
+                            <option value="adulto">Adulto</option>
+                            <option value="mayor">Mayor</option>
+                            <option value="irrelevante">Me da igual</option>
+                        </select>
+                    </section>
+                    <section class="columna dcha"> 
+                        <label for="tamMascota">Tama&ntilde;o</label>
+                        <select name="tamanio" id="tamMascota" multiple class="dcha">
+                            <option value="pequenio" selected>&lt; 10kg</option>
+                            <option value="mediano" selected>10kg - 20kg</option>
+                            <option value="grande" selected>20kg - 35kg</option>
+                            <option value="gigante" selected>&gt; 35kg</option>
+                        </select>
+                    </section>
                 </fieldset>
                 <fieldset id="datos-entorno">
                     <legend>Datos de tu entorno</legend>
@@ -120,6 +127,7 @@
                         <input type="radio" name="vivienda" id="otraVivienda" value="otro">
                         <label for="otraVivienda">Otro (introducir explicaci&oacute;n)</label>
                         <textarea name="descVivienda" id="descVivienda" cols="40" rows="2" maxlength="100" placeholder="Describe tu vivienda" disabled></textarea>
+                        <label for="descVivienda">Describe tu vivienda</label>
                     </fieldset>
                     <fieldset id="animales">
                         <legend>&iquest;Qu&eacute; otros animales tienes?</legend>
@@ -143,14 +151,14 @@
                     <fieldset id="ninios">
                         <legend>&iquest;Convives con o tienes visitas habituales de ni&ntilde;os?</legend>
                         <input type="radio" name="ninios" id="conNinios" value="si">
-                        <label for="conExp">S&iacute;</label>
+                        <label for="conNinios">S&iacute;</label>
                         <input type="radio" name="ninios" id="sinNinios" value="no">
-                        <label for="sinExp">No</label>  
+                        <label for="sinNinios">No</label>  
                     </fieldset>
                 </fieldset>
                 <section class="botones">
-                    <input type="submit">
-                    <input type="reset">
+                    <input type="submit" id="enviarForm" value="Enviar Formulario">
+                    <input type="reset" id="resetForm" value="Resetear Formulario">
                 </section>
             </form>
         </main>

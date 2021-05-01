@@ -616,7 +616,8 @@ Estilo genérico de formularios
 
 
 form {
-    width: 45%;
+    /*width: 45%;*/
+    width: 60%;
     margin:auto;
 }
 
@@ -939,6 +940,10 @@ Responsive design
         width: 50%;
         margin-left:10%
     }
+
+    form {
+        width: 45%;
+    }
 }
 /*
     No hay cambios necesarios para monitores de anchura entre 900 y 1300,
@@ -982,6 +987,10 @@ Responsive design
         display: block;
         float: none;
         margin:auto;
+    }
+
+    form {
+        width:90%;
     }
 }
 
@@ -1084,6 +1093,41 @@ iPhone en vertical*/
         border-top: 1px dashed gray;
     }
 
+    form {
+        width: 95%;
+        padding: 2%;
+        overflow-x:hidden;
+    }
+    /*Cambia los formularios para mostrar sólo un campo por línea*/
+    form * {
+        display: block !important;
+        width: 95% !important;
+        margin: unset !important;
+        clear: both !important;
+        float: unset !important;
+    }
+
+    /*
+    form .columna {
+        display: block;
+        width: 100%;
+        margin: unset;
+        clear: both;
+        float: unset;
+    }
+
+    form .dcha, .izq {
+        display: block;
+        width: 100%;
+        margin: unset;
+        clear: both;
+        float: unset;
+    }*/
+
+    form .botones {
+        width:90%
+    }
+
     /*Formato del header en la versión móvil*/
     .mascotas header {
         background-image: none;
@@ -1100,6 +1144,11 @@ iPhone en vertical*/
     /*Quita la animación del botón de adopción -NO FUNCIONA*/
     .mascotas button {
         animation:none;
+    }
+
+    /*Formato del header en la versión móvil*/
+    .formAdopcion header {
+        background-image: none;
     }
         
 }

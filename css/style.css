@@ -614,9 +614,12 @@ Estilo genérico de formularios
 ---------------------------------------------
 */
 
+
 /* Estructura que contiene a los formularios */
+
 form {
-    width: 45%;
+    /*width: 45%;*/
+    width: 60%;
     margin:auto;
 }
 
@@ -640,6 +643,14 @@ fieldset legend {
     margin-bottom: 3%;
 }
 
+form input {
+    width:100%;
+	padding: 1% 0 1% 1%;
+	border: none;
+    background-color:white;
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
 
 form input[type="submit"], form input[type="reset"]{
 	font-size: 0.9em;
@@ -673,6 +684,28 @@ form .izq input {
     margin-right: 1%;
 }
 
+form #tlf {
+    width:100%;
+}
+
+form #email {
+    width:100%;
+    margin-right: 0;
+}
+
+form .columna{
+    width: 49%;
+    display: inline-block;
+    margin: 1px;
+}
+
+form .botones{
+    display:inline-block;
+    width: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+    align-items: normal;
+}
 
 
 /*
@@ -682,35 +715,6 @@ Estilo específico de formularioContacto.html
 ---------------------------------------------
 ---------------------------------------------
 */
-
-
-.formContacto input {
-    width:100%;
-	padding: 1% 0 1% 1%;
-	border: none;
-    background-color:white;
-    margin-top: 1%;
-    margin-bottom: 4%;
-}
-
-
-.formContacto .dcha {
-    float: right;
-}
-
-.formContacto .dcha input {
-    padding: 2% 0 1% 2%;
-    margin-right: 1%;
-}
-
-.formContacto .izq {
-    float:left 
-}
-.formContacto .izq input {
-    padding: 2% 0 1% 2%;
-    margin-right: 1%;
-}
-
 
 
 .formContacto textarea{
@@ -740,37 +744,12 @@ Estilo específico de formularioContacto.html
     margin: 50px;
 }
 
-.formContacto #tlf {
-    width:100%;
-}
-
-.formContacto #email {
-    width:100%;
-    margin-right: 0;
-}
-
-
 .formContacto #prov {
     width:100%;
 }
 
-
 .formContacto #loc {
     width:100%;
-}
-
-.formContacto .columna{
-    width: 49%;
-    display: inline-block;
-    margin: 1px;
-}
-
-.formContacto .botones{
-    display:inline-block;
-    width: 100%;
-    margin-left: 20%;
-    margin-right: 20%;
-    align-items: normal;
 }
 
 
@@ -844,20 +823,40 @@ Estilo específico de formularioAdopcion
 ---------------------------------------------
 */
 
-.formAdopcion {
-    line-height: 1.5em;
+/*Elimina el margen de los campos de input para poder 
+establecerlo según el campo específico*/
+.formAdopcion input {
+    margin-bottom: unset;
 }
-.formAdopcion form label{
-	width: 100%;
-	font-weight:bold;
-    margin-top: 15%;
+
+/*Elimina el width=100% de las checkboxes y los botones radio*/
+.formAdopcion input[type="checkbox"], .formAdopcion input[type="radio"],
+.formAdopcion #idMascota {
+    width: unset;
+}
+
+/*Establece el formato de los campos select*/
+.formAdopcion select {
+    padding: 1%;
+    height: 2.3em;
+    background-color: white;
+    border: white;
     margin-bottom: 5%;
 }
 
-.formAdopcion form fieldset {
-    border: none;
+/*Elimina el formato de textarea*/
+.formAdopcion textarea {
+    width: unset;
+    height: unset;
 }
 
+/*Formato de del select del tamaño, ya que es multiselect*/
+.formAdopcion select[multiple] {
+    height: unset;
+    padding:unset;
+}
+
+/*Cambia el formato de las leyendas de los grupos de botones radio*/
 .formAdopcion fieldset fieldset legend {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: #2f2f6a;
@@ -868,34 +867,58 @@ Estilo específico de formularioAdopcion
     font-weight: bold;
 }
 
-.formAdopcion input:not([type="submit"]):not([type="reset"]), .formAdopcion textarea {
-    margin: 1%;
-    padding: 1%;
-}
-
-.formAdopcion select {
-    margin: 1%;
-}
-
-.formAdopcion .observacion {
-    font-size: 0.8em;
-    padding: 0;
-    margin: 0;
-}
-
-.formAdopcion label[for="tamMascota"] {
-    vertical-align:top;
-}
-
+/*Cambia el formato de las label de los grupos de botones radio*/
 .formAdopcion fieldset fieldset label {
     font-weight: lighter;
 }
 
+/*Añade margen superior a los grupos dentro de un fieldset*/
+.formAdopcion fieldset fieldset {
+    margin-top:2%;
+}
+
+/*Añade margen superior a los campos de teléfono e email*/
+.formAdopcion #datos-contacto section{
+    margin-top: 4%;
+}
+
+/*Cambia el formato de la observación con * sobre ID Mascota*/
+.formAdopcion .observacion {
+    font-size: 0.9em;
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom:3%
+}
+
+/*Formato de los select sobre la mascota*/
+.formAdopcion .izq select, .formAdopcion .dcha select {
+
+    width: 100%;
+}
+
+/*Alinea la label del multiselect con el borde superior del campo*/
+.formAdopcion label[for="tamMascota"] {
+    vertical-align:top;
+}
+
+/*Corrige la posición del botón radio Otro en el grupo de vivienda*/
+.formAdopcion #casa, .formAdopcion label[for="casa"]  {
+    margin-bottom: 1em;
+}
+
+/*Alinea el botón radio Otro con el textarea relacionado*/
 .formAdopcion #otraVivienda, .formAdopcion label[for="otraVivienda"]  {
-    margin-top: 1%;
+    margin-top:0;
     vertical-align: top;
 }
 
+/*Esconde las label del textarea de descripción de vivienda y
+los botones de submit y reseteo.
+Nota: es importante mantener la label aunque no se muestre
+para aquellas personas que usen un lector de pantalla*/
+.formAdopcion label[for="descVivienda"] {
+    display: none;
+}
 /*
 ---------------------------------------------
 ---------------------------------------------
@@ -921,15 +944,10 @@ Responsive design
         margin-left:10%
     }
 
-    main .contacto{
-        width: 65%;
-        margin: auto;
-    }
 
-    /*.form{
-        width: 65%;
-        margin: auto;
-    }*/
+    form {
+        width: 45%;
+    }
 }
 /*
     No hay cambios necesarios para monitores de anchura entre 900 y 1300,
@@ -976,7 +994,7 @@ Responsive design
     }
 
     /*Reducimos los márgenes y ampliamos el ancho del main del FORMULARIO DE CONTACTO*/
-    main .contacto{
+    form {
         width: 90%;
         margin-left: 2%;
         margin-right: 2%;
@@ -1083,6 +1101,41 @@ iPhone en vertical*/
         border-top: 1px dashed gray;
     }
 
+    form {
+        width: 95%;
+        padding: 2%;
+        overflow-x:hidden;
+    }
+    /*Cambia los formularios para mostrar sólo un campo por línea*/
+    form * {
+        display: block !important;
+        width: 95% !important;
+        margin: unset !important;
+        clear: both !important;
+        float: unset !important;
+    }
+
+    /*
+    form .columna {
+        display: block;
+        width: 100%;
+        margin: unset;
+        clear: both;
+        float: unset;
+    }
+
+    form .dcha, .izq {
+        display: block;
+        width: 100%;
+        margin: unset;
+        clear: both;
+        float: unset;
+    }*/
+
+    form .botones {
+        width:90%
+    }
+
     /*Formato del header en la versión móvil*/
     .mascotas header {
         background-image: none;
@@ -1101,17 +1154,18 @@ iPhone en vertical*/
         animation:none;
     }
 
+
     /*Cambia el formato del FORMULARIO DE CONTACTO para que cada input ocupe toda la pantalla
     y mostrarlos uno detrás de otro */
-    .formContacto .columna {
+    form .columna {
         width: 95%;
     }
 
-    .formContacto .izq {
+    form .izq {
         width: 99%;
     }
 
-    .formContacto .dcha {
+    form .dcha {
         width: 100%;
     }
 
@@ -1121,17 +1175,22 @@ iPhone en vertical*/
     }
 
     /*Los botones de Enviar y Reestablecer los disponemos uno debajo de otro*/
-    .formContacto .botones input {
+    form .botones input {
         width: 100%;
         display: block;
        
     }
-    .formContacto .botones {
+    form .botones {
         width: 93%;
         display: block;
         margin-left: 5%;
         margin-right: 5%;
         position: auto;
+
+    /*Formato del header en la versión móvil*/
+    .formAdopcion header {
+        background-image: none;
+
     }
         
 }

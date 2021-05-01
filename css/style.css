@@ -818,32 +818,41 @@ Estilo específico de formularioAdopcion
 ---------------------------------------------
 ---------------------------------------------
 */
+
+/*Elimina el margen de los campos de input para poder 
+establecerlo según el campo específico*/
 .formAdopcion input {
     margin-bottom: unset;
 }
+
+/*Elimina el width=100% de las checkboxes y los botones radio*/
 .formAdopcion input[type="checkbox"], .formAdopcion input[type="radio"],
 .formAdopcion #idMascota {
     width: unset;
 }
 
+/*Establece el formato de los campos select*/
 .formAdopcion select {
-    margin-bottom: 1%;
     padding: 1%;
     height: 2.3em;
     background-color: white;
     border: white;
-    margin-bottom: 4%;
+    margin-bottom: 5%;
 }
 
+/*Elimina el formato de textarea*/
 .formAdopcion textarea {
     width: unset;
     height: unset;
 }
 
-.formAdopcion #tamMascota {
+/*Formato de del select del tamaño, ya que es multiselect*/
+.formAdopcion select[multiple] {
     height: unset;
+    padding:unset;
 }
 
+/*Cambia el formato de las leyendas de los grupos de botones radio*/
 .formAdopcion fieldset fieldset legend {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: #2f2f6a;
@@ -853,34 +862,58 @@ Estilo específico de formularioAdopcion
     margin-bottom: unset;
     font-weight: bold;
 }
+
+/*Cambia el formato de las label de los grupos de botones radio*/
 .formAdopcion fieldset fieldset label {
     font-weight: lighter;
 }
 
+/*Añade margen superior a los grupos dentro de un fieldset*/
 .formAdopcion fieldset fieldset {
     margin-top:2%;
 }
 
+/*Añade margen superior a los campos de teléfono e email*/
 .formAdopcion #datos-contacto section{
     margin-top: 4%;
 }
+
+/*Cambia el formato de la observación con * sobre ID Mascota*/
 .formAdopcion .observacion {
     font-size: 0.9em;
     padding: 0;
     margin-top: 0.5em;
+    margin-bottom:3%
 }
 
+/*Formato de los select sobre la mascota*/
+.formAdopcion .izq select, .formAdopcion .dcha select {
+
+    width: 100%;
+}
+
+/*Alinea la label del multiselect con el borde superior del campo*/
 .formAdopcion label[for="tamMascota"] {
     vertical-align:top;
 }
 
+/*Corrige la posición del botón radio Otro en el grupo de vivienda*/
 .formAdopcion #casa, .formAdopcion label[for="casa"]  {
     margin-bottom: 1em;
 }
 
+/*Alinea el botón radio Otro con el textarea relacionado*/
 .formAdopcion #otraVivienda, .formAdopcion label[for="otraVivienda"]  {
     margin-top:0;
     vertical-align: top;
+}
+
+/*Esconde las label del textarea de descripción de vivienda y
+los botones de submit y reseteo.
+Nota: es importante mantener la label aunque no se muestre
+para aquellas personas que usen un lector de pantalla*/
+.formAdopcion label[for="descVivienda"] {
+    display: none;
 }
 /*
 ---------------------------------------------

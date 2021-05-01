@@ -614,6 +614,7 @@ Estilo genérico de formularios
 ---------------------------------------------
 */
 
+
 form {
     width: 45%;
     margin:auto;
@@ -639,6 +640,14 @@ fieldset legend {
     margin-bottom: 3%;
 }
 
+form input {
+    width:100%;
+	padding: 1% 0 1% 1%;
+	border: none;
+    background-color:white;
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
 
 form input[type="submit"], form input[type="reset"]{
 	font-size: 0.9em;
@@ -672,6 +681,27 @@ form .izq input {
     margin-right: 1%;
 }
 
+form #tlf {
+    width:100%;
+}
+
+form #email {
+    width:100%;
+    margin-right: 0;
+}
+
+form .columna{
+    width: 49%;
+    display: inline-block;
+    margin: 1px;
+}
+
+form .botones{
+    display:inline-block;
+    width: 100%;
+    margin-left: 20%;
+    align-items: normal;
+}
 
 
 /*
@@ -681,35 +711,6 @@ Estilo específico de formularioContacto.html
 ---------------------------------------------
 ---------------------------------------------
 */
-
-
-.formContacto input {
-    width:100%;
-	padding: 1% 0 1% 1%;
-	border: none;
-    background-color:white;
-    margin-top: 1%;
-    margin-bottom: 4%;
-}
-
-
-.formContacto .dcha {
-    float: right;
-}
-
-.formContacto .dcha input {
-    padding: 2% 0 1% 2%;
-    margin-right: 1%;
-}
-
-.formContacto .izq {
-    float:left 
-}
-.formContacto .izq input {
-    padding: 2% 0 1% 2%;
-    margin-right: 1%;
-}
-
 
 
 .formContacto textarea{
@@ -739,36 +740,12 @@ Estilo específico de formularioContacto.html
     margin: 50px;
 }
 
-.formContacto #tlf {
-    width:100%;
-}
-
-.formContacto #email {
-    width:100%;
-    margin-right: 0;
-}
-
-
 .formContacto #prov {
     width:100%;
 }
 
-
 .formContacto #loc {
     width:100%;
-}
-
-.formContacto .columna{
-    width: 49%;
-    display: inline-block;
-    margin: 1px;
-}
-
-.formContacto .botones{
-    display:inline-block;
-    width: 100%;
-    margin-left: 20%;
-    align-items: normal;
 }
 
 
@@ -841,26 +818,31 @@ Estilo específico de formularioAdopcion
 ---------------------------------------------
 ---------------------------------------------
 */
-
-.formAdopcion {
-    line-height: 1.5em;
+.formAdopcion input {
+    margin-bottom: unset;
 }
-.formAdopcion input{
-    width:100%;
-	padding: 1% 0 1% 1%;
-	border: none;
-    background-color:white;
-    margin-top: 1%;
+.formAdopcion input[type="checkbox"], .formAdopcion input[type="radio"],
+.formAdopcion #idMascota {
+    width: unset;
+}
+
+.formAdopcion select {
+    margin-bottom: 1%;
+    padding: 1%;
+    height: 2.3em;
+    background-color: white;
+    border: white;
     margin-bottom: 4%;
 }
 
-.formAdopcion form label{
-	width: 100%;
-	font-weight:bold;
-    margin-top: 15%;
-    margin-bottom: 5%;
+.formAdopcion textarea {
+    width: unset;
+    height: unset;
 }
 
+.formAdopcion #tamMascota {
+    height: unset;
+}
 
 .formAdopcion fieldset fieldset legend {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
@@ -871,57 +853,35 @@ Estilo específico de formularioAdopcion
     margin-bottom: unset;
     font-weight: bold;
 }
-
-/*
-.formAdopcion #name {
-    margin-bottom:4%;
+.formAdopcion fieldset fieldset label {
+    font-weight: lighter;
 }
 
-.formAdopcion #datos-contacto input {
-    width:100%;
+.formAdopcion fieldset fieldset {
+    margin-top:2%;
 }
 
-.formAdopcion #datos-contacto .dcha {
-    float: right;
+.formAdopcion #datos-contacto section{
+    margin-top: 4%;
 }
-
-.formAdopcion #datos-contacto .dcha input {
-    padding: 2% 0 1% 2%;
-    margin-right: 1%;
-}
-
-.formAdopcion #datos-contacto .izq {
-    float:left 
-}
-.formAdopcion #datos-contacto .izq input {
-    padding: 2% 0 1% 2%;
-    margin-right: 1%;
-}
-
-.formAdopcion select {
-    margin: 1%;
-}
-
-
 .formAdopcion .observacion {
-    font-size: 0.8em;
+    font-size: 0.9em;
     padding: 0;
-    margin: 0;
+    margin-top: 0.5em;
 }
 
 .formAdopcion label[for="tamMascota"] {
     vertical-align:top;
 }
 
-.formAdopcion fieldset fieldset label {
-    font-weight: lighter;
+.formAdopcion #casa, .formAdopcion label[for="casa"]  {
+    margin-bottom: 1em;
 }
 
 .formAdopcion #otraVivienda, .formAdopcion label[for="otraVivienda"]  {
-    margin-top: 1%;
+    margin-top:0;
     vertical-align: top;
 }
-*/
 /*
 ---------------------------------------------
 ---------------------------------------------

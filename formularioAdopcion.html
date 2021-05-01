@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width"/>
         <title>Formulario de Adopcion</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/pruebas.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat&family=Poppins:wght@300;400&family=Roboto+Condensed&family=Roboto:wght@300;500&display=swap" rel="stylesheet">     </head>
         <script src="js/script.js"></script>
     </head>
@@ -53,15 +53,19 @@
             <h1>Formulario de Adopci&oacute;n</h1>
         </header>
         <main>
-            <form action="recibido.html" method="POST"> <!--Acción no se ha escogido acción-->
+            <form action="recibido.html" method="POST"> <!--Escogido acción post porque hay información personal. Cambiar a GET para ver parámetros al enviar-->
                 <fieldset id="datos-contacto">
                     <legend>Datos de Contacto</legend>
-                    <label for="nomAdoptante">Nombre</label>
-                    <input type="text" name="nombre" id="nomAdoptante" autofocus required placeholder="Introduce tu nombre"><br>
-                    <label for="tflAdoptante">Tel&eacute;fono</label>
-                    <input type="tel" name="tlf" id="tflAdoptante" placeholder="+34xxxxxxxxx" required pattern="\+34[0-9]{9}">
-                    <label for="emailAdoptante">Email</label>
-                    <input type="email" name="email" id="emailAdoptante" required placeholder="Introduce tu email">
+                    <label for="name">Nombre y apellidos</label>
+                    <input type="text" id="name" name="user_name" autofocus required>
+                    <section class="columna izq">
+                        <label for="tlf">Teléfono</label>
+                        <input type="tel" id="tlf" name="user_telefono" placeholder="+34xxxxxxxxx" required pattern="\+34[0-9]{9}">
+                    </section>
+                    <section class="columna dcha">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="user_email" required><br>
+                    </section> 
                 </fieldset>
                 <fieldset id="datos-mascota">
                     <legend>Datos sobre la mascota deseada</legend>
@@ -144,8 +148,10 @@
                         <label for="sinExp">No</label>  
                     </fieldset>
                 </fieldset>
-                <input type="submit">
-                <input type="reset">
+                <section class="botones">
+                    <input type="submit">
+                    <input type="reset">
+                </section>
             </form>
         </main>
         <footer>

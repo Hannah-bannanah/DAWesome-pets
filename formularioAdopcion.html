@@ -4,44 +4,68 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width"/>
         <title>Formulario de Adopcion</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/pruebas.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat&family=Poppins:wght@300;400&family=Roboto+Condensed&family=Roboto:wght@300;500&display=swap" rel="stylesheet">     </head>
         <script src="js/script.js"></script>
     </head>
     <body onload="prerrellenarFormulario()"> <!--al cargarse la página, se prellenan los campos que se le hayan pasado por url-->
-        <nav>
+        <nav class="barra">
             <ul class="menu nav"> 
                 <li><a href="formularioContacto.html">Cont&aacute;ctanos</a></li>            
-                <li> <a href="formularioAdopcion.html"  class="pagina-actual">Formulario de Adopcion</a></li>
+                <li> <a href="formularioAdopcion.html" class="pagina-actual">Formulario de Adopcion</a></li>
                 <li><a href="mascotas.html">Nuestras mascotas</a>
                     <ul class="submenu">
-                        <li><a href="mascotas.html?#pp-asl1">Aslan</a></li>
-                        <li><a href="mascotas.html?#gg-ony5">Onyx</a></li>
-                        <li><a href="mascotas.html?#gg-mar9">Marilyn</a></li>
-                        <li><a href="mascotas.html?#pp-pup4">Pupok</a></li>
+                        <li><a href="mascotas.html?idMascota=pp-asl1">Aslan</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-ony5">Onyx</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-mar9">Marilyn</a></li>
+                        <li><a href="mascotas.html?idMascota=pp-pup4">Pupok</a></li>
                     </ul>
                 </li>
-                <li><a href="quienesSomos.html">Quienes Somos</a>
-                </li>
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
                 <li><a href="index.html">
                     <img src="images/iconindex.png" alt="Icono Home" />
                     </a>
                 </li>   
             </ul>
         </nav>
+        <nav class="movil">
+            <input type="checkbox" name="menu-movil" id="menu-movil">
+            <label for="menu-movil"><img id="abrir-menu" src="images/iconmenu.png" alt="Abrir menu de navegaci&oacute;n"><img id="cerrar-menu" src="images/iconcerrar.png" alt=""></label>
+            <ul class="menu nav"> 
+                <li><a href="index.html">
+                    <img src="images/iconindex.png" alt="Icono Home" />
+                    </a>
+                </li>   
+                <li><a href="quienesSomos.html">Quienes Somos</a></li> 
+                <li><a href="mascotas.html">Nuestras mascotas</a>
+                    <ul class="submenu">
+                        <li><a href="mascotas.html?idMascota=pp-asl1">Aslan</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-ony5">Onyx</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-mar9">Marilyn</a></li>
+                        <li><a href="mascotas.html?idMascota=pp-pup4">Pupok</a></li>
+                    </ul>
+                </li>
+                <li> <a href="formularioAdopcion.html" class="pagina-actual">Formulario de Adopcion</a></li>
+                <li><a href="formularioContacto.html">Cont&aacute;ctanos</a></li>
+            </ul>
+        </nav>
         <header>
             <h1>Formulario de Adopci&oacute;n</h1>
         </header>
         <main>
-            <form action="recibido.html" method="POST"> <!--Acción no se ha escogido acción-->
+            <form action="recibido.html" method="POST"> <!--Escogido acción post porque hay información personal. Cambiar a GET para ver parámetros al enviar-->
                 <fieldset id="datos-contacto">
                     <legend>Datos de Contacto</legend>
-                    <label for="nomAdoptante">Nombre</label>
-                    <input type="text" name="nombre" id="nomAdoptante" autofocus required placeholder="Introduce tu nombre"><br>
-                    <label for="tflAdoptante">Tel&eacute;fono</label>
-                    <input type="tel" name="tlf" id="tflAdoptante" placeholder="+34xxxxxxxxx" required pattern="\+34[0-9]{9}">
-                    <label for="emailAdoptante">Email</label>
-                    <input type="email" name="email" id="emailAdoptante" required placeholder="Introduce tu email">
+                    <label for="name">Nombre y apellidos</label>
+                    <input type="text" id="name" name="user_name" autofocus required>
+                    <section class="columna izq">
+                        <label for="tlf">Teléfono</label>
+                        <input type="tel" id="tlf" name="user_telefono" placeholder="+34xxxxxxxxx" required pattern="\+34[0-9]{9}">
+                    </section>
+                    <section class="columna dcha">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="user_email" required><br>
+                    </section> 
                 </fieldset>
                 <fieldset id="datos-mascota">
                     <legend>Datos sobre la mascota deseada</legend>
@@ -124,8 +148,10 @@
                         <label for="sinExp">No</label>  
                     </fieldset>
                 </fieldset>
-                <input type="submit">
-                <input type="reset">
+                <section class="botones">
+                    <input type="submit">
+                    <input type="reset">
+                </section>
             </form>
         </main>
         <footer>

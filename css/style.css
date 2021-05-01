@@ -240,7 +240,7 @@ Estilo específico de mascotas.html
 }
 
 .mascotas #placeholder p {
-    font-size: 2vw;
+    font-size: 1.5em;
     font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
     font-weight: 400;
     color: #005691;
@@ -482,10 +482,10 @@ Estilo específico de mascotas.html
 /*Posicionamiento del aside*/
 .mascotas aside {
     float: right;
-    width: 60%;
-    margin-right: 10%;
+    width: 40%;
+    margin-right: 20%;
     text-align: center;
-    margin-top: 11vh;
+    margin-top: 10%;
 }
 
 /*Formato del título del aside*/
@@ -730,6 +730,7 @@ Estilo específico de formularioContacto.html
     border: white;
     margin-top: 1%;
     margin-bottom: 4%;
+
 }
 
 

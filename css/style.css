@@ -614,6 +614,7 @@ Estilo genérico de formularios
 ---------------------------------------------
 */
 
+/* Estructura que contiene a los formularios */
 form {
     width: 45%;
     margin:auto;
@@ -768,6 +769,7 @@ Estilo específico de formularioContacto.html
     display:inline-block;
     width: 100%;
     margin-left: 20%;
+    margin-right: 20%;
     align-items: normal;
 }
 
@@ -918,6 +920,16 @@ Responsive design
         width: 50%;
         margin-left:10%
     }
+
+    main .contacto{
+        width: 65%;
+        margin: auto;
+    }
+
+    /*.form{
+        width: 65%;
+        margin: auto;
+    }*/
 }
 /*
     No hay cambios necesarios para monitores de anchura entre 900 y 1300,
@@ -961,6 +973,14 @@ Responsive design
         display: block;
         float: none;
         margin:auto;
+    }
+
+    /*Reducimos los márgenes y ampliamos el ancho del main del FORMULARIO DE CONTACTO*/
+    main .contacto{
+        width: 90%;
+        margin-left: 2%;
+        margin-right: 2%;
+        position: relative;
     }
 }
 
@@ -1079,6 +1099,39 @@ iPhone en vertical*/
     /*Quita la animación del botón de adopción -NO FUNCIONA*/
     .mascotas button {
         animation:none;
+    }
+
+    /*Cambia el formato del FORMULARIO DE CONTACTO para que cada input ocupe toda la pantalla
+    y mostrarlos uno detrás de otro */
+    .formContacto .columna {
+        width: 95%;
+    }
+
+    .formContacto .izq {
+        width: 99%;
+    }
+
+    .formContacto .dcha {
+        width: 100%;
+    }
+
+    .formContacto input #loc {
+        width: 98%;
+        padding: 0
+    }
+
+    /*Los botones de Enviar y Reestablecer los disponemos uno debajo de otro*/
+    .formContacto .botones input {
+        width: 100%;
+        display: block;
+       
+    }
+    .formContacto .botones {
+        width: 93%;
+        display: block;
+        margin-left: 5%;
+        margin-right: 5%;
+        position: auto;
     }
         
 }

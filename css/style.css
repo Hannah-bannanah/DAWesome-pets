@@ -615,6 +615,8 @@ Estilo genérico de formularios
 */
 
 
+/* Estructura que contiene a los formularios */
+
 form {
     /*width: 45%;*/
     width: 60%;
@@ -701,6 +703,7 @@ form .botones{
     display:inline-block;
     width: 100%;
     margin-left: 20%;
+    margin-right: 20%;
     align-items: normal;
 }
 
@@ -941,6 +944,7 @@ Responsive design
         margin-left:10%
     }
 
+
     form {
         width: 45%;
     }
@@ -989,8 +993,12 @@ Responsive design
         margin:auto;
     }
 
+    /*Reducimos los márgenes y ampliamos el ancho del main del FORMULARIO DE CONTACTO*/
     form {
-        width:90%;
+        width: 90%;
+        margin-left: 2%;
+        margin-right: 2%;
+        position: relative;
     }
 }
 
@@ -1146,9 +1154,43 @@ iPhone en vertical*/
         animation:none;
     }
 
+
+    /*Cambia el formato del FORMULARIO DE CONTACTO para que cada input ocupe toda la pantalla
+    y mostrarlos uno detrás de otro */
+    form .columna {
+        width: 95%;
+    }
+
+    form .izq {
+        width: 99%;
+    }
+
+    form .dcha {
+        width: 100%;
+    }
+
+    .formContacto input #loc {
+        width: 98%;
+        padding: 0
+    }
+
+    /*Los botones de Enviar y Reestablecer los disponemos uno debajo de otro*/
+    form .botones input {
+        width: 100%;
+        display: block;
+       
+    }
+    form .botones {
+        width: 93%;
+        display: block;
+        margin-left: 5%;
+        margin-right: 5%;
+        position: auto;
+
     /*Formato del header en la versión móvil*/
     .formAdopcion header {
         background-image: none;
+
     }
         
 }

@@ -614,7 +614,6 @@ Estilo genérico de formularios
 /* Estructura que contiene a los formularios */
 
 form {
-    /*width: 45%;*/
     width: 60%;
     margin:auto;
 }
@@ -696,11 +695,9 @@ form .columna{
 }
 
 form .botones{
-    display:inline-block;
+    display:flex;
     width: 100%;
-    margin-left: 20%;
-    margin-right: 20%;
-    align-items: normal;
+    justify-content: space-around;
 }
 
 

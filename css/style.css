@@ -1091,10 +1091,10 @@ iPhone en vertical*/
         border-top: 1px dashed gray;
     }
 
+    /*Estructura genérica de los formularios en versión móvil*/
     form {
-        width: 95%;
         padding: 2%;
-        overflow-x:hidden;
+        overflow-x:hidden; /*no muestra el contenido que se salga de las dimensiones especificadas en el contenedor*/
     }
 
     /*Los botones de Enviar y Reestablecer los disponemos uno debajo de otro*/
@@ -1146,8 +1146,12 @@ iPhone en vertical*/
     }
 
 
+    /*FORMULARIO CONTACTO Formato del header en la versión móvil*/
+    .formContacto header {
+        background-image: none;
+    }
 
-
+    /*FORMULARIO CONTACTO Formato de la caja de texto de localidad en la versión móvil*/
     .formContacto input #loc {
         width: 98%;
         padding: 0

@@ -602,6 +602,24 @@ Estilo específico de index.html
     line-height: 200%;
 }
 
+.index #artabajo {
+    padding: 10px 20% 10px 20%;
+}
+
+.index #artabajo .fondo{
+    background-image:url(../images/pelotafondo.jpg);  
+    height: 15vw;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.index #artabajo .fondo p{
+    padding: 10% 5% 10% 5%;
+    color: #f8f1f1;
+    text-align:center;
+    font-size: 1em;
+}
+
 /*
 ---------------------------------------------
 ---------------------------------------------

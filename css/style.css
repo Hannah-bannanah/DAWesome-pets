@@ -73,6 +73,7 @@ nav a {
 /*Oculta el submenú*/
 nav.barra .submenu {
     display: none;
+    position: absolute;
 }
 
 /*Posiciona los elementos del submenú*/
@@ -93,19 +94,23 @@ nav.barra .submenu a {
     text-align: center;
 }
 
-/*Muestra el submenú cuando se pasa el cursor por el elemento del
-menú principal correspondiente*/
-
-nav.barra li:hover ul.submenu {
-    display: block;
-    position: absolute;
-}
-
-/*Cambia el color del links del menú de navegación al pasar el cursor*/
-nav.barra a:hover, nav.barra a.pagina-actual {
+/*Cambia el color del link de la página actual en el menú de navegación*/
+nav.barra a.pagina-actual, nav.barra a:hover, nav.barra button:hover {
     background-color: #a3d2ca;
 }
 
+/*Formato de los bottones de la barra de navegación*/
+nav.barra button {
+    height: 57px;
+    padding: 12px;
+    border:none;
+    background-color: unset;
+}
+/*Formato del botton de cerrar menu*/
+nav.barra #cerrar-submenu {
+    transform: rotate(180deg);
+    display: none;
+}
 
 /*Formato del header*/
 header {

@@ -922,7 +922,7 @@ Responsive design
         margin-left: 7%;
     }
     .mascotas #placeholder p {
-        font-size: 2em;
+        font-size: 1.8em;
     }
 
     .mascotas aside {
@@ -1008,7 +1008,7 @@ iPhone en vertical*/
     }
 
     header h1 {
-        font-size: 1em;
+        font-size: 1.3em;
         text-align: center;
         padding: 0;
         margin: 0;
@@ -1094,7 +1094,7 @@ iPhone en vertical*/
     /*Estructura genérica de los formularios en versión móvil*/
     form {
         padding: 2%;
-        overflow-x:hidden; /*no muestra el contenido que se salga de las dimensiones especificadas en el contenedor*/
+        /*overflow-x:hidden; /*no muestra el contenido que se salga de las dimensiones especificadas en el contenedor*/
     }
 
     /*Los botones de Enviar y Reestablecer los disponemos uno debajo de otro*/
@@ -1161,9 +1161,21 @@ iPhone en vertical*/
     /*Formato del header en la versión móvil*/
     .formAdopcion header {
         background-image: none;
-
     }
-        
+
+    /*Establece anchura máxima de la sección de entorno del formulario
+    para prevenir overflow*/
+    .formAdopcion #datos-entorno, .formAdopcion #datos-entorno fieldset,
+    .formAdopcion #datos-entorno fieldset > *{
+        max-width: 99%;
+        text-align: left;
+    }
+
+    /*Anchura del textarea del formulario de adopción*/
+    .formAdopcion #datos-entorno textarea {
+        width:95%;
+    }
+     
 }
 
 /*

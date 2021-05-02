@@ -444,6 +444,7 @@ Estilo específico de mascotas.html
         rotate: 0deg; 
     }
 }
+
 /*Formato del botón de adopción de cada cuando se pasa el cursor sobre él*/
 .mascotas .quieroAdoptar:hover {
     cursor: pointer;
@@ -517,60 +518,48 @@ Estilo específico de index.html
 ---------------------------------------------
 ---------------------------------------------
 */
+
 .index header {
-    vertical-align: bottom;
-    font-variant: small-caps;
-    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
-    padding-left: 5%;
-    color: #f8f1f1;
-    font-size: 4em;
+        height: 30vw;
+        width: 100vw;
+        display: table-cell;
+        vertical-align: bottom;
+        clear: both;
+        padding-top: 3%;
 }
 
-.index #banner h1{
-    
+.index h1 a img{
+    display:block;
+    margin:0 auto;
     font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
-    color: #e8f1f5;
+    color: #005691;
     font-variant: small-caps;
-    height: 8%;
-    padding: 10px 10px 10px 10px;
-    display: block;
+    height: 10vw;
+    width: 50vw;
+    padding: 4% 4% 4% 4%;
     margin: 0 auto;
     text-align: center;
     font-size: 4em ;
 }
 
 .index h2{
-        font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
-        font-weight: 300;
-        color: #005691;
-        height: 6%;
-        padding: 100px 30px 100px 30px;
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 3em ;
-}
-
-.index #banner h1 a img{
-    height: 100%;
-    display:block;
-    margin:0 auto;
-    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-weight: 300;
     color: #005691;
-    font-variant: small-caps;
-    height: 30rem;
-    padding: 40px 40px 40px 40px;
+    height: 6%;
+    padding: 100px 30px 100px 30px;
     display: block;
     margin: 0 auto;
     text-align: center;
-    font-size: 4em ;
+    font-size: 3em ;
 }
+
 .index #text-bnv p{
     padding: 10px 20% 10px 20%;
     text-align: justify;
 }
 
-}
+
 .index #noticias table{
     table-layout: fixed;
     width: 70%;
@@ -583,10 +572,9 @@ Estilo específico de index.html
 
 }
 
-.index #noticias th, .index #noticias td
- {
+.index #noticias th, .index #noticias td{
     padding: 20px;
-  }
+}
 
 .index aside #webamiga {
     display: flex;
@@ -598,8 +586,8 @@ Estilo específico de index.html
     background: #a3d2ca;
     position: absolute;
     right:3%;
-    top: 700px;
-    height: 70vh;
+    top: 40%;
+    height: 20vh;
     border-radius: 10%/5%;
     text-align: center;
     padding: 6% 3%;

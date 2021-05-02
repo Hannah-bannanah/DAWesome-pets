@@ -564,8 +564,8 @@ Estilo específico de index.html
 }
 
 .index #text-bnv p{
-    padding: 10px 20% 10px 20%;
-    text-align: justify;
+    padding: 1% 20% 1% 20%;
+    text-align: center;
 }
 
 .index #noticias table{
@@ -576,31 +576,55 @@ Estilo específico de index.html
   }
 
 .index #noticias tr{
-    padding: 20px;
+    padding: 2%;
 
 }
 
 .index #noticias th, .index #noticias td{
-    padding: 20px;
+    padding: 2%;
+    text-align: center;
 }
 
-.index aside #webamiga {
-    display: flex;
+.index aside  {
+    display: block;
+    border-width : 0.1em;
+    border-style : dashed;
+    border-color : black;
     flex-direction: column;
     justify-content: space-between; 
     box-sizing: border-box;
     width: 15%;
-    position: absolute;
+    height: 20vh;
     background: #a3d2ca;
-    position: absolute;
+    position: fixed;
     right:3%;
     top: 40%;
-    height: 20vh;
     border-radius: 10%/5%;
     text-align: center;
     padding: 6% 3%;
     line-height: 200%;
+    float:right;
 }
+
+.index #artabajo {
+    padding: 10% 20% 10% 20%;
+}
+
+.index #artabajo .fondo{
+    background-image:url(../images/pelotafondo.jpg);  
+    height: 15vw;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.index #artabajo .fondo p{
+    padding: 10% 5% 10% 5%;
+    color: #f8f1f1;
+    text-align:center;
+    font-size: 1em;
+}
+
+
 
 /*
 ---------------------------------------------

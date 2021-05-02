@@ -73,6 +73,7 @@ nav a {
 /*Oculta el submenú*/
 nav.barra .submenu {
     display: none;
+    position: absolute;
 }
 
 /*Posiciona los elementos del submenú*/
@@ -84,7 +85,7 @@ nav.barra .submenu li {
 /*Formato de los links del submenú*/
 nav.barra .submenu a {
     display: block;
-    width: 140px;
+    width: 179px;
     padding: 12px 12px 0 12px;
     background-color: rgba(94,170,168, 0.8);
     text-align: center;
@@ -93,19 +94,31 @@ nav.barra .submenu a {
     text-align: center;
 }
 
-/*Muestra el submenú cuando se pasa el cursor por el elemento del
-menú principal correspondiente*/
-
-nav.barra li:hover ul.submenu {
-    display: block;
-    position: absolute;
-}
-
-/*Cambia el color del links del menú de navegación al pasar el cursor*/
-nav.barra a:hover, nav.barra a.pagina-actual {
+/*Cambia el color del link de la página actual y del link sobre
+el que se pasa el cursor en la barra de navegación*/
+nav.barra a.pagina-actual, nav.barra a:hover {
     background-color: #a3d2ca;
 }
 
+/*Cambia el formato de los botones de la barra de navegación
+cuando se pasa el cursor sobre ellos*/
+nav.barra button:hover {
+    cursor: pointer;
+    background-color: #a3d2ca;
+}
+
+/*Formato de los bottones de la barra de navegación*/
+nav.barra button {
+    height: 57px;
+    padding: 12px;
+    border:none;
+    background-color: unset;
+}
+/*Formato del botton de cerrar menu*/
+nav.barra #cerrar-submenu {
+    transform: rotate(180deg);
+    display: none;
+}
 
 /*Formato del header*/
 header {
@@ -440,6 +453,7 @@ Estilo específico de mascotas.html
         rotate: 0deg; 
     }
 }
+
 /*Formato del botón de adopción de cada cuando se pasa el cursor sobre él*/
 .mascotas .quieroAdoptar:hover {
     cursor: pointer;
@@ -513,54 +527,42 @@ Estilo específico de index.html
 ---------------------------------------------
 ---------------------------------------------
 */
+
 .index header {
-    vertical-align: bottom;
-    font-variant: small-caps;
-    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
-    padding-left: 5%;
-    color: #f8f1f1;
-    font-size: 4em;
+        height: 30vw;
+        width: 100vw;
+        display: table-cell;
+        vertical-align: bottom;
+        clear: both;
+        padding-top: 3%;
 }
 
-.index #banner h1{
-    
+.index h1 a img{
+    display:block;
+    margin:0 auto;
     font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
-    color: #e8f1f5;
+    color: #005691;
     font-variant: small-caps;
-    height: 8%;
-    padding: 10px 10px 10px 10px;
-    display: block;
+    height: 10vw;
+    width: 50vw;
+    padding: 4% 4% 4% 4%;
     margin: 0 auto;
     text-align: center;
     font-size: 4em ;
 }
 
 .index h2{
-        font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
-        font-weight: 300;
-        color: #005691;
-        height: 6%;
-        padding: 100px 30px 100px 30px;
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 3em ;
-}
-
-.index #banner h1 a img{
-    height: 100%;
-    display:block;
-    margin:0 auto;
-    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-weight: 300;
     color: #005691;
-    font-variant: small-caps;
-    height: 30rem;
-    padding: 40px 40px 40px 40px;
+    height: 6%;
+    padding: 100px 30px 100px 30px;
     display: block;
     margin: 0 auto;
     text-align: center;
-    font-size: 4em ;
+    font-size: 3em ;
 }
+
 .index #text-bnv p{
     padding: 10px 20% 10px 20%;
     text-align: justify;
@@ -578,10 +580,9 @@ Estilo específico de index.html
 
 }
 
-.index #noticias th, .index #noticias td
- {
+.index #noticias th, .index #noticias td{
     padding: 20px;
-  }
+}
 
 .index aside #webamiga {
     display: flex;
@@ -593,8 +594,8 @@ Estilo específico de index.html
     background: #a3d2ca;
     position: absolute;
     right:3%;
-    top: 700px;
-    height: 70vh;
+    top: 40%;
+    height: 20vh;
     border-radius: 10%/5%;
     text-align: center;
     padding: 6% 3%;
@@ -609,8 +610,12 @@ Estilo genérico de formularios
 ---------------------------------------------
 */
 
+
+/* Estructura que contiene a los formularios */
+
 form {
-    width: 45%;
+    /*width: 45%;*/
+    width: 60%;
     margin:auto;
 }
 
@@ -634,6 +639,14 @@ fieldset legend {
     margin-bottom: 3%;
 }
 
+form input {
+    width:100%;
+	padding: 1% 0 1% 1%;
+	border: none;
+    background-color:white;
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
 
 form input[type="submit"], form input[type="reset"]{
 	font-size: 0.9em;
@@ -667,6 +680,28 @@ form .izq input {
     margin-right: 1%;
 }
 
+form #tlf {
+    width:100%;
+}
+
+form #email {
+    width:100%;
+    margin-right: 0;
+}
+
+form .columna{
+    width: 49%;
+    display: inline-block;
+    margin: 1px;
+}
+
+form .botones{
+    display:inline-block;
+    width: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+    align-items: normal;
+}
 
 
 /*
@@ -676,35 +711,6 @@ Estilo específico de formularioContacto.html
 ---------------------------------------------
 ---------------------------------------------
 */
-
-
-.formContacto input {
-    width:100%;
-	padding: 1% 0 1% 1%;
-	border: none;
-    background-color:white;
-    margin-top: 1%;
-    margin-bottom: 4%;
-}
-
-
-.formContacto .dcha {
-    float: right;
-}
-
-.formContacto .dcha input {
-    padding: 2% 0 1% 2%;
-    margin-right: 1%;
-}
-
-.formContacto .izq {
-    float:left 
-}
-.formContacto .izq input {
-    padding: 2% 0 1% 2%;
-    margin-right: 1%;
-}
-
 
 
 .formContacto textarea{
@@ -734,36 +740,12 @@ Estilo específico de formularioContacto.html
     margin: 50px;
 }
 
-.formContacto #tlf {
-    width:100%;
-}
-
-.formContacto #email {
-    width:100%;
-    margin-right: 0;
-}
-
-
 .formContacto #prov {
     width:100%;
 }
 
-
 .formContacto #loc {
     width:100%;
-}
-
-.formContacto .columna{
-    width: 49%;
-    display: inline-block;
-    margin: 1px;
-}
-
-.formContacto .botones{
-    display:inline-block;
-    width: 100%;
-    margin-left: 20%;
-    align-items: normal;
 }
 
 
@@ -834,26 +816,40 @@ Estilo específico de formularioAdopcion
 ---------------------------------------------
 */
 
-.formAdopcion {
-    line-height: 1.5em;
-}
-.formAdopcion input{
-    width:100%;
-	padding: 1% 0 1% 1%;
-	border: none;
-    background-color:white;
-    margin-top: 1%;
-    margin-bottom: 4%;
+/*Elimina el margen de los campos de input para poder 
+establecerlo según el campo específico*/
+.formAdopcion input {
+    margin-bottom: unset;
 }
 
-.formAdopcion form label{
-	width: 100%;
-	font-weight:bold;
-    margin-top: 15%;
+/*Elimina el width=100% de las checkboxes y los botones radio*/
+.formAdopcion input[type="checkbox"], .formAdopcion input[type="radio"],
+.formAdopcion #idMascota {
+    width: unset;
+}
+
+/*Establece el formato de los campos select*/
+.formAdopcion select {
+    padding: 1%;
+    height: 2.3em;
+    background-color: white;
+    border: white;
     margin-bottom: 5%;
 }
 
+/*Elimina el formato de textarea*/
+.formAdopcion textarea {
+    width: unset;
+    height: unset;
+}
 
+/*Formato de del select del tamaño, ya que es multiselect*/
+.formAdopcion select[multiple] {
+    height: unset;
+    padding:unset;
+}
+
+/*Cambia el formato de las leyendas de los grupos de botones radio*/
 .formAdopcion fieldset fieldset legend {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: #2f2f6a;
@@ -864,56 +860,58 @@ Estilo específico de formularioAdopcion
     font-weight: bold;
 }
 
-/*
-.formAdopcion #name {
-    margin-bottom:4%;
-}
-
-.formAdopcion #datos-contacto input {
-    width:100%;
-}
-
-.formAdopcion #datos-contacto .dcha {
-    float: right;
-}
-
-.formAdopcion #datos-contacto .dcha input {
-    padding: 2% 0 1% 2%;
-    margin-right: 1%;
-}
-
-.formAdopcion #datos-contacto .izq {
-    float:left 
-}
-.formAdopcion #datos-contacto .izq input {
-    padding: 2% 0 1% 2%;
-    margin-right: 1%;
-}
-
-.formAdopcion select {
-    margin: 1%;
-}
-
-
-.formAdopcion .observacion {
-    font-size: 0.8em;
-    padding: 0;
-    margin: 0;
-}
-
-.formAdopcion label[for="tamMascota"] {
-    vertical-align:top;
-}
-
+/*Cambia el formato de las label de los grupos de botones radio*/
 .formAdopcion fieldset fieldset label {
     font-weight: lighter;
 }
 
+/*Añade margen superior a los grupos dentro de un fieldset*/
+.formAdopcion fieldset fieldset {
+    margin-top:2%;
+}
+
+/*Añade margen superior a los campos de teléfono e email*/
+.formAdopcion #datos-contacto section{
+    margin-top: 4%;
+}
+
+/*Cambia el formato de la observación con * sobre ID Mascota*/
+.formAdopcion .observacion {
+    font-size: 0.9em;
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom:3%
+}
+
+/*Formato de los select sobre la mascota*/
+.formAdopcion .izq select, .formAdopcion .dcha select {
+
+    width: 100%;
+}
+
+/*Alinea la label del multiselect con el borde superior del campo*/
+.formAdopcion label[for="tamMascota"] {
+    vertical-align:top;
+}
+
+/*Corrige la posición del botón radio Otro en el grupo de vivienda*/
+.formAdopcion #casa, .formAdopcion label[for="casa"]  {
+    margin-bottom: 1em;
+}
+
+/*Alinea el botón radio Otro con el textarea relacionado*/
 .formAdopcion #otraVivienda, .formAdopcion label[for="otraVivienda"]  {
-    margin-top: 1%;
+    margin-top:0;
     vertical-align: top;
 }
-*/
+
+/*Esconde las label del textarea de descripción de vivienda y
+los botones de submit y reseteo.
+Nota: es importante mantener la label aunque no se muestre
+para aquellas personas que usen un lector de pantalla*/
+.formAdopcion label[for="descVivienda"] {
+    display: none;
+}
 /*
 ---------------------------------------------
 ---------------------------------------------
@@ -937,6 +935,11 @@ Responsive design
     .mascotas .petInfo {
         width: 50%;
         margin-left:10%
+    }
+
+
+    form {
+        width: 45%;
     }
 }
 /*
@@ -981,6 +984,14 @@ Responsive design
         display: block;
         float: none;
         margin:auto;
+    }
+
+    /*Reducimos los márgenes y ampliamos el ancho del main del FORMULARIO DE CONTACTO*/
+    form {
+        width: 90%;
+        margin-left: 2%;
+        margin-right: 2%;
+        position: relative;
     }
 }
 
@@ -1083,6 +1094,42 @@ iPhone en vertical*/
         border-top: 1px dashed gray;
     }
 
+    form {
+        width: 95%;
+        padding: 2%;
+        overflow-x:hidden;
+    }
+
+    /*Los botones de Enviar y Reestablecer los disponemos uno debajo de otro*/
+    form .botones input {
+        width: 100%;
+        display: block;
+       
+    }
+    form .botones {
+        width: 93%;
+        display: block;
+        margin-left: 5%;
+        margin-right: 5%;
+        position: auto;
+     
+    }  
+
+    /*Cambia el formato del FORMULARIO DE CONTACTO para que cada input ocupe toda la pantalla
+    y mostrarlos uno detrás de otro */
+    form .columna {
+        width: 95%;
+    }
+
+    form .izq {
+        width: 99%;
+    }
+
+    form .dcha {
+        width: 100%;
+    }
+
+
     /*Formato del header en la versión móvil*/
     .mascotas header {
         background-image: none;
@@ -1099,6 +1146,21 @@ iPhone en vertical*/
     /*Quita la animación del botón de adopción -NO FUNCIONA*/
     .mascotas button {
         animation:none;
+    }
+
+
+
+
+    .formContacto input #loc {
+        width: 98%;
+        padding: 0
+    }
+
+
+    /*Formato del header en la versión móvil*/
+    .formAdopcion header {
+        background-image: none;
+
     }
         
 }

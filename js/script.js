@@ -70,13 +70,15 @@ function mostrarMascota(){
     }
 }
 
-/*Función que al cargar mascotas.html muestra la mascota pasada como parámetro
-function mostrarMascota(){
-    /*Obtiene la parte de la url que va detrás del símbolo # - sacado de 
-    https://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/
-    const idMascota = window.location.hash.split('#')[1];  
-    if (idMascota) {
-        const radioMascota = "check"+idMascota;
-        document.getElementById(radioMascota).checked=true;
-    }
-}*/
+/*Funcion que abre y cierra el submenu*/
+function abrirSubmenu(){
+    document.getElementById("submenu-barra").style.display = "block";
+    document.getElementById("cerrar-submenu").style.display="unset";
+    document.getElementById("abrir-submenu").style.display="none";
+}
+
+function cerrarSubmenu(){
+    document.getElementById("submenu-barra").style.display = "none";
+    document.getElementById("cerrar-submenu").style.display="none";
+    document.getElementById("abrir-submenu").style.display="unset";
+}

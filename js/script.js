@@ -72,13 +72,13 @@ function mostrarMascota(){
 
 /*Funcion que abre y cierra el submenu*/
 function abrirSubmenu(){
-    document.getElementById("submenu1").style.display = "block";
+    document.getElementById("submenu-barra").style.display = "block";
     document.getElementById("cerrar-submenu").style.display="unset";
     document.getElementById("abrir-submenu").style.display="none";
 }
 
 function cerrarSubmenu(){
-    document.getElementById("submenu1").style.display = "none";
+    document.getElementById("submenu-barra").style.display = "none";
     document.getElementById("cerrar-submenu").style.display="none";
     document.getElementById("abrir-submenu").style.display="unset";
 }

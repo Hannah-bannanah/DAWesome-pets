@@ -85,7 +85,7 @@ nav.barra .submenu li {
 /*Formato de los links del submenú*/
 nav.barra .submenu a {
     display: block;
-    width: 140px;
+    width: 179px;
     padding: 12px 12px 0 12px;
     background-color: rgba(94,170,168, 0.8);
     text-align: center;
@@ -94,8 +94,16 @@ nav.barra .submenu a {
     text-align: center;
 }
 
-/*Cambia el color del link de la página actual en el menú de navegación*/
-nav.barra a.pagina-actual, nav.barra a:hover, nav.barra button:hover {
+/*Cambia el color del link de la página actual y del link sobre
+el que se pasa el cursor en la barra de navegación*/
+nav.barra a.pagina-actual, nav.barra a:hover {
+    background-color: #a3d2ca;
+}
+
+/*Cambia el formato de los botones de la barra de navegación
+cuando se pasa el cursor sobre ellos*/
+nav.barra button:hover {
+    cursor: pointer;
     background-color: #a3d2ca;
 }
 

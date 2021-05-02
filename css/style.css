@@ -867,7 +867,7 @@ establecerlo según el campo específico*/
 .formAdopcion fieldset fieldset legend {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: #2f2f6a;
-    text-align: center;
+    text-align: left;
     font-size: 1em;
     margin-top: unset;
     margin-bottom: unset;

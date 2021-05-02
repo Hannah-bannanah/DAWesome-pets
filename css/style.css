@@ -612,12 +612,12 @@ Estilo genérico de formularios
 
 
 /* Estructura que contiene a los formularios */
-
 form {
     width: 60%;
     margin:auto;
 }
 
+/* Formato de las etiquetas de los formularios */
 form label{
 	width: 100%;
 	font-weight:bold;
@@ -626,10 +626,12 @@ form label{
 	
 }
 
+/*Ocultamos la línea que enmarca cada grupo de campos de los formularios*/
 form fieldset {
     border: none;
 }
 
+/* Formato de los títulos de cada grupo de campos de los formularios*/
 fieldset legend {
     color: #db6400;
     text-align: center;
@@ -638,6 +640,7 @@ fieldset legend {
     margin-bottom: 3%;
 }
 
+/* Formato de las cajitas input de los formularios*/
 form input {
     width:100%;
 	padding: 1% 0 1% 1%;
@@ -647,6 +650,7 @@ form input {
     margin-bottom: 4%;
 }
 
+/* Formato de los botones de enviar y resetear los formularios*/
 form input[type="submit"], form input[type="reset"]{
 	font-size: 0.9em;
     width: 27%;
@@ -654,6 +658,7 @@ form input[type="submit"], form input[type="reset"]{
     display: inline;
 }
 
+/* Formato de los botones de enviar y resetear los formularios cuando se pasa el ratón por encima*/
 form input[type="submit"]:hover, form input[type="reset"]:hover{
 	cursor:pointer;
     color:white;
@@ -661,23 +666,28 @@ form input[type="submit"]:hover, form input[type="reset"]:hover{
     Border:#5eaaa8;
 }
 
-
+/* Formato de las columnas de la derecha de los formularios*/
 form .dcha {
     float: right;
 }
 
+/* Formato de las cajitas input de las columnas de la derecha de los formularios*/
 form .dcha input {
     padding: 2% 0 1% 2%;
     margin-right: 1%;
 }
 
+/* Formato de las columnas de la izquierda de los formularios*/
 form .izq {
     float:left 
 }
+
+/* Formato de las cajitas input de las columnas de la izquierda de los formularios*/
 form .izq input {
     padding: 2% 0 1% 2%;
     margin-right: 1%;
 }
+
 
 form #tlf {
     width:100%;
@@ -688,12 +698,14 @@ form #email {
     margin-right: 0;
 }
 
+/*Formato de las columnas que aparecen en los formularios*/
 form .columna{
     width: 49%;
     display: inline-block;
     margin: 1px;
 }
 
+/*Formato de la sección en la que aparecen los botones en los formularios*/
 form .botones{
     display:flex;
     width: 100%;
@@ -709,7 +721,7 @@ Estilo específico de formularioContacto.html
 ---------------------------------------------
 */
 
-
+/*Formato de la caja en la que se introduce el mensaje*/
 .formContacto textarea{
 	width:100%;
 	height:100px;
@@ -721,8 +733,10 @@ Estilo específico de formularioContacto.html
 	
 }
 
+/*Formato del desplegable del formulario de contacto*/
 .formContacto select{
-	height: 25px;
+	width:100%;
+    height: 25px;
     padding: 1px;
     background-color: white;
     border: white;
@@ -731,20 +745,23 @@ Estilo específico de formularioContacto.html
 
 }
 
-
+/*Formato del texto introductorio del fomulario de contacto*/
 .formContacto #introForm {
     text-align: center;
     margin: 50px;
 }
 
+/* BORRAR 
+Formato del texto introductorio del fomulario de contacto
 .formContacto #prov {
     width:100%;
 }
 
+
 .formContacto #loc {
     width:100%;
 }
-
+*/
 
 /*
 ---------------------------------------------
@@ -1103,6 +1120,8 @@ iPhone en vertical*/
         display: block;
        
     }
+
+    /*Estructura de la sección que contiene los botones de los formularios*/
     form .botones {
         width: 93%;
         display: block;
@@ -1112,16 +1131,14 @@ iPhone en vertical*/
      
     }  
 
-    /*Cambia el formato del FORMULARIO DE CONTACTO para que cada input ocupe toda la pantalla
-    y mostrarlos uno detrás de otro */
+    /*Cambia el formato de las secciones que están distribuidas en columnas para que cada una ocupe toda la pantalla
+    y mostrarlas una debajo de otra */
     form .columna {
         width: 95%;
     }
-
     form .izq {
         width: 99%;
     }
-
     form .dcha {
         width: 100%;
     }

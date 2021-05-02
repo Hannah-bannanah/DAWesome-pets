@@ -197,19 +197,15 @@ footer {
 footer #texto{
     width: 80%;
     display: inline-block;
-}
-
-footer #contacto {
-    margin-top: 0%;
-    margin-left: 1%;
+    margin-left: 2%;
 }
 
 footer #redes {
     list-style: none;
-    width: 10%;
-    margin-right: 0%;
+    width: 1 0%;
     margin-top: 0%;
     float: right;
+    margin-right: 0%;
 }
 
 footer #redes a img {
@@ -798,28 +794,26 @@ Estilo específico de quienesSomos.html
     
 }
 
-/*Vídeo. Solo hay que separarlo del título principal. 
-Las dimensiones vienen por defecto en el enlace que proporciona Youtube.*/
+/*Vídeo*/
 .quienesSomos #video iframe{
     margin-top: 2%;
     margin-bottom:2%;
     float: left;
     width: 45vw; 
     height: 50vh; 
+    display: inline-block;
 }
 
-/*Aside. Publicidad*/
+/*Aside. Título "publicidad"*/
 .quienesSomos #publititulo {
-    position:relative;
-    float:inherit;
+    display: block;
     margin-left: 5%;
 }
 
 /*Aside. Publicidad: imagen 1*/
 .quienesSomos #publicidad #train {
     position:relative;
-    float:left;
-    margin-left: 5%;
+    margin-left: 3%;
     width: 15%; 
     height: 25%;
 }
@@ -827,10 +821,9 @@ Las dimensiones vienen por defecto en el enlace que proporciona Youtube.*/
 /*Aside. Publicidad: imagen 2*/
 .quienesSomos #publicidad #vet {
     position:relative;
-    float:left;
-    margin-left: 5%;
-    width: 20%; 
-    height: 10%;
+    margin-left: 1%;
+    width: 25%; 
+    height: 15%;
 }
 
 /*
@@ -1108,4 +1101,37 @@ iPhone en vertical*/
         animation:none;
     }
         
+}
+
+/*
+---------------------------------------------
+---------------------------------------------
+Responsive design: QUIÉNES SOMOS
+---------------------------------------------
+---------------------------------------------
+*/
+
+/* No hay cambios necesarios para los siguientes formatos:
+    - monitores de más de 1300px de ancho.
+    - monitores de anchura entre 900 y 1300 (ya que la web se ha diseñado con esa anchura en mente).
+    - el diseño por defecto incluye compatibilidad con iPad, iPad Mini y iPad Pro en posición horizontal. 
+*/
+
+/*iPad en posición vertical.*/
+@media screen and (max-width: 900px) {
+
+    .quienesSomos #quienesSomos, .quienesSomos  #video iframe{
+        width: 95%;
+        display: block;
+        clear:both;
+    }
+    
+    .quienesSomos aside{
+        display: block;
+        clear: both;
+    }
+}
+/*iPhone posición vertical.*/
+@media screen and (max-width: 700px) {
+
 }

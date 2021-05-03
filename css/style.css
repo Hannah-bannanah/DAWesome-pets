@@ -16,7 +16,7 @@ Elementos comunes a todas las páginas
 /*Formato de base para el body de las páginas*/
 body {
     background-color: #f8f1f1;
-    font-family: 'Roboto', 'Arial', 'Helvetica', 'sans-serif';
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: #2f2f6a;
     margin:0;
     padding-top: 0;
@@ -165,14 +165,14 @@ header {
 header h1 {
     vertical-align: bottom;
     font-variant: small-caps;
-    font-family: 'Roboto Condensed', 'Montserrat', 'Helvetica', 'sans-serif';
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
     padding-left: 5%;
     color: #f8f1f1;
     font-size: 4em;
 }
 /*Formato de h2*/
 h2 {
-    font-family: 'Roboto', 'Poppins', 'Helvetica', 'sans-serif';
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
     font-weight: 300;
     color: #005691;
     height: 6%;
@@ -185,7 +185,7 @@ h2 {
 
 /*Formato de h3*/
 h3 {
-    font-family: 'Roboto', 'Poppins', 'Helvetica', 'sans-serif';
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
     font-weight: 200;
     color: #005691;
     height: 4%;
@@ -264,7 +264,7 @@ Estilo específico de mascotas.html
 
 .mascotas #placeholder p {
     font-size: 1.5em;
-    font-family: 'Roboto', 'Poppins', 'Helvetica', 'sans-serif';
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
     font-weight: 400;
     color: #005691;
 }
@@ -313,7 +313,7 @@ Estilo específico de mascotas.html
 
 /*Formato del id de Mascota*/
 .mascotas .idMascota {
-    font-family: 'Roboto', 'Poppins', 'Helvetica', 'sans-serif';
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
     font-size: 1.75em;
     color: #005691;
     margin-top: 0;
@@ -529,7 +529,7 @@ Estilo específico de mascotas.html
 
 /*Formato del título del aside*/
 .mascotas #sabiasque h3 {
-    font-family: 'Poppins', 'Montserrat', 'Helvetica', 'sans-serif';
+    font-family: 'Poppins', 'Montserrat', Helvetica, sans-serif;
     color: #005691;
     font-size: 1.5em;
 }
@@ -581,7 +581,7 @@ Estilo específico de index.html
 
 
 .index a h1 img{
-    font-family: 'Roboto Condensed', 'Montserrat', 'Helvetica', 'sans-serif';
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
     color: #5eaaa8;
     font-variant: small-caps;
     width: 70vw;
@@ -591,10 +591,6 @@ Estilo específico de index.html
 }
 
 .index h2{
-
-    font-family: 'Roboto', 'Poppins', 'Helvetica', 'sans-serif';
-    font-weight: 300;
-    color: #005691;
     height: 6%;
     padding: 10% 4% 4% 4%;
     display: block;
@@ -603,12 +599,7 @@ Estilo específico de index.html
     font-size: 3.5em ;
 }
 
-
 .index .titulocont h3 {
-    font-family: 'Roboto', 'Poppins', 'Helvetica', 'sans-serif';
-    font-weight: 300;
-    color: #005691;
-    height: 6%;
     padding: 4% 4% 8% 4%;
     display: block;
     margin: 0 auto;
@@ -1145,7 +1136,7 @@ establecerlo según el campo específico*/
 
 /*Cambia el formato de las leyendas de los grupos de botones radio*/
 .formAdopcion fieldset fieldset legend {
-    font-family: 'Roboto', 'Arial', 'Helvetica', 'sans-serif';
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: #2f2f6a;
     text-align: left;
     font-size: 1em;
@@ -1520,5 +1511,55 @@ Responsive design: INDEX
 ---------------------------------------------
 ---------------------------------------------
 */
+
+/* No hay cambios necesarios para los siguientes formatos:
+    - monitores de más de 1300px de ancho.
+    */
+
+/*Cambios para monitores de menos de 900px de ancho 
+    iPad, iPad Mini, iPad Pro en vertical*/
+    @media screen and (max-width: 900px) {
+        .index .seleccion, .mascotas #placeholder {
+            display: none;
+        }
+        
+        .index section {
+            display: block;
+            position: relative;
+        }
+        
+        .index .petInfo {
+            width: 80%;
+            display: block;
+            visibility: visible;
+            opacity: unset;
+            position: relative;
+        }
+        
+        .index :checked ~ .petInfo { 
+            visibility: visible;
+            opacity: 1;
+            float: none;
+        }
+    
+        .index .petInfo article {
+            max-height: unset;
+        }
+    
+        .index aside {
+            width: 90%;
+            display: block;
+            float: none;
+            margin:auto;
+        }
+    
+        /*Reducimos los márgenes y ampliamos el ancho del main del FORMULARIO DE CONTACTO*/
+        form {
+            width: 90%;
+            margin-left: 2%;
+            margin-right: 2%;
+            position: relative;
+        }
+    }
 
 

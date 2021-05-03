@@ -563,6 +563,18 @@ Estilo específico de index.html
     font-size: 3em ;
 }
 
+.index h3{
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-weight: 300;
+    color: #005691;
+    height: 6%;
+    padding: 4% 4% 4% 4%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3em;
+}
+
 .index #text-bnv p{
     padding: 1% 20% 1% 20%;
     text-align: center;
@@ -668,8 +680,85 @@ Estilo específico de index.html
     box-sizing: border-box;
 }
 
-.index #news .contenedornews .contenidonoticias .cajanoticias{
+.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat{
+    margin-bottom: 0 !important;
+    box-sizing: border-box;
+}
 
+.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .imgcuad{
+
+    position: relative;
+    box-sizing: border-box
+}
+
+.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .imgcuad a{
+    cursor: pointer !important;
+    text-decoration: none;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .imgcuad a .imgresponsive{
+
+    border-radius:6px 6px 0 0;
+    width: 100%;
+    height: auto;
+    border-style: none;
+}
+
+.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .imgcuad a .bl-fecha{
+
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    width: 90px;
+    box-sizing: border-box;
+    background-color:  #a3d2ca;
+    border-radius: 6px;
+}
+.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .imgcuad a .bl-fecha h4{
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+}
+
+.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .contabajo{
+    border: 1px solid #005691;
+    border-top: none;
+    padding: 2em;
+    border-bottom-left-radius:35px;
+    border-bottom-right-radius: 35px;
+    background: transparent;
+    box-sizing: border-box;
+}
+.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .contabajo h5{
+
+    font-size: 24px;    
+    line-height: 30px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    color: #005691 ;
+    font-weight: 600;
+    text-align: center;
+}
+
+.btn-leermas{
+    padding: 12px 45px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+    transition: 0.3s ease-in;
+    border-radius: 35px;
+    margin-top: 1.5rem !important;
+    color: #fff;
+    background-color: #a3d2ca;
+    border-color: #a3d2ca;
+}
 
 
 /*

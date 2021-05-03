@@ -556,7 +556,7 @@ Estilo específico de index.html
     font-weight: 300;
     color: #005691;
     height: 6%;
-    padding: 100px 30px 100px 30px;
+    padding: 10% 4% 4% 4%;
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -568,19 +568,19 @@ Estilo específico de index.html
     text-align: center;
 }
 
-.index #noticias table{
+.index #tablon table{
     table-layout: fixed;
     width: 70%;
     margin-right: auto;
     margin-left: auto;
   }
 
-.index #noticias tr{
+.index #tablon tr{
     padding: 2%;
 
 }
 
-.index #noticias th, .index #noticias td{
+.index #tablon th, .index #tablon td{
     padding: 2%;
     text-align: center;
 }
@@ -607,7 +607,7 @@ Estilo específico de index.html
 }
 
 .index #artabajo {
-    padding: 10% 20% 10% 20%;
+    padding: 5% 20% 5% 20%;
 }
 
 .index #artabajo .fondo{
@@ -623,6 +623,52 @@ Estilo específico de index.html
     text-align:center;
     font-size: 1em;
 }
+
+.index #news{
+    padding-bottom: 3rem !important;
+    padding-top: 3rem !important;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: block;
+    box-sizing: border-box;
+}
+
+.index #news .contenedornews{
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 3rem !important;
+    padding-top: 3rem !important;
+
+}
+
+.index #news .contenedornews .titulocont{
+    text-align: center !important;
+}
+
+.index #news .contenedornews .titulocont h3{
+    text-align: center;
+}
+
+.index #news .contenedornews .contenidonoticias{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    box-sizing: border-box;
+}
+
+.index #news .contenedornews .contenidonoticias .cajanoticias{
+    margin-top: 3rem !important;
+    flex: 0 0 50%;
+    max-width: 50%; 
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.index #news .contenedornews .contenidonoticias .cajanoticias{
 
 
 

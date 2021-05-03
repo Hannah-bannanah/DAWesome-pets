@@ -530,10 +530,7 @@ Estilo específico de mascotas.html
 .mascotas #sabiasque a, .mascotas #sabiasque a:visited{
     color:chocolate;
 }
-/*Formato del footer*/
-.mascotas footer {
-    clear:both;
-}
+
 
 /*
 ---------------------------------------------
@@ -1330,6 +1327,10 @@ iPhone en vertical*/
         display: block;
         clear: both;
         margin-left: 0;
+    }
+
+    .mascotas td, .mascotas th {
+        background: none #a3d2ca;
     }
 
     /*Quita la animación del botón de adopción -NO FUNCIONA*/

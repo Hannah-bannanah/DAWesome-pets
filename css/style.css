@@ -279,7 +279,7 @@ Estilo específico de mascotas.html
     border: 3px solid #5eaaa8;
     /*border-radius: 5%/10%;*/
     text-align: left;
-    background-color: #e7f3f1;
+    background-color: #f8f1f1;
     max-height: 50vh;
     overflow: scroll;
     /*box-shadow: 0 0 5px 8px #a3d2ca;*/
@@ -316,12 +316,30 @@ Estilo específico de mascotas.html
 .mascotas table {
     line-height: 1.25em;
     height: max-content;
+    background-color: #a3d2ca;
+/*    background: rgb(94,170,168);
+    background: linear-gradient(90deg, rgba(94,170,168,1) 0%, rgba(163,210,202,1) 50%, rgba(94,170,168,1) 100%);
+*/    border-collapse: collapse;
+    width: 100%;
+}
+
+/*Formato de la cabecera (lateral) de la tabla*/
+.mascotas th {
+    padding: 2%;
+    border-radius: 2%;
+    border: 1px solid #f8f1f1;
+    width: 30%;
+    background: rgb(163,210,202);
+    background: linear-gradient(90deg, rgba(163,210,202,1) 75%, rgba(94,170,168,1) 100%);
 }
 
 /*Formato de las celdas de la tabla*/
 .mascotas td {
-    padding: 1%, 2%;
-    border-radius: 1%;
+    padding: 2%;
+    border-radius: 2%;
+    border: 1px solid #f8f1f1;
+    background: rgb(163,210,202);
+    background: linear-gradient(90deg, rgba(163,210,202,1) 75%, rgba(94,170,168,1) 100%);
 }
 
 /*Formato del botón de adopción de cada animal*/
@@ -493,9 +511,8 @@ Estilo específico de mascotas.html
 .mascotas aside {
     float: right;
     width: 40%;
-    margin-right: 20%;
     text-align: center;
-    margin-top: 10%;
+    margin: 15% 20% 5% 0;
 }
 
 /*Formato del título del aside*/
@@ -1313,7 +1330,8 @@ iPhone en vertical*/
     .mascotas article img, .mascotas .bio {
         width: 95%;
         display: block;
-        clear:both;
+        clear: both;
+        margin-left: 0;
     }
 
     /*Quita la animación del botón de adopción -NO FUNCIONA*/

@@ -591,6 +591,7 @@ Estilo específico de index.html
 }
 
 .index h2{
+
     font-family: 'Roboto', 'Poppins', 'Helvetica', 'sans-serif';
     font-weight: 300;
     color: #005691;
@@ -599,19 +600,20 @@ Estilo específico de index.html
     display: block;
     margin: 0 auto;
     text-align: center;
-    font-size: 5.3em ;
+    font-size: 3.5em ;
 }
 
-.index #news .contenedornews .titulocont h3{
+
+.index .titulocont h3 {
     font-family: 'Roboto', 'Poppins', 'Helvetica', 'sans-serif';
     font-weight: 300;
     color: #005691;
     height: 6%;
-    padding: 4% 4% 4% 4%;
+    padding: 4% 4% 8% 4%;
     display: block;
     margin: 0 auto;
     text-align: center;
-    font-size: 3em;
+    font-size: 2.4em;
 }
 
 .index #text-bnv p{
@@ -688,19 +690,16 @@ Estilo específico de index.html
     padding-right: 2rem;
     padding-left: 2rem;
     padding-bottom: 3rem !important;
-    padding-top: 3rem !important;
+    padding-top: 1rem !important;
 
 }
 
-.index #news .contenedornews .titulocont{
+.index .titulocont{
     text-align: center !important;
 }
 
-.index #news .contenedornews .titulocont h3{
-    text-align: center;
-}
 
-.index #news .contenedornews .contenidonoticias{
+.index .contenidonoticias{
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
@@ -708,36 +707,36 @@ Estilo específico de index.html
     box-sizing: border-box;
 }
 
-.index #news .contenedornews .contenidonoticias .cajanoticias{
+.index .cajanoticias{
     margin-top: 3rem !important;
     flex: 0 0 50%;
     max-width: 50%; 
     position: relative;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3vw;
+    padding-left: 3vw;
     box-sizing: border-box;
 }
 
-.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat{
+.index .cajalat{
     margin-bottom: 0 !important;
     box-sizing: border-box;
 }
 
-.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .imgcuad{
+.index .imgcuad{
 
     position: relative;
     box-sizing: border-box
 }
 
-.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .imgcuad a{
+.index .imgcuad a{
     cursor: pointer !important;
     text-decoration: none;
     background-color: transparent;
     box-sizing: border-box;
 }
 
-.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .imgcuad a .imgresponsive{
+.index .imgresponsive{
 
     border-radius:6px 6px 0 0;
     width: 100%;
@@ -745,7 +744,7 @@ Estilo específico de index.html
     border-style: none;
 }
 
-.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .imgcuad a .bl-fecha{
+.index .bl-fecha{
 
     position: absolute;
     bottom: -10px;
@@ -755,7 +754,7 @@ Estilo específico de index.html
     background-color:  #a3d2ca;
     border-radius: 6px;
 }
-.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .imgcuad a .bl-fecha h4{
+.index .bl-fecha h4{
     font-size: 20px;
     background: rgba(0, 0, 0, 0.3);
     background: transparent;
@@ -794,12 +793,94 @@ Estilo específico de index.html
     font-weight: 600;
     transition: 0.3s ease-in;
     margin-top: 1.5rem !important;
-    color: #fff;
+    color: #005691;
     background-color: #5eaaa8;
     border-radius: 5%/10%;
     border-color: #a3d2ca;
 }
 
+.link-index{
+    background:#a3d2ca;
+    padding: 2rem 2rem 2rem 2rem !important;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    box-sizing: border-box;
+}
+
+.container-link{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 1.5rem !important;
+    padding-top: 1.5rem !important;
+}
+
+.row-container-link{
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.cont-izda{
+    text-align: center;
+    padding-left: 1rem !important;
+    padding-right: 1rem;
+    max-width: 33.33333%;
+}
+
+.form-nl{
+    padding-top: 3vw;
+}
+
+.cont-newslet{
+    max-width: 33.33333%;
+}
+.index h6{
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #f8f1f1;
+}
+.index h6 a:link{
+    color: #f8f1f1;
+}
+.index h6 a:hover{
+    color: #db6400;
+}
+
+.cont-dcha{
+    text-align: center;
+    padding-left: 1rem !important;
+    padding-right: 1rem;
+    max-width: 33.33333%;
+}
+.cont-newslet form{
+    width: 70%;
+
+}
+
+.index form #email{
+    margin-top: 6%;
+}
+
+.cont-bot{
+    padding: 30px 20px;
+    transition: all 0.5s ease 0s;
+    border-radius: 6px;
+    background-color:#005691;
+    border: 1px solid #5eaaa8;
+    position: relative;
+}
+
+.cont-dcha p{
+    padding-top: 3vw;
+}
+
+.cont-izda p{
+    padding-top: 3vw;
+
+}
 
 /*
 ---------------------------------------------
@@ -1431,3 +1512,13 @@ Responsive design: QUIÉNES SOMOS
 @media screen and (max-width: 700px) {
 
 }
+
+/*
+---------------------------------------------
+---------------------------------------------
+Responsive design: INDEX
+---------------------------------------------
+---------------------------------------------
+*/
+
+

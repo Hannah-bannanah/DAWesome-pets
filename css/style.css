@@ -16,7 +16,7 @@ Elementos comunes a todas las páginas
 /*Formato de base para el body de las páginas*/
 body {
     background-color: #f8f1f1;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', 'Arial', 'Helvetica', 'sans-serif';
     color: #2f2f6a;
     margin:0;
     padding-top: 0;
@@ -165,14 +165,14 @@ header {
 header h1 {
     vertical-align: bottom;
     font-variant: small-caps;
-    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    font-family: 'Roboto Condensed', 'Montserrat', 'Helvetica', 'sans-serif';
     padding-left: 5%;
     color: #f8f1f1;
     font-size: 4em;
 }
 /*Formato de h2*/
 h2 {
-    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-family: 'Roboto', 'Poppins', 'Helvetica', 'sans-serif';
     font-weight: 300;
     color: #005691;
     height: 6%;
@@ -185,7 +185,7 @@ h2 {
 
 /*Formato de h3*/
 h3 {
-    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-family: 'Roboto', 'Poppins', 'Helvetica', 'sans-serif';
     font-weight: 200;
     color: #005691;
     height: 4%;
@@ -264,7 +264,7 @@ Estilo específico de mascotas.html
 
 .mascotas #placeholder p {
     font-size: 1.5em;
-    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-family: 'Roboto', 'Poppins', 'Helvetica', 'sans-serif';
     font-weight: 400;
     color: #005691;
 }
@@ -313,7 +313,7 @@ Estilo específico de mascotas.html
 
 /*Formato del id de Mascota*/
 .mascotas .idMascota {
-    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-family: 'Roboto', 'Poppins', 'Helvetica', 'sans-serif';
     font-size: 1.75em;
     color: #005691;
     margin-top: 0;
@@ -529,7 +529,7 @@ Estilo específico de mascotas.html
 
 /*Formato del título del aside*/
 .mascotas #sabiasque h3 {
-    font-family: 'Poppins', 'Montserrat', Helvetica, sans-serif;
+    font-family: 'Poppins', 'Montserrat', 'Helvetica', 'sans-serif';
     color: #005691;
     font-size: 1.5em;
 }
@@ -581,7 +581,7 @@ Estilo específico de index.html
 
 
 .index a h1 img{
-    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    font-family: 'Roboto Condensed', 'Montserrat', 'Helvetica', 'sans-serif';
     color: #5eaaa8;
     font-variant: small-caps;
     width: 70vw;
@@ -591,7 +591,7 @@ Estilo específico de index.html
 }
 
 .index h2{
-    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-family: 'Roboto', 'Poppins', 'Helvetica', 'sans-serif';
     font-weight: 300;
     color: #005691;
     height: 6%;
@@ -603,7 +603,7 @@ Estilo específico de index.html
 }
 
 .index #news .contenedornews .titulocont h3{
-    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-family: 'Roboto', 'Poppins', 'Helvetica', 'sans-serif';
     font-weight: 300;
     color: #005691;
     height: 6%;
@@ -1064,7 +1064,7 @@ establecerlo según el campo específico*/
 
 /*Cambia el formato de las leyendas de los grupos de botones radio*/
 .formAdopcion fieldset fieldset legend {
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', 'Arial', 'Helvetica', 'sans-serif';
     color: #2f2f6a;
     text-align: left;
     font-size: 1em;

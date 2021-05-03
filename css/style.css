@@ -69,6 +69,13 @@ nav a {
     height: 45px;
     padding: 12px 12px 0 12px;
 }
+nav a:link{
+    color:black;
+}
+
+nav a:hover{
+    color: black;
+}
 
 /*Oculta el submenú*/
 nav.barra .submenu {

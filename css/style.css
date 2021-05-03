@@ -563,7 +563,7 @@ Estilo específico de index.html
     font-size: 3em ;
 }
 
-.index h3{
+.index #news .contenedornews .titulocont h3{
     font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
     font-weight: 300;
     color: #005691;

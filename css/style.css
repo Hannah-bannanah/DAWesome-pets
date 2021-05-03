@@ -227,6 +227,20 @@ footer #redes a img {
     width: 22px;
 }
 
+/*
+---------------------------------------------
+---------------------------------------------
+Estílo de hipervínculos
+---------------------------------------------
+---------------------------------------------
+*/
+a:link{
+    color:#2f2f6a;
+}
+
+a:hover {
+    color:#db6400;
+  }
 
 /*
 ---------------------------------------------
@@ -745,9 +759,10 @@ Estilo específico de index.html
     font-size: 20px;
     background: rgba(0, 0, 0, 0.3);
     background: transparent;
-    color: #fff;
+    color:#2f2f6a;
+    padding: 2px 2px 2px 2px;
+    
     text-align: center;
-    padding: 20px;
     font-weight: 600;
     border-radius: 6px;
 }
@@ -778,10 +793,10 @@ Estilo específico de index.html
     line-height: 30px;
     font-weight: 600;
     transition: 0.3s ease-in;
-    border-radius: 35px;
     margin-top: 1.5rem !important;
     color: #fff;
-    background-color: #a3d2ca;
+    background-color: #5eaaa8;
+    border-radius: 5%/10%;
     border-color: #a3d2ca;
 }
 

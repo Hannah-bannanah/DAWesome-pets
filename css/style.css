@@ -132,7 +132,7 @@ header {
 }
 
 .index header{
-    background-image: url(../images/bannerstormi.jpg);
+    background-image: url(../images/ksbanner.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -540,25 +540,38 @@ Estilo específico de index.html
 ---------------------------------------------
 */
 
-.index header {
-        height: 30vw;
-        width: 100vw;
+.index header{
         display: table-cell;
         vertical-align: bottom;
         clear: both;
+        height: 43.5vw;
         padding-top: 3%;
 }
 
-.index h1 a img{
-    display:block;
-    margin:0 auto;
+.index header .hd-box{
+    display: block;
+    margin: 0;
+    padding: 10vw 10vw 10vw 10vw;
+    text-align: center;
+}
+
+.index header .bannerdaw{
+
+
+}
+
+.index header h1{
+    padding:0;
+}
+
+
+
+.index a h1 img{
     font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
-    color: #005691;
+    color: #5eaaa8;
     font-variant: small-caps;
-    height: 10vw;
-    width: 50vw;
+    width: 70vw;
     padding: 4% 4% 4% 4%;
-    margin: 0 auto;
     text-align: center;
     font-size: 4em ;
 }
@@ -572,7 +585,7 @@ Estilo específico de index.html
     display: block;
     margin: 0 auto;
     text-align: center;
-    font-size: 3em ;
+    font-size: 5.3em ;
 }
 
 .index #news .contenedornews .titulocont h3{
@@ -736,15 +749,15 @@ Estilo específico de index.html
     text-align: center;
     padding: 20px;
     font-weight: 600;
-    border-radius: var(--border-radius);
+    border-radius: 6px;
 }
 
 .index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .contabajo{
-    border: 1px solid #005691;
+    border:3px solid #5eaaa8;
     border-top: none;
     padding: 2em;
-    border-bottom-left-radius:35px;
-    border-bottom-right-radius: 35px;
+    /*border-bottom-left-radius:35px;
+    border-bottom-right-radius: 35px;*/
     background: transparent;
     box-sizing: border-box;
 }

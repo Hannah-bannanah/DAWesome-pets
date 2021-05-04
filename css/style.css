@@ -457,18 +457,20 @@ Estilo específico de mascotas.html
 .mascotas #sabiasque h3 {
     font-family: 'Poppins', 'Montserrat', Helvetica, sans-serif;
     color: #005691;
+    font-weight: bolder;
     font-size: 1.5em;
+    font-style: oblique;
 }
 
 /*Formato del texto del aside*/
 .mascotas #sabiasque p {
     color: #005691;
-    font-weight: 400;
 }
 
 /*Eliminar decoración del link del aside cuando se ha visitado*/
 .mascotas #sabiasque a, .mascotas #sabiasque a:visited{
-    color:chocolate;
+    color: #005691;
+    font-style: oblique;
 }
 
 

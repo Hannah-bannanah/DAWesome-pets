@@ -17,7 +17,7 @@ function adoptar (petId){
     Función que prerrellena parte del formulario de adopción al cargarse, si se le han enviado parámetros.
     El método para coger parámetros de la url se ha obtenido de https://www.sitepoint.com/get-url-parameters-with-javascript/
 */
-function prerrellenarFormulario(){
+function prerrellenarFormulario(){ 
     const urlParam = new URLSearchParams(window.location.search); /*obtiene la parte de la url que contiene los parámetros*/
 
     /*extraer los parámetros relevantes a la mascota elegida (en un futuro la funcionalidad se puede ampliar a otros parámetros)*/
@@ -27,16 +27,19 @@ function prerrellenarFormulario(){
     /*rellena los campos para los que tenemos parámetros*/
     if (mascotaElegida) {
         document.getElementById('mascotaElegida').checked = true;
-        toggleDatosMascota();
         document.getElementById('idMascota').value = miMascotaiD;
     }
+
+    /*Llama a las funciones sobre las checkboxes*/
+    toggleDatosMascota();
+    toggleDescripcionVivienda();
 }
 
 /*Función que habilita y deshabilita las secciones de datos de la mascota según el valor de mascotaElegida*/
 function toggleDatosMascota () {
     const valorToggle = document.getElementById('mascotaElegida').checked;
     document.getElementById('idMascota').disabled = !valorToggle;
-    document.getElementById('idMascota').disabled = !valorToggle;
+    document.getElementById('idMascota').required = valorToggle;
 
     document.getElementById('especie').disabled = valorToggle;
     document.getElementById('especie').value= "";
@@ -49,6 +52,7 @@ function toggleDatosMascota () {
 
     document.getElementById('tamMascota').disabled = valorToggle;
     document.getElementById('tamMascota').selectedIndex = -1;
+
 
 }
 

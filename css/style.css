@@ -1273,17 +1273,22 @@ Responsive design
 */
 /*Cambios para monitores de más de 1300px de ancho*/
 @media screen and (min-width: 1300px) {
+    /*Añade espacio en el lado izquierdo de la pantalla*/
     .mascotas main {
         margin-left: 7%;
     }
+
+    /*Reduce el tamaño de letra del texto placeholder*/
     .mascotas #placeholder p {
         font-size: 1.8em;
     }
 
+    /*Reposiciona el aside*/
     .mascotas aside {
         margin-top: unset;
     }
 
+    /*Incrementa el tamaño de los artículos de los animales*/
     .mascotas .petInfo {
         width: 50%;
         margin-left:10%
@@ -1304,15 +1309,22 @@ Responsive design
 /*Cambios para monitores de menos de 900px de ancho 
     iPad, iPad Mini, iPad Pro en vertical*/
 @media screen and (max-width: 900px) {
+
+    /*Oculta el panel de selección
+    Se mostrarán los artículos directamente*/
     .mascotas .seleccion, .mascotas #placeholder {
         display: none;
     }
     
+    /*Modifica las secciones de cada animal para 
+    que se muestre como bloques una detrás de otra*/
     .mascotas section {
         display: block;
         position: relative;
     }
     
+    /*Modifica la subsección de la información de cada animal
+    para que ocupe todo el ancho de la pantalla y se muestre en bloque*/
     .mascotas .petInfo {
         width: 80%;
         display: block;
@@ -1321,16 +1333,21 @@ Responsive design
         position: relative;
     }
     
+    /*Si una mascota ha sido seleccionada (por link directo), 
+    alinea su información con las demás*/
     .mascotas :checked ~ .petInfo { 
         visibility: visible;
         opacity: 1;
         float: none;
     }
 
+    /*Quita la restricción de altura de los artículos de animales 
+    (evita scroll)*/
     .mascotas .petInfo article {
         max-height: unset;
     }
 
+    /*Cambia el formato del aside*/
     .mascotas aside {
         width: 90%;
         display: block;
@@ -1356,12 +1373,14 @@ iPhone en vertical*/
         display: none;
     }
 
+    /*Reduce el header a una barra mínima*/
     header {
         height: 50px;
         padding: 0;
         margin: 0;
     }
 
+    /*Reduce el tamaño de letra de los títulos del header*/
     header h1 {
         font-size: 1.3em;
         text-align: center;
@@ -1504,6 +1523,8 @@ iPhone en vertical*/
         margin-left: 0;
     }
 
+    /*Elimina el gradiente de la tabla para 
+    evitar sensación de sobrecarga*/
     .mascotas td, .mascotas th {
         background: none #a3d2ca;
     }

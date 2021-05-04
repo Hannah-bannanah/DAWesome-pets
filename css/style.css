@@ -1163,6 +1163,12 @@ Estilo específico de formularioAdopcion
 ---------------------------------------------
 */
 
+/*Modificación del formato de leyendas de fieldset*/
+.formAdopcion fieldset legend {
+    padding-top: 5%;
+    text-align: left;
+}
+
 /*Elimina el margen de los campos de input para poder 
 establecerlo según el campo específico*/
 .formAdopcion input {
@@ -1205,6 +1211,7 @@ establecerlo según el campo específico*/
     margin-top: unset;
     margin-bottom: unset;
     font-weight: bold;
+    padding-top: unset;
 }
 
 /*Cambia el formato de las label de los grupos de botones radio*/

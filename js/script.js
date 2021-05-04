@@ -37,10 +37,15 @@ function prerrellenarFormulario(){
 
 /*Función que habilita y deshabilita las secciones de datos de la mascota según el valor de mascotaElegida*/
 function toggleDatosMascota () {
+    /*Obtiene el estatus de la checkbox de mascotaElegida*/
     const valorToggle = document.getElementById('mascotaElegida').checked;
-    document.getElementById('idMascota').disabled = !valorToggle;
-    document.getElementById('idMascota').required = valorToggle;
 
+    /*Habilita/deshabilita el campo idMascota dependiendo del estado de la checkbox*/
+    document.getElementById('idMascota').disabled = !valorToggle;
+    document.getElementById('idMascota').required = valorToggle; /*Cuando está habilitado, el campo debe ser obligatorio*/
+
+    /*Habilitar/deshabilita las secciones de requisitos de mascota 
+    dependiendo del estado de la checkbox*/
     document.getElementById('especie').disabled = valorToggle;
     document.getElementById('especie').value= "";
 
@@ -74,13 +79,14 @@ function mostrarMascota(){
     }
 }
 
-/*Funcion que abre y cierra el submenu*/
+/*Función que abre el submenu*/
 function abrirSubmenu(){
     document.getElementById("submenu-barra").style.display = "block";
     document.getElementById("cerrar-submenu").style.display="unset";
     document.getElementById("abrir-submenu").style.display="none";
 }
 
+/*Función que cierra el submenú*/
 function cerrarSubmenu(){
     document.getElementById("submenu-barra").style.display = "none";
     document.getElementById("cerrar-submenu").style.display="none";

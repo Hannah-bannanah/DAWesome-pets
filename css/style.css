@@ -576,11 +576,6 @@ Estilo específico de index.html
     text-align: center;
 }
 
-.index header .bannerdaw{
-
-
-}
-
 .index header h1{
     padding:0;
 }
@@ -619,22 +614,7 @@ Estilo específico de index.html
     text-align: center;
 }
 
-.index #tablon table{
-    table-layout: fixed;
-    width: 70%;
-    margin-right: auto;
-    margin-left: auto;
-  }
 
-.index #tablon tr{
-    padding: 2%;
-
-}
-
-.index #tablon th, .index #tablon td{
-    padding: 2%;
-    text-align: center;
-}
 
 .index aside  {
     display: block;
@@ -671,8 +651,11 @@ Estilo específico de index.html
 .index #artabajo .fondo p{
     padding: 10% 5% 10% 5%;
     color: #f8f1f1;
-    text-align:center;
+    text-align:justify;
     font-size: 1em;
+}
+.index #text-bnv p em{
+    background-color: #a3d2ca;
 }
 
 .index #news{
@@ -764,7 +747,7 @@ Estilo específico de index.html
     border-radius: 6px;
 }
 
-.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .contabajo{
+.index .contabajo{
     border:3px solid #5eaaa8;
     border-top: none;
     padding: 2em;
@@ -773,7 +756,7 @@ Estilo específico de index.html
     background: transparent;
     box-sizing: border-box;
 }
-.index #news .contenedornews .contenidonoticias .cajanoticias .cajalat .contabajo h5{
+.index .contabajo h5{
 
     font-size: 24px;    
     line-height: 30px;
@@ -803,6 +786,7 @@ Estilo específico de index.html
     margin-left: 4vw;
     margin-right: 4vw;
     box-sizing: border-box;
+    border: 3px solid #5eaaa8;
 }
 
 .container-link{
@@ -826,12 +810,19 @@ Estilo específico de index.html
     max-width: 33.33333%;
 }
 
-.form-nl{
+.form-bod{
     padding-top: 3vw;
+}
+
+.index .form-bod input[type="submit"]{
+    width: 100%;
 }
 
 .cont-newslet{
     max-width: 33.33333%;
+    text-align: center;
+    padding-left: 1rem !important;
+    padding-right: 1rem;
 }
 .index h6{
     font-size: 1em;
@@ -853,21 +844,27 @@ Estilo específico de index.html
     padding-right: 1rem;
     max-width: 33.33333%;
 }
+
 .cont-newslet form{
     width: 70%;
-
 }
 
-.index form #email{
+.index .form-nl #email{
     margin-top: 6%;
 }
+
+.index .form-text{
+    font-size: 0.5em;
+
+}
+
 
 .cont-bot{
     padding: 30px 20px;
     transition: all 0.5s ease 0s;
     border-radius: 6px;
     background-color:#005691;
-    border: 1px solid #5eaaa8;
+    border: 2px solid black;
     position: relative;
 }
 
@@ -989,7 +986,6 @@ form .botones{
     width: 100%;
     justify-content: space-around;
 }
-
 
 /*
 ---------------------------------------------
@@ -1414,9 +1410,11 @@ iPhone en vertical*/
     form .columna {
         width: 95%;
     }
+
     form .izq {
         width: 99%;
     }
+
     form .dcha {
         width: 100%;
     }
@@ -1526,47 +1524,130 @@ Responsive design: INDEX
 /*Cambios para monitores de menos de 900px de ancho 
     iPad, iPad Mini, iPad Pro en vertical*/
     @media screen and (max-width: 900px) {
-        .index .seleccion, .mascotas #placeholder {
-            display: none;
+
+        .index #text-bnv p{
+            margin-top: 50px;
         }
-        
-        .index section {
+        .index #text-bnv p em{
+            font-size: 0.8em;
+            background-color: #a3d2ca;
+        }
+
+        .index #artabajo .fondo {
+            height: unset;
+        }
+
+        .index .row-container-link{
+            display:block
+        }
+        .index .cont-izda, .index .cont-dcha, .index .cont-newslet {
+            width: 95%;
             display: block;
-            position: relative;
+            clear: both;
+            margin-left: 0;
+            max-width: 100%;
+            padding: 3vw;
         }
-        
-        .index .petInfo {
+
+        .index .form-bod input[type="submit"] {
             width: 80%;
-            display: block;
-            visibility: visible;
-            opacity: unset;
-            position: relative;
         }
-        
-        .index :checked ~ .petInfo { 
-            visibility: visible;
-            opacity: 1;
-            float: none;
-        }
-    
-        .index .petInfo article {
-            max-height: unset;
-        }
-    
-        .index aside {
-            width: 90%;
-            display: block;
-            float: none;
-            margin:auto;
-        }
-    
+
         /*Reducimos los márgenes y ampliamos el ancho del main del FORMULARIO DE CONTACTO*/
-        form {
-            width: 90%;
-            margin-left: 2%;
-            margin-right: 2%;
+        .index form #email{
+            margin-top: 6%;
             position: relative;
+            width:80%;
         }
-    }
+        .cont-newslet form{
+            width: 100%;
+        }
+
+        /*Cambios para monitores de menos de 600px de ancho 
+        iPhone en vertical*/
+        @media screen and (max-width: 700px) {
+
+            .index #text-bnv p{
+                padding: 1% 5% 1% 5%;
+                text-align: justify;
+            }
+
+            .index #artabajo .fondo{
+                background-image:none;
+                height: unset;
+            }
+
+            .index #artabajo .fondo p{
+                color:#2f2f6a;
+                padding: 5% 5% 1% 5%;
+            }
+        
+            .index .form-bod input[type="submit"] {
+                width: 80%;
+            }
+
+            /*Estructura del formulario en versión móvil*/
+            .index .form-nl {
+                padding: 2%;overflow-x:hidden; 
+                /*no muestra el contenido que se salga de las dimensiones especificadas en el contenedor*/
+            }
+        
+            /*Los botones de Enviar y Reestablecer los disponemos uno debajo de otro*/
+            .index .form-nl .botones input {
+                width: 100%;
+                display: block;
+               
+            }
+
+            .index form #email{
+                margin-top: 6%;
+                position: relative;
+                width:80%;
+            }
+        
+            .index #news{
+                padding-right: 0.01rem;
+                padding-left: 0.7rem;
+                display: block;
+                box-sizing: border-box;
+            }
+
+            .index .contenidonoticias {
+                width: 95%;
+                display: block;
+                clear: both;
+                margin-left: 0;
+                max-width: 100%;
+            }
+
+            .index .cajanoticias{
+                max-width: 100%;
+            }
+        
+            .index .row-container-link{
+                display:block
+            }
+
+            .index .cont-izda, .index .cont-dcha, .index .cont-newslet {
+                width: 88%;
+                display: block;
+                clear: both;
+                margin-left: 0;
+                max-width: 100%;
+                padding:0;
+            }
+            .contabajo p{
+                text-align: justify ;
+            }
+        
+            form #email{
+                width: 90%;
+                margin-left: 2%;
+                margin-right: 2%;
+                position: relative;
+                width:100%;
+                margin-right: 0;
+            }    
+        }
 
 

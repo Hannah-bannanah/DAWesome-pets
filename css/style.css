@@ -375,120 +375,39 @@ Estilo específico de mascotas.html
 }
 
 /*Animación del botón de adopción*/
-
 @-webkit-keyframes giro {
-    0% {
-        height: 100%;
-        rotate: 0;   
-    }
-    25% {
-        height: 105%;
-        rotate: 30deg; 
-    }
-    50% {
-        height: 110%;
-        rotate: 0; 
-    }
-    50% {
-        height: 105%;
-        rotate: -30deg; 
-    }
-    100% {
-        height: 100%;
-        rotate: 0deg; 
-    }
+    25% {height: 105%; -webkit-transform: rotate(30deg);}
+    50% {height: 110%; -webkit-transform: rotate(0deg);}
+    75% {height: 105%; -webkit-transform: rotate(-30deg);}
+    100% {height: 100%; -webkit-transform: rotate(0deg);}
 }
 
 @-moz-keyframes giro {
-    0% {
-        height: 100%;
-        rotate: 0;   
-    }
-    25% {
-        height: 105%;
-        rotate: 30deg; 
-    }
-    50% {
-        height: 110%;
-        rotate: 0; 
-    }
-    50% {
-        height: 105%;
-        rotate: -30deg; 
-    }
-    100% {
-        height: 100%;
-        rotate: 0deg; 
-    }
+    25% {height: 105%; -moz-transform: rotate(30deg);}
+    50% {height: 110%; -moz-transform: rotate(0deg);}
+    75% {height: 105%; -moz-transform: rotate(-30deg);}
+    100% {height: 100%; -moz-transform: rotate(0deg);}
 }
 
 @-o-keyframes giro {
-    0% {
-        height: 100%;
-        rotate: 0;   
-    }
-    25% {
-        height: 105%;
-        rotate: 30deg; 
-    }
-    50% {
-        height: 110%;
-        rotate: 0; 
-    }
-    50% {
-        height: 105%;
-        rotate: -30deg; 
-    }
-    100% {
-        height: 100%;
-        rotate: 0deg; 
-    }
+    25% {height: 105%; -o-transform: rotate(30deg);}
+    50% {height: 110%; -o-transform: rotate(0deg);}
+    75% {height: 105%; -o-transform: rotate(-30deg);}
+    100% {height: 100%; -o-transform: rotate(0deg);}
 }
 
 @-ms-keyframes giro {
-    0% {
-        height: 100%;
-        rotate: 0;   
-    }
-    25% {
-        height: 105%;
-        rotate: 30deg; 
-    }
-    50% {
-        height: 110%;
-        rotate: 0; 
-    }
-    50% {
-        height: 105%;
-        rotate: -30deg; 
-    }
-    100% {
-        height: 100%;
-        rotate: 0deg; 
-    }
+    25% {height: 105%; -ms-transform: rotate(30deg);}
+    50% {height: 110%; -ms-transform: rotate(0deg);}
+    75% {height: 105%; -ms-transform: rotate(-30deg);}
+    100% {height: 100%; -ms-transform: rotate(0deg);}
 }
 
 @keyframes giro {
-    0% {
-        height: 100%;
-        rotate: 0;   
-    }
-    25% {
-        height: 105%;
-        rotate: 30deg; 
-    }
-    50% {
-        height: 110%;
-        rotate: 0; 
-    }
-    50% {
-        height: 105%;
-        rotate: -30deg; 
-    }
-    100% {
-        height: 100%;
-        rotate: 0deg; 
-    }
+    25% {height: 105%; transform: rotate(30deg);}
+    50% {height: 110%; transform: rotate(0deg);}
+    75% {height: 105%; transform: rotate(-30deg);}
+    100% {height: 100%; transform: rotate(0deg);}
 }
 
 /*Formato del botón de adopción de cada cuando se pasa el cursor sobre él*/

@@ -365,13 +365,13 @@ Estilo específico de mascotas.html
 .mascotas .quieroAdoptar {
     padding: 4%;
     margin-top: 5%;
-    background-color: #5eaaa8;
+    background-color: #005691;
     border-radius: 5%/10%;
     font-weight: bold;
     font-size: 1.25em;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
-    color: #2f2f6a;
+    color: #f8f1f1;
 }
 
 /*Animación del botón de adopción*/
@@ -1360,7 +1360,7 @@ iPhone en vertical*/
     nav.movil a {
         text-align: left;
         padding-left: 5%;
-        border-top: 3px solid gray;
+        border-top: 1px solid #005691;
     }
     /*Formato del link a la página actual*/
     .movil a.pagina-actual {
@@ -1368,9 +1368,15 @@ iPhone en vertical*/
     }
 
     /*Mueve los elementos del submenú más a la derecha*/ 
+    nav.movil .submenu li {
+        height: 2.5em;
+    }
+
+    /*Mueve los elementos del submenú más a la derecha*/ 
     nav.movil .submenu li a{
-        padding-left: 20%;
-        border-top: 1px dashed gray;
+        padding-bottom: 0;
+        padding-left: 30%;
+        border-top: 1px dashed #005691;
     }
 
     /*Estructura genérica de los formularios en versión móvil*/

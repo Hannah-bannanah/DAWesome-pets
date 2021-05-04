@@ -298,12 +298,10 @@ Estilo específico de mascotas.html
     padding: 3%;
     display: inline-block;
     border: 3px solid #5eaaa8;
-    /*border-radius: 5%/10%;*/
     text-align: left;
     background-color: #f8f1f1;
     max-height: 50vh;
     overflow: auto;
-    /*box-shadow: 0 0 5px 8px #a3d2ca;*/
 }
 
 /*Formato de las imágenes dentro de cada artículo*/
@@ -349,7 +347,7 @@ Estilo específico de mascotas.html
     border: 1px solid #f8f1f1;
     width: 30%;
     background: rgb(163,210,202);
-    background: linear-gradient(90deg, rgba(163,210,202,1) 75%, rgba(94,170,168,1) 100%);
+    background: linear-gradient(90deg, rgba(163,210,202,1) 75%, rgba(94,170,168,1) 100%); /*Gradiente calculado con https://cssgradient.io/ */
 }
 
 /*Formato de las celdas de la tabla*/
@@ -358,7 +356,7 @@ Estilo específico de mascotas.html
     border-radius: 2%;
     border: 1px solid #f8f1f1;
     background: rgb(163,210,202);
-    background: linear-gradient(90deg, rgba(163,210,202,1) 75%, rgba(94,170,168,1) 100%);
+    background: linear-gradient(90deg, rgba(163,210,202,1) 75%, rgba(94,170,168,1) 100%); /*Gradiente calculado con https://cssgradient.io/ */
 }
 
 /*Formato del botón de adopción de cada animal*/

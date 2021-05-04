@@ -561,6 +561,7 @@ Estilo específico de index.html
 ---------------------------------------------
 */
 
+/*Formato específico del header de .index*/
 .index header{
         display: table-cell;
         vertical-align: bottom;
@@ -569,6 +570,7 @@ Estilo específico de index.html
         padding-top: 3%;
 }
 
+/*Formato del .hd-box del header que controla la foto*/
 .index header .hd-box{
     display: block;
     margin: 0;
@@ -576,12 +578,14 @@ Estilo específico de index.html
     text-align: center;
 }
 
+/*Para desactivar el padding heredado*/
 .index header h1{
     padding:0;
 }
 
-
-
+/*Formato para la imagen que sirve como h1 en el header
+--- También le damos fotmato al título alternativo que 
+--- saldrá en caso de no poder utilizar la imagen*/
 .index a h1 img{
     font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
     color: #5eaaa8;
@@ -589,9 +593,10 @@ Estilo específico de index.html
     width: 70vw;
     padding: 4% 4% 4% 4%;
     text-align: center;
-    font-size: 4em ;
+    font-size: 2.5em ;
 }
 
+/*Formato específico del h2 de .index*/
 .index h2{
     height: 6%;
     padding: 10% 4% 4% 4%;
@@ -600,7 +605,7 @@ Estilo específico de index.html
     text-align: center;
     font-size: 3.5em ;
 }
-
+/*Formato específico del h3 de .titulocont*/
 .index .titulocont h3 {
     padding: 4% 4% 8% 4%;
     display: block;
@@ -609,34 +614,13 @@ Estilo específico de index.html
     font-size: 2.4em;
 }
 
+/*Formato para el párrafo de #text-bnv*/
 .index #text-bnv p{
     padding: 1% 20% 1% 20%;
     text-align: center;
 }
 
-
-
-.index aside  {
-    display: block;
-    border-width : 0.1em;
-    border-style : dashed;
-    border-color : black;
-    flex-direction: column;
-    justify-content: space-between; 
-    box-sizing: border-box;
-    width: 15%;
-    height: 20vh;
-    background: #a3d2ca;
-    position: fixed;
-    right:3%;
-    top: 40%;
-    border-radius: 10%/5%;
-    text-align: center;
-    padding: 6% 3%;
-    line-height: 200%;
-    float:right;
-}
-
+/*Formato general de la seccion #artbajo, un banner formado por una imagen con texto sobre el*/
 .index #artabajo {
     padding: 5% 20% 5% 20%;
 }
@@ -654,10 +638,13 @@ Estilo específico de index.html
     text-align:justify;
     font-size: 1em;
 }
+
+/*Formato del texto enfatizado en #text-bnv*/
 .index #text-bnv p em{
     background-color: #a3d2ca;
 }
 
+/*Formato general de la seccion #news*/
 .index #news{
     padding-bottom: 3rem !important;
     padding-top: 3rem !important;
@@ -667,7 +654,8 @@ Estilo específico de index.html
     box-sizing: border-box;
 }
 
-.index #news .contenedornews{
+/*Con las sucesivas div, vamos creando los contenedores*/
+.index .contenedornews{
     padding-right: 2rem;
     padding-left: 2rem;
     padding-bottom: 3rem !important;
@@ -679,7 +667,7 @@ Estilo específico de index.html
     text-align: center !important;
 }
 
-
+/*Aquí, el atributo display en flex nos permite colocar las cajas de noticias de forma paralela*/
 .index .contenidonoticias{
     display: flex;
     flex-wrap: wrap;
@@ -705,28 +693,26 @@ Estilo específico de index.html
 }
 
 .index .imgcuad{
-
     position: relative;
     box-sizing: border-box
 }
 
 .index .imgcuad a{
+    /*He probado a cambiar el pointer cuando pasas por encima de la imagen*/
     cursor: pointer !important;
-    text-decoration: none;
     background-color: transparent;
     box-sizing: border-box;
 }
 
 .index .imgresponsive{
-
     border-radius:6px 6px 0 0;
     width: 100%;
     height: auto;
     border-style: none;
 }
 
+/*Formato sobre los rectángulos que contienen las fechas*/
 .index .bl-fecha{
-
     position: absolute;
     bottom: -10px;
     left: 10px;
@@ -735,29 +721,28 @@ Estilo específico de index.html
     background-color:  #a3d2ca;
     border-radius: 6px;
 }
+
 .index .bl-fecha h4{
     font-size: 20px;
     background: rgba(0, 0, 0, 0.3);
     background: transparent;
     color:#2f2f6a;
     padding: 2px 2px 2px 2px;
-    
     text-align: center;
     font-weight: 600;
     border-radius: 6px;
 }
 
+/*Esta sección da formato al contenido debajo de la foto*/
 .index .contabajo{
     border:3px solid #5eaaa8;
     border-top: none;
     padding: 2em;
-    /*border-bottom-left-radius:35px;
-    border-bottom-right-radius: 35px;*/
     background: transparent;
     box-sizing: border-box;
 }
-.index .contabajo h5{
 
+.index .contabajo h5{
     font-size: 24px;    
     line-height: 30px;
     margin-bottom: 15px;
@@ -767,6 +752,7 @@ Estilo específico de index.html
     text-align: center;
 }
 
+/*Esto es para dar formato al botón de leer más*/
 .btn-leermas{
     padding: 12px 45px;
     font-size: 18px;
@@ -780,6 +766,7 @@ Estilo específico de index.html
     border-color: #a3d2ca;
 }
 
+/*Esta sección da formato al tablón que contiene links de adopción, de contacto y la suscripción a newsletter*/
 .link-index{
     background:#a3d2ca;
     padding: 2rem 2rem 2rem 2rem !important;
@@ -803,11 +790,30 @@ Estilo específico de index.html
     margin-right: -15px;
     margin-left: -15px;
 }
+
+/*Da formato a la columna de formulario de adopción*/
 .cont-izda{
     text-align: center;
     padding-left: 1rem !important;
     padding-right: 1rem;
     max-width: 33.33333%;
+}
+
+.cont-izda p{
+    padding-top: 3vw;
+}
+
+/*A continuación, el formato del newsletter*/
+.cont-newslet{
+    max-width: 33.33333%;
+    text-align: center;
+    padding-left: 1rem !important;
+    padding-right: 1rem;
+}
+
+/*Formato especifico para el formulario de index, el resto lo hereda de form*/
+.cont-newslet form{
+    width: 70%;
 }
 
 .form-bod{
@@ -818,12 +824,33 @@ Estilo específico de index.html
     width: 100%;
 }
 
-.cont-newslet{
-    max-width: 33.33333%;
+.index .form-text{
+    font-size: 0.7em;
+
+}
+
+/*Formato de la columna de contacto*/
+.cont-dcha{
     text-align: center;
     padding-left: 1rem !important;
     padding-right: 1rem;
+    max-width: 33.33333%;
 }
+
+.cont-dcha p{
+    padding-top: 3vw;
+}
+
+/*Formato del h6 usado en los 3 contenedores*/
+.cont-bot{
+    padding: 30px 20px;
+    transition: all 0.5s ease 0s;
+    border-radius: 6px;
+    background-color:#005691;
+    border: 2px solid black;
+    position: relative;
+}
+
 .index h6{
     font-size: 1em;
     text-align: center;
@@ -834,48 +861,12 @@ Estilo específico de index.html
 .index h6 a:link{
     color: #f8f1f1;
 }
+
 .index h6 a:hover{
     color: #db6400;
 }
 
-.cont-dcha{
-    text-align: center;
-    padding-left: 1rem !important;
-    padding-right: 1rem;
-    max-width: 33.33333%;
-}
 
-.cont-newslet form{
-    width: 70%;
-}
-
-.index .form-nl #email{
-    margin-top: 6%;
-}
-
-.index .form-text{
-    font-size: 0.5em;
-
-}
-
-
-.cont-bot{
-    padding: 30px 20px;
-    transition: all 0.5s ease 0s;
-    border-radius: 6px;
-    background-color:#005691;
-    border: 2px solid black;
-    position: relative;
-}
-
-.cont-dcha p{
-    padding-top: 3vw;
-}
-
-.cont-izda p{
-    padding-top: 3vw;
-
-}
 
 /*
 ---------------------------------------------
@@ -1509,6 +1500,7 @@ Responsive design: QUIÉNES SOMOS
 
 }
 
+
 /*
 ---------------------------------------------
 ---------------------------------------------
@@ -1517,137 +1509,131 @@ Responsive design: INDEX
 ---------------------------------------------
 */
 
-/* No hay cambios necesarios para los siguientes formatos:
-    - monitores de más de 1300px de ancho.
-    */
+/* No hay cambios necesarios para monitores de más de 1300px de ancho.*/
 
 /*Cambios para monitores de menos de 900px de ancho 
     iPad, iPad Mini, iPad Pro en vertical*/
-    @media screen and (max-width: 900px) {
-
-        .index #text-bnv p{
-            margin-top: 50px;
-        }
-        .index #text-bnv p em{
-            font-size: 0.8em;
-            background-color: #a3d2ca;
-        }
-
-        .index #artabajo .fondo {
-            height: unset;
-        }
-
-        .index .row-container-link{
-            display:block
-        }
-        .index .cont-izda, .index .cont-dcha, .index .cont-newslet {
-            width: 95%;
-            display: block;
-            clear: both;
-            margin-left: 0;
-            max-width: 100%;
-            padding: 3vw;
-        }
-
-        .index .form-bod input[type="submit"] {
-            width: 80%;
-        }
-
-        /*Reducimos los márgenes y ampliamos el ancho del main del FORMULARIO DE CONTACTO*/
-        .index form #email{
-            margin-top: 6%;
-            position: relative;
-            width:80%;
-        }
-        .cont-newslet form{
-            width: 100%;
-        }
-
-        /*Cambios para monitores de menos de 600px de ancho 
-        iPhone en vertical*/
-        @media screen and (max-width: 700px) {
-
-            .index #text-bnv p{
-                padding: 1% 5% 1% 5%;
-                text-align: justify;
-            }
-
-            .index #artabajo .fondo{
-                background-image:none;
-                height: unset;
-            }
-
-            .index #artabajo .fondo p{
-                color:#2f2f6a;
-                padding: 5% 5% 1% 5%;
-            }
-        
-            .index .form-bod input[type="submit"] {
-                width: 80%;
-            }
-
-            /*Estructura del formulario en versión móvil*/
-            .index .form-nl {
-                padding: 2%;overflow-x:hidden; 
-                /*no muestra el contenido que se salga de las dimensiones especificadas en el contenedor*/
-            }
-        
-            /*Los botones de Enviar y Reestablecer los disponemos uno debajo de otro*/
-            .index .form-nl .botones input {
-                width: 100%;
-                display: block;
-               
-            }
-
-            .index form #email{
-                margin-top: 6%;
-                position: relative;
-                width:80%;
-            }
-        
-            .index #news{
-                padding-right: 0.01rem;
-                padding-left: 0.7rem;
-                display: block;
-                box-sizing: border-box;
-            }
-
-            .index .contenidonoticias {
-                width: 95%;
-                display: block;
-                clear: both;
-                margin-left: 0;
-                max-width: 100%;
-            }
-
-            .index .cajanoticias{
-                max-width: 100%;
-            }
-        
-            .index .row-container-link{
-                display:block
-            }
-
-            .index .cont-izda, .index .cont-dcha, .index .cont-newslet {
-                width: 88%;
-                display: block;
-                clear: both;
-                margin-left: 0;
-                max-width: 100%;
-                padding:0;
-            }
-            .contabajo p{
-                text-align: justify ;
-            }
-        
-            form #email{
-                width: 90%;
-                margin-left: 2%;
-                margin-right: 2%;
-                position: relative;
-                width:100%;
-                margin-right: 0;
-            }    
-        }
+@media screen and (max-width: 900px) {
 
 
+    .index #text-bnv p{
+        margin-top: 50px;
+    }
+    .index #text-bnv p em{
+        font-size: 0.8em;
+        background-color: #a3d2ca;
+    }
+
+    .index #artabajo .fondo {
+        height: unset;
+    }
+
+    .index .row-container-link{
+        display:block
+    }
+    .index .cont-izda, .index .cont-dcha, .index .cont-newslet {
+        width: 95%;
+        display: block;
+        clear: both;
+        margin-left: 0;
+        max-width: 100%;
+        padding: 3vw;
+    }
+
+    .index .form-bod input[type="submit"] {
+        width: 80%;
+    }
+
+    .index form #email{
+        margin-top: 6%;
+        position: relative;
+        width:80%;
+    }
+    .cont-newslet form{
+        width: 100%;
+    }
+
+/*Cambios para monitores de menos de 600px de ancho 
+iPhone en vertical*/
+@media screen and (max-width: 700px) {
+
+    .index #text-bnv p{
+        padding: 1% 5% 1% 5%;
+        text-align: justify;
+    }
+
+    .index #artabajo .fondo{
+        background-image:none;
+        height: unset;
+    }
+
+    .index #artabajo .fondo p{
+        color:#2f2f6a;
+        padding: 5% 5% 1% 5%;
+    }
+
+    .index .form-bod input[type="submit"] {
+        width: 80%;
+    }
+    
+    .index .form-nl {
+        padding: 2%;overflow-x:hidden;
+    }
+
+    .index .form-nl .botones input {
+        width: 100%;
+        display: block;
+    }
+
+    .index form #email{
+        margin-top: 6%;
+        position: relative;
+        width:80%;
+    }
+
+    .index #news{
+        padding-right: 0.01rem;
+        padding-left: 0.7rem;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .index .contenidonoticias {
+        width: 95%;
+        display: block;
+        clear: both;
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .index .cajanoticias{
+        max-width: 100%;
+    }
+
+    .index .row-container-link{
+        display:block
+    }
+
+    .index .cont-izda, .index .cont-dcha, .index .cont-newslet {
+        width: 88%;
+        display: block;
+        clear: both;
+        margin-left: 0;
+        max-width: 100%;
+        padding:0;
+    }
+
+    .contabajo p{
+        text-align: justify ;
+    }
+
+    form #email{
+        width: 90%;
+        margin-left: 2%;
+        margin-right: 2%;
+        position: relative;
+        width:100%;
+        margin-right: 0;
+    }    
+}
+}

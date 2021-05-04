@@ -635,7 +635,7 @@ Estilo específico de index.html
 .index #artabajo .fondo p{
     padding: 10% 5% 10% 5%;
     color: #f8f1f1;
-    text-align:justify;
+    text-align: center;
     font-size: 1em;
 }
 
@@ -1517,26 +1517,31 @@ Responsive design: INDEX
 
 /* No hay cambios necesarios para monitores de más de 1300px de ancho.*/
 
+
 /*Cambios para monitores de menos de 900px de ancho 
     iPad, iPad Mini, iPad Pro en vertical*/
 @media screen and (max-width: 900px) {
 
-
+    /*Formato para adaptar el texto sa una pantalla más reducida y eliminar espacios vacíos*/
     .index #text-bnv p{
         margin-top: 50px;
     }
+
     .index #text-bnv p em{
         font-size: 0.8em;
         background-color: #a3d2ca;
     }
 
+    /**/
     .index #artabajo .fondo {
         height: unset;
     }
 
+    /**/
     .index .row-container-link{
         display:block
     }
+
     .index .cont-izda, .index .cont-dcha, .index .cont-newslet {
         width: 95%;
         display: block;

@@ -1082,17 +1082,7 @@ Estilo específico de formularioContacto.html
     margin: 50px;
 }
 
-/* BORRAR 
-Formato del texto introductorio del fomulario de contacto
-.formContacto #prov {
-    width:100%;
-}
 
-
-.formContacto #loc {
-    width:100%;
-}
-*/
 
 /*
 ---------------------------------------------
@@ -1355,7 +1345,7 @@ Responsive design
         margin:auto;
     }
 
-    /*Reducimos los márgenes y ampliamos el ancho del main del FORMULARIO DE CONTACTO*/
+    /*Reducimos los márgenes y ampliamos el ancho del main del FORMULARIO*/
     form {
         width: 90%;
         margin-left: 2%;

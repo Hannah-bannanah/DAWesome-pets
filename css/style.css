@@ -908,14 +908,9 @@ Responsive design: INDEX
         .index form #email{
             margin-top: 6%;
             position: relative;
-            width:80%;
-        }
-        .index form #email{
-            width: 90%;
             margin-left: 2%;
             margin-right: 2%;
             position: relative;
-            width:100%;
             margin-right: 0;
         }    
     

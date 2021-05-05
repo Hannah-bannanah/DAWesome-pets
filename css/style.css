@@ -236,6 +236,124 @@ footer #redes a img {
 
 /*
 ---------------------------------------------
+Adaptabilidad del menú de navegación y header
+---------------------------------------------
+*/
+
+/*
+No hay cambios necesarios para pantallas de más de 700px
+*/
+
+/*Cambios para monitores de menos de 700px de ancho 
+iPhone en vertical*/
+@media screen and (max-width: 700px) {
+
+    /*Esconde la barra de navegación de la version web*/
+    .barra {
+        display: none;
+    }
+
+    /*Reduce el header a una barra mínima*/
+    header {
+        height: 50px;
+        padding: 0;
+        margin: 0;
+    }
+
+    /*Reduce el tamaño de letra de los títulos del header*/
+    header h1 {
+        font-size: 1.3em;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    /*Revela el menú de navegación móvil*/
+    nav.movil {
+        display: unset;
+    }
+
+    /*Esconde la checkbox que abre y cierra el menú de navegación
+    para que se active/desactive sólo con el label asociado*/
+    #menu-movil {
+        display: none;
+    }
+
+    /*Formato del icono de activación del menú*/
+    label[for="menu-movil"] img{
+        background-color:rgba(94,170,168);
+        height: 50px;
+        width: 50px;
+    }
+
+    /*Esconde el icono de cerrar el menu*/
+    #cerrar-menu {
+        display: none;
+    }
+
+    /*Muestra el menú cuando la checkbox está activada*/
+    #menu-movil:checked ~ .menu {
+        display: unset;
+    }
+
+    /*Muestra el icono de cerrar el menú cuando el menú está abierto*/
+    #menu-movil:checked ~ label > #cerrar-menu {
+        display: unset;
+    }
+
+    /*Esconde el icono de abrir el menú cuando el menú está abierto*/
+    #menu-movil:checked ~ label > #abrir-menu {
+        display: none;
+    }
+
+    /*Esconde el menú de navegación*/
+    .movil ul.menu {
+        display: none;
+    }
+
+    /*Formato de menú de navegación móvil cuando no está abierto*/
+    nav.movil {
+        width: 70%;
+        box-sizing: border-box;
+        margin-top: 0;
+        top: 0;
+        position: absolute;
+        z-index: 100;
+        text-align: left;
+    }
+
+    /*Formato de cada elemento del menú de navegación*/
+    .movil ul, .movil ul li {
+        list-style:none;
+        padding-left: 0;
+        background-color:rgba(94,170,168);
+    }
+
+    /*Cambia la alineación del texto de los links a la izquierda*/
+    nav.movil a {
+        text-align: left;
+        padding-left: 5%;
+        border-top: 1px solid #005691;
+    }
+    /*Formato del link a la página actual*/
+    .movil a.pagina-actual {
+        background-color: #a3d2ca;
+    }
+
+    /*Mueve los elementos del submenú más a la derecha*/ 
+    nav.movil .submenu li {
+        height: 2.5em;
+    }
+
+    /*Mueve los elementos del submenú más a la derecha*/ 
+    nav.movil .submenu li a{
+        padding-bottom: 0;
+        padding-left: 30%;
+        border-top: 1px dashed #005691;
+    }
+}
+
+/*
+---------------------------------------------
 ---------------------------------------------
 Estílo de hipervínculos
 ---------------------------------------------
@@ -471,6 +589,119 @@ Estilo específico de mascotas.html
     font-style: oblique;
 }
 
+/*
+---------------------------------------------
+Adaptabilidad de mascotas.html
+---------------------------------------------
+*/
+/*Cambios para monitores de más de 1300px de ancho*/
+@media screen and (min-width: 1300px) {
+    /*Añade espacio en el lado izquierdo de la pantalla*/
+    .mascotas main {
+        margin-left: 7%;
+    }
+
+    /*Reduce el tamaño de letra del texto placeholder*/
+    .mascotas #placeholder p {
+        font-size: 1.8em;
+    }
+
+    /*Reposiciona el aside*/
+    .mascotas aside {
+        margin-top: unset;
+    }
+
+    /*Incrementa el tamaño de los artículos de los animales*/
+    .mascotas .petInfo {
+        width: 50%;
+        margin-left:10%
+    }
+}
+/*
+    No hay cambios necesarios para monitores de anchura entre 900 y 1300,
+    ya que la web se ha diseñado con esa anchura en mente.
+    El diseño por defecto incluye compatibilidad con iPad, iPad Mini y iPad Pro
+    en posición horizontal
+*/
+
+/*Cambios para monitores de menos de 900px de ancho 
+    iPad, iPad Mini, iPad Pro en vertical*/
+@media screen and (max-width: 900px) {
+
+    /*Oculta el panel de selección
+    Se mostrarán los artículos directamente*/
+    .mascotas .seleccion, .mascotas #placeholder {
+        display: none;
+    }
+    
+    /*Modifica las secciones de cada animal para 
+    que se muestre como bloques una detrás de otra*/
+    .mascotas section {
+        display: block;
+        position: relative;
+    }
+    
+    /*Modifica la subsección de la información de cada animal
+    para que ocupe todo el ancho de la pantalla y se muestre en bloque*/
+    .mascotas .petInfo {
+        width: 80%;
+        display: block;
+        visibility: visible;
+        opacity: unset;
+        position: relative;
+    }
+    
+    /*Si una mascota ha sido seleccionada (por link directo), 
+    alinea su información con las demás*/
+    .mascotas :checked ~ .petInfo { 
+        visibility: visible;
+        opacity: 1;
+        float: none;
+    }
+
+    /*Quita la restricción de altura de los artículos de animales 
+    (evita scroll)*/
+    .mascotas .petInfo article {
+        max-height: unset;
+    }
+
+    /*Cambia el formato del aside*/
+    .mascotas aside {
+        width: 90%;
+        display: block;
+        float: none;
+        margin:auto;
+    }
+}
+
+/*Cambios para monitores de menos de 700px de ancho 
+iPhone en vertical*/
+@media screen and (max-width: 700px) {
+    /*Formato del header en la versión móvil*/
+    .mascotas header {
+        background-image: none;
+    }
+
+    /*Cambia el formato de los artículos para ocupar toda la pantalla
+    y mostrar una sección detrás de otra */
+    .mascotas article img, .mascotas .bio {
+        width: 95%;
+        display: block;
+        clear: both;
+        margin-left: 0;
+    }
+
+    /*Elimina el gradiente de la tabla para 
+    evitar sensación de sobrecarga*/
+    .mascotas td, .mascotas th {
+        background: none #a3d2ca;
+    }
+
+    /*Quita la animación del botón de adopción -NO FUNCIONA*/
+    .mascotas button {
+        animation:none;
+    }    
+}
 
 /*
 ---------------------------------------------
@@ -787,14 +1018,11 @@ Estilo específico de index.html
 
 /*
 ---------------------------------------------
----------------------------------------------
-Responsive design: INDEX
----------------------------------------------
+Adapatabilidad de index.html
 ---------------------------------------------
 */
 
 /* No hay cambios necesarios para monitores de más de 1300px de ancho.*/
-
 
 /*Cambios para monitores de menos de 900px de ancho 
     iPad, iPad Mini, iPad Pro en vertical*/
@@ -1046,6 +1274,78 @@ form .botones{
 
 /*
 ---------------------------------------------
+Adaptabilidad de formularios
+---------------------------------------------
+*/
+/*Cambios para monitores de más de 1300px de ancho*/
+@media screen and (min-width: 1300px) {
+    form {
+        width: 45%;
+    }
+}
+/*
+    No hay cambios necesarios para monitores de anchura entre 900 y 1300,
+    ya que la web se ha diseñado con esa anchura en mente.
+    El diseño por defecto incluye compatibilidad con iPad, iPad Mini y iPad Pro
+    en posición horizontal
+*/
+
+/*Cambios para monitores de menos de 900px de ancho 
+    iPad, iPad Mini, iPad Pro en vertical*/
+@media screen and (max-width: 900px) {
+    /*Reducimos los márgenes y ampliamos el ancho del main del FORMULARIO*/
+    form {
+        width: 90%;
+        margin-left: 2%;
+        margin-right: 2%;
+        position: relative;
+    }
+}
+
+/*Cambios para monitores de menos de 700px de ancho 
+iPhone en vertical*/
+@media screen and (max-width: 700px) {
+
+    /*Estructura genérica de los formularios en versión móvil*/
+    form {
+        padding: 2%;
+        /*overflow-x:hidden; /*no muestra el contenido que se salga de las dimensiones especificadas en el contenedor*/
+    }
+
+    /*Los botones de Enviar y Reestablecer los disponemos uno debajo de otro*/
+    form .botones input {
+        width: 100%;
+        display: block;
+       
+    }
+
+    /*Estructura de la sección que contiene los botones de los formularios*/
+    form .botones {
+        width: 93%;
+        display: block;
+        margin-left: 5%;
+        margin-right: 5%;
+        position: auto;
+     
+    }  
+
+    /*Cambia el formato de las secciones que están distribuidas en columnas para que cada una ocupe toda la pantalla
+    y mostrarlas una debajo de otra */
+    form .columna {
+        width: 95%;
+    }
+
+    form .izq {
+        width: 99%;
+    }
+
+    form .dcha {
+        width: 100%;
+    }     
+}
+
+/*
+---------------------------------------------
 ---------------------------------------------
 Estilo específico de formularioContacto.html
 ---------------------------------------------
@@ -1082,7 +1382,33 @@ Estilo específico de formularioContacto.html
     margin: 50px;
 }
 
+/*
+---------------------------------------------
+Adaptabilidad formularioContacto.html
+---------------------------------------------
+*/
+/*
+    Parte de la adaptabilidad de esta página está gestionada
+    por los estilos genéricos aplicados a formularios. Sólo
+    se requieren cambios específicos para la página para 
+    pantallas de menos de 700px de ancho
+*/
 
+/*Cambios para monitores de menos de 700px de ancho 
+iPhone en vertical*/
+@media screen and (max-width: 700px) {
+
+    /*FORMULARIO CONTACTO Formato del header en la versión móvil*/
+    .formContacto header {
+        background-image: none;
+    }
+
+    /*FORMULARIO CONTACTO Formato de la caja de texto de localidad en la versión móvil*/
+    .formContacto input #loc {
+        width: 98%;
+        padding: 0
+    }     
+}
 
 /*
 ---------------------------------------------
@@ -1142,6 +1468,39 @@ Estilo específico de quienesSomos.html
     width: 25%; 
     height: 15%;
 }
+
+/*
+---------------------------------------------
+Adaptabilidad para quienesSomos.html
+---------------------------------------------
+*/
+
+/* No hay cambios necesarios para los siguientes formatos:
+    - monitores de más de 1300px de ancho.
+    - monitores de anchura entre 900 y 1300 (ya que la web se ha diseñado con esa anchura en mente).
+    - el diseño por defecto incluye compatibilidad con iPad, iPad Mini y iPad Pro en posición horizontal. 
+*/
+
+/*iPad en posición vertical.*/
+@media screen and (max-width: 900px) {
+
+    .quienesSomos #quienesSomos, .quienesSomos  #video iframe{
+        width: 95%;
+        display: block;
+        clear:both;
+    }
+    
+    .quienesSomos aside{
+        display: block;
+        clear: both;
+    }
+}
+
+/*iPhone en posición vertical*/
+@media screen and (max-width:700px) {
+    .quienesSomos header {
+        background-image: none;
+    }
 
 /*
 ---------------------------------------------
@@ -1254,289 +1613,22 @@ para aquellas personas que usen un lector de pantalla*/
 .formAdopcion label[for="descVivienda"] {
     display: none;
 }
+
 /*
 ---------------------------------------------
----------------------------------------------
-Responsive design
----------------------------------------------
+Adaptabilidad formularioAdopcion.html
 ---------------------------------------------
 */
-/*Cambios para monitores de más de 1300px de ancho*/
-@media screen and (min-width: 1300px) {
-    /*Añade espacio en el lado izquierdo de la pantalla*/
-    .mascotas main {
-        margin-left: 7%;
-    }
-
-    /*Reduce el tamaño de letra del texto placeholder*/
-    .mascotas #placeholder p {
-        font-size: 1.8em;
-    }
-
-    /*Reposiciona el aside*/
-    .mascotas aside {
-        margin-top: unset;
-    }
-
-    /*Incrementa el tamaño de los artículos de los animales*/
-    .mascotas .petInfo {
-        width: 50%;
-        margin-left:10%
-    }
-
-
-    form {
-        width: 45%;
-    }
-}
 /*
-    No hay cambios necesarios para monitores de anchura entre 900 y 1300,
-    ya que la web se ha diseñado con esa anchura en mente.
-    El diseño por defecto incluye compatibilidad con iPad, iPad Mini y iPad Pro
-    en posición horizontal
+    Parte de la adaptabilidad de esta página está gestionada
+    por los estilos genéricos aplicados a formularios. Sólo
+    se requieren cambios específicos para la página para 
+    pantallas de menos de 700px de ancho
 */
 
-/*Cambios para monitores de menos de 900px de ancho 
-    iPad, iPad Mini, iPad Pro en vertical*/
-@media screen and (max-width: 900px) {
-
-    /*Oculta el panel de selección
-    Se mostrarán los artículos directamente*/
-    .mascotas .seleccion, .mascotas #placeholder {
-        display: none;
-    }
-    
-    /*Modifica las secciones de cada animal para 
-    que se muestre como bloques una detrás de otra*/
-    .mascotas section {
-        display: block;
-        position: relative;
-    }
-    
-    /*Modifica la subsección de la información de cada animal
-    para que ocupe todo el ancho de la pantalla y se muestre en bloque*/
-    .mascotas .petInfo {
-        width: 80%;
-        display: block;
-        visibility: visible;
-        opacity: unset;
-        position: relative;
-    }
-    
-    /*Si una mascota ha sido seleccionada (por link directo), 
-    alinea su información con las demás*/
-    .mascotas :checked ~ .petInfo { 
-        visibility: visible;
-        opacity: 1;
-        float: none;
-    }
-
-    /*Quita la restricción de altura de los artículos de animales 
-    (evita scroll)*/
-    .mascotas .petInfo article {
-        max-height: unset;
-    }
-
-    /*Cambia el formato del aside*/
-    .mascotas aside {
-        width: 90%;
-        display: block;
-        float: none;
-        margin:auto;
-    }
-
-    /*Reducimos los márgenes y ampliamos el ancho del main del FORMULARIO*/
-    form {
-        width: 90%;
-        margin-left: 2%;
-        margin-right: 2%;
-        position: relative;
-    }
-}
-
-/*Cambios para monitores de menos de 600px de ancho 
+/*Cambios para monitores de menos de 700px de ancho 
 iPhone en vertical*/
 @media screen and (max-width: 700px) {
-
-    /*Esconde la barra de navegación de la version web*/
-    .barra {
-        display: none;
-    }
-
-    /*Reduce el header a una barra mínima*/
-    header {
-        height: 50px;
-        padding: 0;
-        margin: 0;
-    }
-
-    /*Reduce el tamaño de letra de los títulos del header*/
-    header h1 {
-        font-size: 1.3em;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-    }
-    /*Revela el menú de navegación móvil*/
-    nav.movil {
-        display: unset;
-    }
-
-    /*Esconde la checkbox que abre y cierra el menú de navegación
-    para que se active/desactive sólo con el label asociado*/
-    #menu-movil {
-        display: none;
-    }
-
-    /*Formato del icono de activación del menú*/
-    label[for="menu-movil"] img{
-        background-color:rgba(94,170,168);
-        height: 50px;
-        width: 50px;
-    }
-
-    /*Esconde el icono de cerrar el menu*/
-    #cerrar-menu {
-        display: none;
-    }
-
-    /*Muestra el menú cuando la checkbox está activada*/
-    #menu-movil:checked ~ .menu {
-        display: unset;
-    }
-
-    /*Muestra el icono de cerrar el menú cuando el menú está abierto*/
-    #menu-movil:checked ~ label > #cerrar-menu {
-        display: unset;
-    }
-
-    /*Esconde el icono de abrir el menú cuando el menú está abierto*/
-    #menu-movil:checked ~ label > #abrir-menu {
-        display: none;
-    }
-
-    /*Esconde el menú de navegación*/
-    .movil ul.menu {
-        display: none;
-    }
-
-    /*Formato de menú de navegación móvil cuando no está abierto*/
-    nav.movil {
-        width: 70%;
-        box-sizing: border-box;
-        margin-top: 0;
-        top: 0;
-        position: absolute;
-        z-index: 100;
-        text-align: left;
-    }
-
-    /*Formato de cada elemento del menú de navegación*/
-    .movil ul, .movil ul li {
-        list-style:none;
-        padding-left: 0;
-        background-color:rgba(94,170,168);
-    }
-
-    /*Cambia la alineación del texto de los links a la izquierda*/
-    nav.movil a {
-        text-align: left;
-        padding-left: 5%;
-        border-top: 1px solid #005691;
-    }
-    /*Formato del link a la página actual*/
-    .movil a.pagina-actual {
-        background-color: #a3d2ca;
-    }
-
-    /*Mueve los elementos del submenú más a la derecha*/ 
-    nav.movil .submenu li {
-        height: 2.5em;
-    }
-
-    /*Mueve los elementos del submenú más a la derecha*/ 
-    nav.movil .submenu li a{
-        padding-bottom: 0;
-        padding-left: 30%;
-        border-top: 1px dashed #005691;
-    }
-
-    /*Estructura genérica de los formularios en versión móvil*/
-    form {
-        padding: 2%;
-        /*overflow-x:hidden; /*no muestra el contenido que se salga de las dimensiones especificadas en el contenedor*/
-    }
-
-    /*Los botones de Enviar y Reestablecer los disponemos uno debajo de otro*/
-    form .botones input {
-        width: 100%;
-        display: block;
-       
-    }
-
-    /*Estructura de la sección que contiene los botones de los formularios*/
-    form .botones {
-        width: 93%;
-        display: block;
-        margin-left: 5%;
-        margin-right: 5%;
-        position: auto;
-     
-    }  
-
-    /*Cambia el formato de las secciones que están distribuidas en columnas para que cada una ocupe toda la pantalla
-    y mostrarlas una debajo de otra */
-    form .columna {
-        width: 95%;
-    }
-
-    form .izq {
-        width: 99%;
-    }
-
-    form .dcha {
-        width: 100%;
-    }
-
-
-    /*Formato del header en la versión móvil*/
-    .mascotas header {
-        background-image: none;
-    }
-
-    /*Cambia el formato de los artículos para ocupar toda la pantalla
-    y mostrar una sección detrás de otra */
-    .mascotas article img, .mascotas .bio {
-        width: 95%;
-        display: block;
-        clear: both;
-        margin-left: 0;
-    }
-
-    /*Elimina el gradiente de la tabla para 
-    evitar sensación de sobrecarga*/
-    .mascotas td, .mascotas th {
-        background: none #a3d2ca;
-    }
-
-    /*Quita la animación del botón de adopción -NO FUNCIONA*/
-    .mascotas button {
-        animation:none;
-    }
-
-
-    /*FORMULARIO CONTACTO Formato del header en la versión móvil*/
-    .formContacto header {
-        background-image: none;
-    }
-
-    /*FORMULARIO CONTACTO Formato de la caja de texto de localidad en la versión móvil*/
-    .formContacto input #loc {
-        width: 98%;
-        padding: 0
-    }
-
-
     /*Formato del header en la versión móvil*/
     .formAdopcion header {
         background-image: none;
@@ -1556,33 +1648,3 @@ iPhone en vertical*/
     }
      
 }
-
-/*
----------------------------------------------
----------------------------------------------
-Responsive design: QUIÉNES SOMOS
----------------------------------------------
----------------------------------------------
-*/
-
-/* No hay cambios necesarios para los siguientes formatos:
-    - monitores de más de 1300px de ancho.
-    - monitores de anchura entre 900 y 1300 (ya que la web se ha diseñado con esa anchura en mente).
-    - el diseño por defecto incluye compatibilidad con iPad, iPad Mini y iPad Pro en posición horizontal. 
-*/
-
-/*iPad en posición vertical.*/
-@media screen and (max-width: 900px) {
-
-    .quienesSomos #quienesSomos, .quienesSomos  #video iframe{
-        width: 95%;
-        display: block;
-        clear:both;
-    }
-    
-    .quienesSomos aside{
-        display: block;
-        clear: both;
-    }
-}
-

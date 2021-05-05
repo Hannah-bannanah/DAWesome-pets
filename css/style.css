@@ -780,6 +780,9 @@ Estilo específico de index.html
 .index h6 a:link{
     color: #f8f1f1;
 }
+.index h6 a:visited{
+    color: #f8f1f1;
+}
 
 .index h6 a:hover{
     color: #db6400;
@@ -798,140 +801,140 @@ Responsive design: INDEX
 
 /*Cambios para monitores de menos de 900px de ancho 
     iPad, iPad Mini, iPad Pro en vertical*/
-    @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
 
-        /*Formato para adaptar el texto sa una pantalla más reducida y eliminar espacios vacíos*/
-        .index #text-bnv p{
-            margin-top: 50px;
-        }
+    /*Formato para adaptar el texto sa una pantalla más reducida y eliminar espacios vacíos*/
+    .index #text-bnv p{
+        margin-top: 50px;
+    }
+
+    .index #text-bnv p em{
+        font-size: 0.8em;
+        background-color: #a3d2ca;
+    }
+
+
+    /*Formato de la foto para adaptarlo a tamaño de 701px a 900px*/
+
+    .index #artabajo .fondo {
+        height: unset;
+    }
+
+    /*Con esto colocamos las dos columnas en una para adaptarlo a un ancho más estrecho*/
+
+    .index .row-container-link{
+        display:block
+    }
+
+    /* Con esto cambiamos la resolucion de los contenedores para ajustarlos al ancho de pantalla*/
+    .index .cont-izda, .index .cont-dcha, .index .cont-newslet {
+        width: 95%;
+        display: block;
+        clear: both;
+        margin-left: 0;
+        max-width: 100%;
+        padding: 3vw;
+    }
+
     
-        .index #text-bnv p em{
-            font-size: 0.8em;
-            background-color: #a3d2ca;
-        }
+    /* Modificamos la dimensión del formulario de la newsletter */
+    .index .form-bod input[type="submit"] {
+        width: 80%;
+    }
+
+    .index form #email{
+        margin-top: 6%;
+        position: relative;
+        width:80%;
+    }
+    .cont-newslet form{
+        width: 100%;
+    }
+}
     
-    
-        /*Formato de la foto para adaptarlo a tamaño de 701px a 900px*/
-    
-        .index #artabajo .fondo {
-            height: unset;
-        }
-    
-        /*Con esto colocamos las dos columnas en una para adaptarlo a un ancho más estrecho*/
-    
-        .index .row-container-link{
-            display:block
-        }
-    
-        /* Con esto cambiamos la resolucion de los contenedores para ajustarlos al ancho de pantalla*/
-        .index .cont-izda, .index .cont-dcha, .index .cont-newslet {
-            width: 95%;
-            display: block;
-            clear: both;
-            margin-left: 0;
-            max-width: 100%;
-            padding: 3vw;
-        }
-    
-        
-        /* Modificamos la dimensión del formulario de la newsletter */
-        .index .form-bod input[type="submit"] {
-            width: 80%;
-        }
-    
-        .index form #email{
-            margin-top: 6%;
-            position: relative;
-            width:80%;
-        }
-        .cont-newslet form{
-            width: 100%;
-        }
+/*Cambios para monitores de menos de 700px de ancho 
+iPhone en vertical*/
+@media screen and (max-width: 700px) {
+
+    /*Formato para adaptar el texto sa una pantalla más reducida y eliminar espacios vacíos*/
+    .index #text-bnv p{
+        padding: 1% 5% 1% 5%;
+        text-align: justify;
+    }
+
+    /*En la versión más pequeña quitamos la imagen y dejamos solo el texto que tenía encima*/
+    .index #artabajo .fondo{
+        background-image:none;
+        height: unset;
+    }
+
+    /*Damos formato al texto que estaba arriba cambiándolo de color*/
+    .index #artabajo .fondo p{
+        color:#2f2f6a;
+        padding: 5% 5% 1% 5%;
+    }
+
+    /*Formato de la caja de noticias, que colocaremos en vertical*/
+    .index #news{
+        padding-right: 0.01rem;
+        padding-left: 0.7rem;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .index .contenidonoticias {
+        width: 95%;
+        display: block;
+        clear: both;
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .index .cajanoticias{
+        max-width: 100%;
+    }
+
+    /*Formato de las cajas del formulario ajustadas a menor resolución*/
+    .index .form-bod input[type="submit"] {
+        width: 80%;
     }
     
-    /*Cambios para monitores de menos de 700px de ancho 
-    iPhone en vertical*/
-    @media screen and (max-width: 700px) {
-    
-        /*Formato para adaptar el texto sa una pantalla más reducida y eliminar espacios vacíos*/
-        .index #text-bnv p{
-            padding: 1% 5% 1% 5%;
-            text-align: justify;
-        }
-    
-        /*En la versión más pequeña quitamos la imagen y dejamos solo el texto que tenía encima*/
-        .index #artabajo .fondo{
-            background-image:none;
-            height: unset;
-        }
-    
-        /*Damos formato al texto que estaba arriba cambiándolo de color*/
-        .index #artabajo .fondo p{
-            color:#2f2f6a;
-            padding: 5% 5% 1% 5%;
-        }
-    
-        /*Formato de la caja de noticias, que colocaremos en vertical*/
-        .index #news{
-            padding-right: 0.01rem;
-            padding-left: 0.7rem;
-            display: block;
-            box-sizing: border-box;
-        }
-    
-        .index .contenidonoticias {
-            width: 95%;
-            display: block;
-            clear: both;
-            margin-left: 0;
-            max-width: 100%;
-        }
-    
-        .index .cajanoticias{
-            max-width: 100%;
-        }
-    
-        /*Formato de las cajas del formulario ajustadas a menor resolución*/
-        .index .form-bod input[type="submit"] {
-            width: 80%;
-        }
-        
-        .index .form-nl {
-            padding: 2%;overflow-x:hidden;
-        }
-    
-        .index .form-nl .botones input {
-            width: 100%;
-            display: block;
-        }
-    
-        .index form #email{
-            margin-top: 6%;
-            position: relative;
-            margin-left: 2%;
-            margin-right: 2%;
-            position: relative;
-            margin-right: 0;
-        }    
-    
-        /*Formato del contendor de los links*/
-        .index .row-container-link{
-            display:block
-        }
-    
-        .index .cont-izda, .index .cont-dcha, .index .cont-newslet {
-            width: 88%;
-            display: block;
-            clear: both;
-            margin-left: 0;
-            max-width: 100%;
-            padding:0;
-        }
-    
-        .contabajo p{
-            text-align: justify ;
-        }
+    .index .form-nl {
+        padding: 2%;overflow-x:hidden;
     }
+
+    .index .form-nl .botones input {
+        width: 100%;
+        display: block;
+    }
+
+    .index form #email{
+        margin-top: 6%;
+        position: relative;
+        margin-left: 2%;
+        margin-right: 2%;
+        position: relative;
+        margin-right: 0;
+    }    
+
+    /*Formato del contendor de los links*/
+    .index .row-container-link{
+        display:block
+    }
+
+    .index .cont-izda, .index .cont-dcha, .index .cont-newslet {
+        width: 88%;
+        display: block;
+        clear: both;
+        margin-left: 0;
+        max-width: 100%;
+        padding:0;
+    }
+
+    .contabajo p{
+        text-align: justify ;
+    }
+}
 
 
 /*
